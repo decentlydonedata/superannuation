@@ -223,5 +223,358 @@ raw_censusage <- read_csv(paste0(here(),"/data/raw/Age Range.csv"), skip = 8) %>
   ) %>% filter(!is.na(`Average Age`)) %>% rename(SA2 = `AGEP Age`) %>%
   select(c(SA2, `Average Age`))
 
-# 
+# Benefit Reasons
+raw_benefitpayments <- read_excel(paste0(here(),"/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
+     sheet = "Table 4", skip = 4) %>%
+  select(c(`Fund name`,`Total lump sum benefit payments`,`Retirement...32`, `Attaining age 65...33`, `Attaining preservation age...34`, 
+           `Death...35`, `Termination...36`, `Termination with less than $200...37`, 
+           `Unclaimed money and lost member...38`, `Lost member who is found...39`, 
+           `Non categorised conditions of release...40`, `Terminal medical condition...41`, 
+           `Permanent incapacity...42`, `Temporary incapacity...43`, `Compassionate grounds...44`, 
+           `Severe financial hardship...45`, `Excess contributions tax...46`, 
+           `Release of unrestricted non-preserved benefits...47`)) %>%
+           rename(
+             Fund = `Fund name`,
+             Total = `Total lump sum benefit payments`,
+             Retirement = `Retirement...32`,
+             `Attaining age 65` = `Attaining age 65...33`,
+             `Attaining preservation age` = `Attaining preservation age...34`,
+             Death = `Death...35`,
+             Termination = `Termination...36`,
+             `Termination with less than $200` = `Termination with less than $200...37`,
+             `Unclaimed money and lost member` = `Unclaimed money and lost member...38`,
+             `Lost member who is found` = `Lost member who is found...39`,
+             `Non categorised conditions of release` = `Non categorised conditions of release...40`,
+             `Terminal medical condition` = `Terminal medical condition...41`,
+             `Permanent incapacity` = `Permanent incapacity...42`,
+             `Temporary incapacity` = `Temporary incapacity...43`,
+             `Compassionate grounds` = `Compassionate grounds...44`,
+             `Severe financial hardship` = `Severe financial hardship...45`,
+             `Excess contributions tax` = `Excess contributions tax...46`,
+             `Release of unrestricted non-preserved benefits` = `Release of unrestricted non-preserved benefits...47`
+           ) %>% 
+  # Turning to numeric removing *
+  mutate(
+    across(
+      c(
+        Total,
+        Retirement,
+        `Attaining age 65`,
+        `Attaining preservation age`,
+        Death,
+        Termination,
+        `Termination with less than $200`,
+        `Unclaimed money and lost member`,
+        `Lost member who is found`,
+        `Non categorised conditions of release`,
+        `Terminal medical condition`,
+        `Permanent incapacity`,
+        `Temporary incapacity`,
+        `Compassionate grounds`,
+        `Severe financial hardship`,
+        `Excess contributions tax`,
+        `Release of unrestricted non-preserved benefits`
+      ),
+      ~ as.numeric(na_if(as.character(.x), "*"))
+    )
+  )
+payments <- raw_benefitpayments %>% filter(!is.na(Total)) %>% filter(!is.na(Retirement)) %>%
+  mutate(
+    `Other or unknown` = rowSums(
+      across(
+        c(
+          Termination,
+          `Termination with less than $200`,
+          `Unclaimed money and lost member`,
+          `Lost member who is found`,
+          `Non categorised conditions of release`,
+          `Terminal medical condition`,
+          `Permanent incapacity`,
+          `Temporary incapacity`,
+          `Compassionate grounds`,
+          `Severe financial hardship`,
+          `Excess contributions tax`,
+          `Release of unrestricted non-preserved benefits`
+        )
+      ),
+      na.rm = TRUE
+    ),
+      `Missing Percentage` = 1 -
+        (coalesce(Retirement, 0) + coalesce(`Attaining age 65`, 0) + coalesce(`Attaining preservation age`, 0) +coalesce(`Other or unknown`, 0))
+  ) %>%
+  select(
+    Fund,
+    Total,
+    Retirement,
+    `Attaining age 65`,
+    `Attaining preservation age`,
+    `Other or unknown`,
+    `Missing Percentage`
+  )
+ratio <- sum(payments$`Attaining age 65`, na.rm = TRUE) /
+  sum(payments$`Attaining preservation age`, na.rm = TRUE)
+
+benefitpayments <- payments %>%
+  mutate(
+    age65_missing = is.na(`Attaining age 65`),
+    preservation_missing = is.na(`Attaining preservation age`),
+    
+    `Attaining age 65` = case_when(
+      age65_missing & !preservation_missing ~ `Missing Percentage`,
+      age65_missing & preservation_missing ~
+        `Missing Percentage` * ratio / (1 + ratio),
+      TRUE ~ `Attaining age 65`
+    ),
+    
+    `Attaining preservation age` = case_when(
+      preservation_missing & !age65_missing ~ `Missing Percentage`,
+      preservation_missing & age65_missing ~
+        `Missing Percentage` / (1 + ratio),
+      TRUE ~ `Attaining preservation age`
+    )
+  ) %>%
+  select(-age65_missing, -preservation_missing, -`Missing Percentage`)
+write_csv(benefitpayments, here("data/clean", "benefit_payments.csv"))
+
+# Bump chart members rank
+raw_memberships <- read_excel(
+  paste0(
+    here(),
+    "/data/raw/Annual fund-level superannuation statistics back series June 2004 to June 2025.xlsx"
+  ),
+  sheet = "Table 10",
+  skip = 5
+) %>%
+  rename(
+    Year = Period,
+    Fund = `Fund name`,
+    `Members' benefits` = `Members' benefits at beginning of period`,
+    Members = `Number of member accounts at beginning of period`
+  ) %>%
+  select(Year, Fund, ABN, `Members' benefits`, Members) %>%
+  filter(!is.na(Year)) %>%
+  filter(Members != "*") %>%
+  mutate(
+    Fund = str_squish(str_replace_all(Fund, "\u00A0", " ")),
+    ABN = as.character(ABN),
+    Year = as.integer(substr(as.character(Year), 1, 4)),
+    `Members' benefits` = as.numeric(`Members' benefits`),
+    Members = as.numeric(Members)
+  )
+
+fund_rankings <- bind_rows(
+  raw_memberships %>%
+    filter(!is.na(`Members' benefits`)) %>%
+    group_by(Year) %>%
+    mutate(
+      Rank = min_rank(desc(`Members' benefits`))
+    ) %>%
+    ungroup() %>%
+    filter(Rank <= 10) %>%
+    mutate(Ranking_type = "Assets"),
   
+  raw_memberships %>%
+    filter(!is.na(Members)) %>%
+    group_by(Year) %>%
+    mutate(
+      Rank = min_rank(desc(Members))
+    ) %>%
+    ungroup() %>%
+    filter(Rank <= 10) %>%
+    mutate(Ranking_type = "Member accounts")
+) %>%
+  arrange(Ranking_type, Year, Rank) %>%
+  select(Year, Ranking_type, Fund, ABN, Members, `Members' benefits`, Rank)
+write_csv(fund_rankings, here("data/clean", "fund_rankings.csv"))
+
+# Gender Population Pyramid
+
+# Age Profiles over time?
+top_bracket_value <- 1500000
+bracket_info <- tibble::tibble(
+  `Members' benefit bracket` = c(
+    "< $1,000",
+    "$1,000 to $5,999",
+    "$6,000 to $9,999",
+    "$10,000 to $14,999",
+    "$15,000 to $24,999",
+    "$25,000 to $39,999",
+    "$40,000 to $59,999",
+    "$60,000 to $99,999",
+    "$100,000 to $199,999",
+    "$200,000 to $499,999",
+    "$500,000 to $999,999",
+    "$1,000,000 +"
+  ),
+  lower = c(
+    0, 1000, 6000, 10000, 15000, 25000,
+    40000, 60000, 100000, 200000, 500000, 1000000
+  ),
+  upper = c(
+    999, 5999, 9999, 14999, 24999, 39999,
+    59999, 99999, 199999, 499999, 999999, NA
+  ),
+  bracket_order = 1:12
+) %>%
+  mutate(
+    midpoint = case_when(
+      is.na(upper) ~ top_bracket_value,
+      TRUE ~ (lower + upper) / 2
+    )
+  )
+age_order <- c(
+  "<25",
+  "25 to 29",
+  "30 to 34",
+  "35 to 39",
+  "40 to 44",
+  "45 to 49",
+  "50 to 54",
+  "55 to 59",
+  "60 to 64",
+  "65 to 69",
+  "70 to 74",
+  "75 to 84",
+  "85+"
+)
+estimate_median_by_age <- function(file_path, persons_col, date) {
+  
+  raw_age_balances <- read_excel(
+    file_path,
+    sheet = "Table 8",
+    skip = 6
+  ) %>%
+    rename(Persons = all_of(persons_col)) %>%
+    filter(
+      !is.na(Persons),
+      !`Age bracket` %in%
+        c("Age information not available", "Total"),
+      !`Members' benefit bracket` %in% "Total"
+    ) %>%
+    select(
+      `Age bracket`,
+      `Members' benefit bracket`,
+      Persons
+    )
+  
+  balance_data <- raw_age_balances %>%
+    mutate(
+      `Age bracket` = str_squish(
+        str_replace_all(`Age bracket`, "\u00A0", " ")
+      ),
+      `Members' benefit bracket` = str_squish(
+        str_replace_all(
+          `Members' benefit bracket`, "\u00A0", " "
+        )
+      ),
+      `Age bracket` = factor(
+        `Age bracket`,
+        levels = age_order,
+        ordered = TRUE
+      )
+    ) %>%
+    left_join(
+      bracket_info,
+      by = "Members' benefit bracket"
+    )
+  
+  median_by_age <- balance_data %>%
+    group_by(`Age bracket`) %>%
+    arrange(bracket_order, .by_group = TRUE) %>%
+    mutate(
+      Total_persons = sum(Persons, na.rm = TRUE),
+      Cumulative_before = lag(
+        cumsum(Persons), default = 0
+      ),
+      Cumulative_after = cumsum(Persons)
+    ) %>%
+    filter(
+      Total_persons > 0,
+      Cumulative_before < Total_persons / 2,
+      Cumulative_after >= Total_persons / 2
+    ) %>%
+    mutate(
+      Estimated_median = if_else(
+        !is.na(upper) & Persons > 0,
+        lower +
+          ((Total_persons / 2 - Cumulative_before) /
+             Persons) * (upper - lower + 1),
+        NA_real_
+      )
+    ) %>%
+    ungroup() %>%
+    select(`Age bracket`, Estimated_median)
+  
+  median_by_age %>%
+    mutate(Date = as.Date(date)) %>%
+    select(Date, `Age bracket`, Estimated_median)
+}
+
+file_path <- paste0(
+  here(),
+  "/data/raw/Quarterly Superannuation Industry Publication - June 2026.xlsx"
+)
+
+median_profiles <- bind_rows(
+  estimate_median_by_age(
+    file_path,
+    persons_col = "...7",
+    date = "2022-06-30"
+  ),
+  estimate_median_by_age(
+    file_path,
+    persons_col = "...15",
+    date = "2024-06-30"
+  ),
+  estimate_median_by_age(
+    file_path,
+    persons_col = "...23",
+    date = "2026-06-30"
+  )
+)
+write_csv(median_profiles, here("data/clean", "age_profiles.csv"))
+
+# Gender population pyramid
+
+raw_gender <- read_excel(
+  here(
+    "data", "raw",
+    "Quarterly Superannuation Industry Publication - June 2026.xlsx"
+  ),
+  sheet = "Table 7",
+  col_names = FALSE
+) %>%
+  mutate(excel_row = row_number()) %>%
+  select(
+    `Age bracket` = 1,
+    Gender = 2,
+    value = 23,
+    excel_row
+  )
+
+measure_rows <- tribble(
+  ~Measure,           ~start_row, ~end_row,
+  "Member accounts ('000)",  8L,         59L,
+  "Member benefits ($ million)",  72L,        123L,
+  "Average balance ($)",  135L,       186L
+)
+
+gender <- raw_gender %>%
+  mutate(
+    measure = case_when(
+      between(excel_row, 8L, 59L)    ~ "Member accounts ('000)",
+      between(excel_row, 72L, 123L)  ~ "Member benefits ($ million)",
+      between(excel_row, 135L, 186L) ~ "Average balance ($)",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(measure)) %>%
+  mutate(
+    value = str_squish(as.character(value)),
+    value = str_remove_all(value, ","),
+    value = na_if(value, "-"),
+    value = na_if(value, ""),
+    value = as.numeric(value)
+  ) %>%
+  filter(Gender != "Other") %>% filter(Gender != "Total")
+write_csv(gender, here("data/clean", "gender.csv"))
