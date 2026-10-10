@@ -1,0 +1,91 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Superannuation word frequency visualisation",
+  "width": 800,
+  "height": 450,
+  "background": "#FAFAF7",
+  "data": {
+    "url": "word_cloud.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.name != null && datum.name !== '' && datum.n > 0"
+    }
+  ],
+  "mark": {
+    "type": "text",
+    "font": "Arial",
+    "fontWeight": "bold",
+    "align": "center",
+    "baseline": "middle"
+  },
+  "encoding": {
+    "x": {
+      "field": "name",
+      "type": "nominal",
+      "axis": null,
+      "sort": {
+        "field": "n",
+        "order": "descending"
+      },
+      "scale": {
+        "padding": 0.5
+      }
+    },
+    "y": {
+      "field": "n",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "zero": false
+      }
+    },
+    "text": {
+      "field": "name"
+    },
+    "size": {
+      "field": "n",
+      "type": "quantitative",
+      "scale": {
+        "range": [12, 55],
+        "type": "sqrt"
+      },
+      "legend": null
+    },
+    "color": {
+      "field": "name",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#19324D",
+          "#247C83",
+          "#C49A45",
+          "#54718C",
+          "#718B7A"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "name",
+        "type": "nominal",
+        "title": "Word"
+      },
+      {
+        "field": "n",
+        "type": "quantitative",
+        "title": "Frequency"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}
