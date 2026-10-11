@@ -1,0 +1,36 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/clean/account_distribution.csv"
+  },
+  "mark": {
+    "type": "arc",
+    "outerRadius": 150
+  },
+  "encoding": {
+    "theta": {
+      "field": "Proportion",
+      "type": "quantitative",
+      "stack": true
+    },
+    "radius": {
+      "field": "Accounts",
+      "type": "quantitative",
+      "scale": {
+        "range": [40, 150]
+      }
+    },
+    "color": {
+      "field": "Number of accounts",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Number of accounts"},
+      {"field": "Proportion"}
+    ]
+  },
+  "view": {
+    "stroke": null
+  }
+}

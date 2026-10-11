@@ -6,7 +6,7 @@ library(here)
 library(readabs)
 
 # Word Cloud
-raw_names <- read_excel(paste0(here(),"/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
+raw_names <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
                         sheet = "Table 2a", skip = 4) %>% mutate(name = `Fund name`) %>% select(name) %>% filter(!is.na(name))
 
 word_cloud <- raw_names %>%
@@ -47,10 +47,10 @@ word_cloud <- raw_names %>%
   separate_longer_delim(name, delim = " ") %>%
   filter(name != "") %>%
   count(name, sort = TRUE)
-write_csv(word_cloud, file = paste0(here(),"/data/clean/word_cloud.csv"))
+write_csv(word_cloud, file = paste0(here(),"/src/data/clean/word_cloud.csv"))
 
 # Balance by State and Gender
-raw_statebalances <- read_excel(paste0(here(),"/data/raw/ts24snapshot05indexofchartdata.xlsx"),
+raw_statebalances <- read_excel(paste0(here(),"/src/data/raw/ts24snapshot05indexofchartdata.xlsx"),
                         sheet = "13", skip = 39) %>%
   select(
     `Income year`,
@@ -134,10 +134,10 @@ map_data <- statebalances_map %>%
   ) %>%
   filter(!is.na(Proportion))
 
-write_csv(map_data, here("data/clean", "state_balances_map.csv"))
+write_csv(map_data, here("src/data/clean", "state_balances_map.csv"))
 
 # Balance by Age and Gender
-raw_demobalances <- read_excel(paste0(here(),"/data/raw/ts24snapshot05indexofchartdata.xlsx"),
+raw_demobalances <- read_excel(paste0(here(),"/src/data/raw/ts24snapshot05indexofchartdata.xlsx"),
                                 sheet = "12", skip = 45) %>%
   select(
     `Income year`,
@@ -179,7 +179,7 @@ demobalances <- raw_demobalances %>%
       `Average account balance` = "Total"
     )
   )
-write_csv(demobalances, here("data/clean", "demoblances.csv"))
+write_csv(demobalances, here("src/data/clean", "demoblances.csv"))
 
 # Number of Super Accounts
 account_distribution <- tibble(
@@ -192,10 +192,10 @@ account_distribution <- tibble(
   Accounts = c(1, 2, 3, 4),
   Proportion = c(0.80, 0.16, 0.03, 0.01)
 )
-write_csv(account_distribution, here("data/clean", "account_distribution.csv"))
+write_csv(account_distribution, here("src/data/clean", "account_distribution.csv"))
 
 # Census data
-raw_census10 <- read_csv(paste0(here(),"/data/raw/Retirement.csv"), skip = 8) %>%
+raw_census10 <- read_csv(paste0(here(),"/src/data/raw/Retirement.csv"), skip = 8) %>%
   filter(!is.na(Total)) %>%
   rename(SA1 = `AGE10P Age in Ten Year Groups`) %>%
   mutate(
@@ -211,10 +211,10 @@ retirees <- raw_census10 %>%
          Retirees = round((over_60/100), digits = 0)) %>%
   filter(over_60 > 99, SA1 != "Total") %>%
   select(c(SA1, Percentage, Retirees))
-write_csv(retirees, here("data/clean", "retirees.csv"))
+write_csv(retirees, here("src/data/clean", "retirees.csv"))
 
 # Census SA2 Data
-raw_censusage <- read_csv(paste0(here(),"/data/raw/Age Range.csv"), skip = 8) %>%
+raw_censusage <- read_csv(paste0(here(),"/src/data/raw/Age Range.csv"), skip = 8) %>%
   mutate(
     `Average Age` = rowSums(
       across(`0`:`115`, ~ .x * as.numeric(cur_column())),
@@ -224,7 +224,7 @@ raw_censusage <- read_csv(paste0(here(),"/data/raw/Age Range.csv"), skip = 8) %>
   select(c(SA2, `Average Age`))
 
 # Benefit Reasons
-raw_benefitpayments <- read_excel(paste0(here(),"/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
+raw_benefitpayments <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
      sheet = "Table 4", skip = 4) %>%
   select(c(`Fund name`,`Total lump sum benefit payments`,`Retirement...32`, `Attaining age 65...33`, `Attaining preservation age...34`, 
            `Death...35`, `Termination...36`, `Termination with less than $200...37`, 
@@ -234,11 +234,11 @@ raw_benefitpayments <- read_excel(paste0(here(),"/data/raw/Annual fund-level sup
            `Severe financial hardship...45`, `Excess contributions tax...46`, 
            `Release of unrestricted non-preserved benefits...47`)) %>%
            rename(
-             Fund = `Fund name`,
-             Total = `Total lump sum benefit payments`,
-             Retirement = `Retirement...32`,
-             `Attaining age 65` = `Attaining age 65...33`,
-             `Attaining preservation age` = `Attaining preservation age...34`,
+             fund = `Fund name`,
+             total = `Total lump sum benefit payments`,
+             retirement = `Retirement...32`,
+             age_65 = `Attaining age 65...33`,
+             preservation = `Attaining preservation age...34`,
              Death = `Death...35`,
              Termination = `Termination...36`,
              `Termination with less than $200` = `Termination with less than $200...37`,
@@ -257,10 +257,10 @@ raw_benefitpayments <- read_excel(paste0(here(),"/data/raw/Annual fund-level sup
   mutate(
     across(
       c(
-        Total,
-        Retirement,
-        `Attaining age 65`,
-        `Attaining preservation age`,
+        total,
+        retirement,
+        age_65,
+        preservation,
         Death,
         Termination,
         `Termination with less than $200`,
@@ -278,9 +278,9 @@ raw_benefitpayments <- read_excel(paste0(here(),"/data/raw/Annual fund-level sup
       ~ as.numeric(na_if(as.character(.x), "*"))
     )
   )
-payments <- raw_benefitpayments %>% filter(!is.na(Total)) %>% filter(!is.na(Retirement)) %>%
+payments <- raw_benefitpayments %>% filter(!is.na(total)) %>% filter(!is.na(retirement)) %>%
   mutate(
-    `Other or unknown` = rowSums(
+    other = rowSums(
       across(
         c(
           Termination,
@@ -299,48 +299,45 @@ payments <- raw_benefitpayments %>% filter(!is.na(Total)) %>% filter(!is.na(Reti
       ),
       na.rm = TRUE
     ),
-      `Missing Percentage` = 1 -
-        (coalesce(Retirement, 0) + coalesce(`Attaining age 65`, 0) + coalesce(`Attaining preservation age`, 0) +coalesce(`Other or unknown`, 0))
+      missing_per = 1 -
+        (coalesce(retirement, 0) + coalesce(age_65, 0) + coalesce(preservation, 0) +coalesce(other, 0))
   ) %>%
   select(
-    Fund,
-    Total,
-    Retirement,
-    `Attaining age 65`,
-    `Attaining preservation age`,
-    `Other or unknown`,
-    `Missing Percentage`
+    fund,
+    total,
+    retirement,
+    age_65,
+    preservation,
+    other,
+    missing_per
   )
-ratio <- sum(payments$`Attaining age 65`, na.rm = TRUE) /
-  sum(payments$`Attaining preservation age`, na.rm = TRUE)
+ratio <- sum(payments$age_65, na.rm = TRUE) /
+  sum(payments$age_65, na.rm = TRUE)
 
 benefitpayments <- payments %>%
   mutate(
-    age65_missing = is.na(`Attaining age 65`),
-    preservation_missing = is.na(`Attaining preservation age`),
-    
-    `Attaining age 65` = case_when(
-      age65_missing & !preservation_missing ~ `Missing Percentage`,
+    age65_missing = is.na(age_65),
+    preservation_missing = is.na(preservation),
+    age_65 = case_when(
+      age65_missing & !preservation_missing ~ missing_per,
       age65_missing & preservation_missing ~
-        `Missing Percentage` * ratio / (1 + ratio),
-      TRUE ~ `Attaining age 65`
+        missing_per * ratio / (1 + ratio),
+      TRUE ~ age_65
     ),
-    
-    `Attaining preservation age` = case_when(
-      preservation_missing & !age65_missing ~ `Missing Percentage`,
-      preservation_missing & age65_missing ~
-        `Missing Percentage` / (1 + ratio),
-      TRUE ~ `Attaining preservation age`
+    preservation = case_when(
+      preservation_missing & !age65_missing ~ missing_per,
+      preservation_missing & age65_missing ~ missing_per / (1 + ratio),
+      TRUE ~ preservation
     )
   ) %>%
-  select(-age65_missing, -preservation_missing, -`Missing Percentage`)
-write_csv(benefitpayments, here("data/clean", "benefit_payments.csv"))
+  select(-age65_missing, -preservation_missing, -missing_per)
+write_csv(benefitpayments, here("src/data/clean", "benefit_payments.csv"))
 
 # Bump chart members rank
 raw_memberships <- read_excel(
   paste0(
     here(),
-    "/data/raw/Annual fund-level superannuation statistics back series June 2004 to June 2025.xlsx"
+    "src/data/raw/Annual fund-level superannuation statistics back series June 2004 to June 2025.xlsx"
   ),
   sheet = "Table 10",
   skip = 5
@@ -385,7 +382,7 @@ fund_rankings <- bind_rows(
 ) %>%
   arrange(Ranking_type, Year, Rank) %>%
   select(Year, Ranking_type, Fund, ABN, Members, `Members' benefits`, Rank)
-write_csv(fund_rankings, here("data/clean", "fund_rankings.csv"))
+write_csv(fund_rankings, here("src/data/clean", "fund_rankings.csv"))
 
 # Gender Population Pyramid
 
@@ -512,7 +509,7 @@ estimate_median_by_age <- function(file_path, persons_col, date) {
 
 file_path <- paste0(
   here(),
-  "/data/raw/Quarterly Superannuation Industry Publication - June 2026.xlsx"
+  "src/data/raw/Quarterly Superannuation Industry Publication - June 2026.xlsx"
 )
 
 median_profiles <- bind_rows(
@@ -532,7 +529,7 @@ median_profiles <- bind_rows(
     date = "2026-06-30"
   )
 )
-write_csv(median_profiles, here("data/clean", "age_profiles.csv"))
+write_csv(median_profiles, here("src/data/clean", "age_profiles.csv"))
 
 # Gender population pyramid
 
@@ -577,4 +574,5 @@ gender <- raw_gender %>%
     value = as.numeric(value)
   ) %>%
   filter(Gender != "Other") %>% filter(Gender != "Total")
-write_csv(gender, here("data/clean", "gender.csv"))
+write_csv(gender, here("src/data/clean", "gender.csv"))
+

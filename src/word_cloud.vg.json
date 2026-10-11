@@ -6,7 +6,7 @@
   "height": 450,
   "background": "#FAFAF7",
   "data": {
-    "url": "word_cloud.csv",
+    "url": "data/clean/word_cloud.csv",
     "format": {
       "type": "csv"
     }
