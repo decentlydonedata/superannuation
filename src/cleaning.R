@@ -312,7 +312,7 @@ payments <- raw_benefitpayments %>% filter(!is.na(total)) %>% filter(!is.na(reti
     missing_per
   )
 ratio <- sum(payments$age_65, na.rm = TRUE) /
-  sum(payments$age_65, na.rm = TRUE)
+  sum(payments$preservation, na.rm = TRUE)
 
 benefitpayments <- payments %>%
   mutate(
@@ -345,26 +345,26 @@ raw_memberships <- read_excel(
   rename(
     Year = Period,
     Fund = `Fund name`,
-    `Members' benefits` = `Members' benefits at beginning of period`,
+    Benefits = `Members' benefits at beginning of period`,
     Members = `Number of member accounts at beginning of period`
   ) %>%
-  select(Year, Fund, ABN, `Members' benefits`, Members) %>%
+  select(Year, Fund, ABN, Benefits, Members) %>%
   filter(!is.na(Year)) %>%
   filter(Members != "*") %>%
   mutate(
     Fund = str_squish(str_replace_all(Fund, "\u00A0", " ")),
     ABN = as.character(ABN),
     Year = as.integer(substr(as.character(Year), 1, 4)),
-    `Members' benefits` = as.numeric(`Members' benefits`),
+    Benefits = as.numeric(Benefits),
     Members = as.numeric(Members)
   )
 
 fund_rankings <- bind_rows(
   raw_memberships %>%
-    filter(!is.na(`Members' benefits`)) %>%
+    filter(!is.na(Benefits)) %>%
     group_by(Year) %>%
     mutate(
-      Rank = min_rank(desc(`Members' benefits`))
+      Rank = min_rank(desc(Benefits))
     ) %>%
     ungroup() %>%
     filter(Rank <= 10) %>%
@@ -381,7 +381,7 @@ fund_rankings <- bind_rows(
     mutate(Ranking_type = "Member accounts")
 ) %>%
   arrange(Ranking_type, Year, Rank) %>%
-  select(Year, Ranking_type, Fund, ABN, Members, `Members' benefits`, Rank)
+  select(Year, Ranking_type, Fund, ABN, Members, Benefits, Rank)
 write_csv(fund_rankings, here("src/data/clean", "fund_rankings.csv"))
 
 # Gender Population Pyramid
@@ -576,3 +576,88 @@ gender <- raw_gender %>%
   filter(Gender != "Other") %>% filter(Gender != "Total")
 write_csv(gender, here("src/data/clean", "gender.csv"))
 
+
+library(sf)
+library(dplyr)
+library(readr)
+library(purrr)
+
+# Read SA1 boundaries
+sa1_boundaries <- st_read(paste0(here(),
+  "/src/data/boundaries/SA1_2021_AUST_GDA2020.shp"),
+  quiet = TRUE
+)
+
+# Check the available boundary column names
+names(sa1_boundaries)
+
+# Read your data
+retirees <- read_csv(paste0(here(),
+  "/src/data/clean/retirees.csv"),
+  col_types = cols(SA1 = col_character())
+)
+
+# Join your data to the SA1 polygons
+sa1 <- sa1_boundaries %>%
+  mutate(SA1 = as.character(SA1_CODE21)) %>%
+  inner_join(retirees, by = "SA1") %>%
+  filter(!is.na(Retirees), Retirees > 0)
+
+# Project coordinates for spatial sampling
+sa1 <- st_transform(sa1, 3577)
+
+# Generate random points inside each SA1
+set.seed(42)
+
+dot_data <- map_dfr(
+  which(!is.na(sa1$Retirees) & sa1$Retirees > 0),
+  function(i) {
+    
+    n <- as.integer(sa1$Retirees[i])
+    
+    # Generate points inside this SA1 polygon
+    points <- st_sample(
+      sa1[i, ],
+      size = n,
+      type = "random"
+    )
+    
+    # Skip empty geometries
+    if (length(points) == 0) {
+      return(tibble(
+        SA1 = character(),
+        Percentage = numeric(),
+        longitude = numeric(),
+        latitude = numeric()
+      ))
+    }
+    
+    # Extract projected coordinates
+    coords <- st_coordinates(points)
+    
+    tibble(
+      SA1 = rep(as.character(sa1$SA1[i]), nrow(coords)),
+      Percentage = rep(sa1$Percentage[i], nrow(coords)),
+      longitude = coords[, 1],
+      latitude = coords[, 2]
+    )
+  }
+)
+
+# Export points in longitude/latitude (WGS84)
+dot_sf <- st_as_sf(
+  dot_data,
+  coords = c("longitude", "latitude"),
+  crs = 3577
+)
+
+dot_sf <- st_transform(dot_sf, 4326)
+coords <- st_coordinates(dot_sf)
+
+dot_data$longitude <- coords[, 1]
+dot_data$latitude <- coords[, 2]
+
+write_csv(
+  dot_data,
+  "data/clean/retiree_dots.csv"
+)

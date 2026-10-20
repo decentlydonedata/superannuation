@@ -1,0 +1,133 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Superannuation Fund Rankings, 2015–2025",
+    "subtitle": "Click a fund to highlight its ranking over time"
+  },
+  "width": 750,
+  "height": 450,
+  "data": {
+    "url": "data/clean/fund_rankings.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.Year >= 2015 && datum.Year <= 2025"
+    },
+    {
+      "filter": "datum.Ranking_type === 'Assets'"
+    }
+  ],
+  "params": [
+    {
+      "name": "fundSelect",
+      "select": {
+        "type": "point",
+        "fields": ["Fund"],
+        "on": "click",
+        "clear": "dblclick"
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 55
+    },
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "sort": "ascending",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "Rank",
+      "type": "quantitative",
+      "title": "Rank",
+      "scale": {
+        "reverse": true,
+        "zero": false
+      },
+      "axis": {
+        "tickMinStep": 1
+      }
+    },
+    "detail": {
+      "field": "Fund"
+    },
+    "color": {
+      "condition": {
+        "param": "fundSelect",
+        "field": "Fund",
+        "type": "nominal"
+      },
+      "value": "#D3D3D3"
+    },
+    "opacity": {
+      "condition": {
+        "param": "fundSelect",
+        "value": 1
+      },
+      "value": 0.2
+    },
+    "strokeWidth": {
+      "condition": {
+        "param": "fundSelect",
+        "value": 4
+      },
+      "value": 1.5
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      {
+        "field": "Rank",
+        "type": "quantitative",
+        "title": "Rank"
+      },
+      {
+        "field": "Fund",
+        "type": "nominal",
+        "title": "Fund"
+      },
+      {
+        "field": "ABN",
+        "type": "nominal",
+        "title": "ABN"
+      },
+      {
+        "field": "Members",
+        "type": "quantitative",
+        "title": "Members",
+        "format": ","
+      },
+      {
+        "field": "Members",
+        "type": "quantitative",
+        "title": "Members",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": true
+    }
+  }
+}

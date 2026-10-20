@@ -1,0 +1,154 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Superannuation Account Balance by State and Gender",
+    "subtitle": "Pie size represents average account balance; slices represent gender proportions"
+  },
+  "width": 760,
+  "height": 600,
+  "params": [
+  {
+    "name": "incomeYear",
+    "value": 2014,
+    "bind": {
+      "input": "range",
+      "min": 2014,
+      "max": 2023,
+      "step": 1,
+      "name": "Income year: "
+    }
+  }
+],
+  "projection": {
+    "type": "mercator",
+    "center": [134, -27],
+    "scale": 700,
+    "translate": [380, 300]
+  },
+  "layer": [
+    {
+        "data": {
+        "url": "data/boundaries/states.geojson",
+        "format": {
+            "type": "json"
+        }
+        },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F0F0F0",
+        "stroke": "#777777",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/clean/state_balances_map.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "transform": [
+        {
+          "filter": "toNumber(datum['Income year']) == incomeYear"
+        },
+        {
+          "calculate": "toNumber(datum['Average account balance'])",
+          "as": "Balance"
+        },
+        {
+          "calculate": "toNumber(datum['Proportion'])",
+          "as": "Gender proportion"
+        },
+        {
+          "calculate": "toNumber(datum['Longitude'])",
+          "as": "Lon"
+        },
+        {
+          "calculate": "toNumber(datum['Latitude'])",
+          "as": "Lat"
+        }
+      ],
+      "mark": {
+        "type": "arc",
+        "stroke": "white",
+        "strokeWidth": 0.8,
+        "outerRadius": 35
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Lat",
+          "type": "quantitative"
+        },
+        "theta": {
+          "field": "Gender proportion",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Male", "Female"],
+            "range": ["#4477AA", "#EE9955"]
+          },
+          "legend": {
+            "title": "Gender"
+          }
+        },
+        "radius": {
+          "field": "Balance",
+          "type": "quantitative",
+          "scale": {
+            "domain": [80000, 200000],
+            "range": [12, 35]
+          },
+          "legend": {
+            "title": "Average account balance ($)"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "State/Territory",
+            "type": "nominal",
+            "title": "State/Territory"
+          },
+          {
+            "field": "Income year",
+            "type": "ordinal",
+            "title": "Income year"
+          },
+          {
+            "field": "Gender",
+            "type": "nominal",
+            "title": "Gender"
+          },
+          {
+            "field": "Balance",
+            "type": "quantitative",
+            "title": "Average account balance ($)",
+            "format": ",.0f"
+          },
+          {
+            "field": "Gender proportion",
+            "type": "quantitative",
+            "title": "Gender proportion",
+            "format": ".1%"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "orient": "bottom"
+    }
+  }
+}

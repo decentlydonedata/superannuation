@@ -1,0 +1,112 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Estimated Median Superannuation Balance by Age",
+    "subtitle": "Comparison across 30 June 2022, 2024 and 2026"
+  },
+  "width": 650,
+  "height": 400,
+  "data": {
+    "url": "/data/clean/age_profiles.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 65
+    },
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "Age bracket",
+      "type": "ordinal",
+      "sort": [
+        "<25",
+        "25 to 29",
+        "30 to 34",
+        "35 to 39",
+        "40 to 44",
+        "45 to 49",
+        "50 to 54",
+        "55 to 59",
+        "60 to 64",
+        "65 to 69",
+        "70 to 74",
+        "75 to 84",
+        "85+"
+      ],
+      "title": "Age bracket",
+      "axis": {
+        "labelAngle": -45,
+        "labelLimit": 100
+      }
+    },
+    "y": {
+      "field": "Estimated_median",
+      "type": "quantitative",
+      "title": "Estimated median balance (AUD)",
+      "axis": {
+        "format": "$,.0f"
+      }
+    },
+    "color": {
+      "field": "Date",
+      "type": "nominal",
+      "sort": [
+        "30/06/2022",
+        "30/06/2024",
+        "30/06/2026"
+      ],
+      "scale": {
+        "domain": [
+          "30/06/2022",
+          "30/06/2024",
+          "30/06/2026"
+        ],
+        "range": [
+          "#3979C3",
+          "#D95F9F",
+          "#269B78"
+        ]
+      },
+      "legend": {
+        "title": "As at",
+        "orient": "top"
+      }
+    },
+    "detail": {
+      "field": "Date"
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "nominal",
+        "title": "Date"
+      },
+      {
+        "field": "Age bracket",
+        "type": "ordinal",
+        "title": "Age bracket"
+      },
+      {
+        "field": "Estimated_median",
+        "type": "quantitative",
+        "title": "Estimated median",
+        "format": "$,.2f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": true
+    }
+  }
+}

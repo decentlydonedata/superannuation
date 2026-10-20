@@ -1,0 +1,120 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "/data/raw/Legislature.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Year)",
+      "as": "Year_numeric"
+    },
+    {
+      "calculate": "toNumber(datum.Rate)",
+      "as": "Rate_numeric"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": false,
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "Year_numeric",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Rate_numeric",
+          "type": "quantitative",
+          "title": "Rate"
+        },
+        "order": {
+          "field": "Year_numeric",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year"
+          },
+          {
+            "field": "Rate_numeric",
+            "type": "quantitative",
+            "title": "Rate"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+            {
+            "filter": "datum.Legislature != null && datum.Legislature != '' && datum.Legislature != 'SG rate increase'"
+            }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90,
+        "color": "#D62728"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year_numeric",
+          "type": "quantitative",
+          "title": "Year"
+        },
+        "y": {
+          "field": "Rate_numeric",
+          "type": "quantitative",
+          "title": "Rate"
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year"
+          },
+          {
+            "field": "Rate_numeric",
+            "type": "quantitative",
+            "title": "Rate"
+          },
+          {
+            "field": "Legislature",
+            "type": "nominal",
+            "title": "Legislature"
+          },
+          {
+            "field": "Act",
+            "type": "nominal",
+            "title": "Act"
+          },
+          {
+            "field": "Description",
+            "type": "nominal",
+            "title": "Description"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": true
+    }
+  }
+}
