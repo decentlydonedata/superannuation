@@ -1,0 +1,197 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ternary plot of superannuation benefit payment reasons by fund.",
+  "width": 560,
+  "height": 500,
+  "background": "white",
+  "data": {
+    "url": "data/clean/benefit_payments.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.retirement)",
+      "as": "Retirement"
+    },
+    {
+      "calculate": "toNumber(datum.age_65)",
+      "as": "Age65"
+    },
+    {
+      "calculate": "toNumber(datum.preservation)",
+      "as": "Preservation"
+    },
+    {
+      "calculate": "toNumber(datum.other)",
+      "as": "Other"
+    },
+    {
+      "calculate": "datum.Retirement + datum.Age65 + datum.Preservation",
+      "as": "ReasonSum"
+    },
+    {
+      "filter": "isValid(datum.ReasonSum) && datum.ReasonSum > 0"
+    },
+    {
+      "calculate": "(datum.Age65 + 0.5 * datum.Preservation) / datum.ReasonSum",
+      "as": "x"
+    },
+    {
+      "calculate": "0.8660254 * datum.Preservation / datum.ReasonSum",
+      "as": "y"
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"x": 0, "y": 0, "order": 1},
+          {"x": 1, "y": 0, "order": 2},
+          {"x": 0.5, "y": 0.8660254, "order": 3},
+          {"x": 0, "y": 0, "order": 4}
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#555555",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.16, 1.16],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.12, 1.02],
+            "nice": false
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "ordinal"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 0, "y": -0.055, "label": "Retirement"},
+          {"x": 1, "y": -0.055, "label": "Attaining age 65"},
+          {"x": 0.5, "y": 0.925, "label": "Attaining preservation age"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.16, 1.16],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.12, 1.02],
+            "nice": false
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "opacity": 0.75,
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.16, 1.16],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.12, 1.02],
+            "nice": false
+          },
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "fund",
+            "type": "nominal",
+            "title": "Fund"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Total benefits paid  ($'000)",
+            "format": ",.0f"
+          },
+          {
+            "field": "Retirement",
+            "type": "quantitative",
+            "title": "Retirement",
+            "format": ".2%"
+          },
+          {
+            "field": "Age65",
+            "type": "quantitative",
+            "title": "Attaining age 65",
+            "format": ".2%"
+          },
+          {
+            "field": "Preservation",
+            "type": "quantitative",
+            "title": "Attaining preservation age",
+            "format": ".2%"
+          },
+          {
+            "field": "Other",
+            "type": "quantitative",
+            "title": "Other",
+            "format": ".2%"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

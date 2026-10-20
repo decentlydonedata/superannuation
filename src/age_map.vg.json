@@ -1,44 +1,60 @@
 
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distribution of Retirees Across Australia",
-  "width": 700,
+  "description": "Average age by Australian Statistical Area Level 2.",
+  "width": 800,
   "height": 600,
   "projection": {
-    "type": "mercator"
+    "type": "mercator",
+    "center": [134, -27],
+    "scale": 700
   },
   "data": {
-    "url": "data/clean/retiree_dots.csv",
+    "url": "data/clean/sa2_age_joined.geojson",
     "format": {
-      "type": "csv"
+      "type": "json"
     }
   },
+  "transform": [
+    {
+      "filter": "isValid(datum['Average Age'])"
+    }
+  ],
   "mark": {
-    "type": "circle",
-    "size": 12,
-    "opacity": 0.7,
-    "color": "#276FBF"
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.3
   },
   "encoding": {
-    "longitude": {
-      "field": "longitude",
-      "type": "quantitative"
-    },
-    "latitude": {
-      "field": "latitude",
-      "type": "quantitative"
+    "color": {
+      "field": "Average Age",
+      "type": "quantitative",
+      "title": "Average age (years)",
+      "scale": {
+        "scheme": "viridis"
+      },
+      "legend": {
+        "format": ".1f",
+        "orient": "bottom"
+      }
     },
     "tooltip": [
       {
-        "field": "SA1",
+        "field": "SA2",
         "type": "nominal",
-        "title": "SA1"
+        "title": "SA2 code"
       },
       {
-        "field": "Percentage",
+        "field": "SA2_NAME21",
+        "type": "nominal",
+        "title": "SA2 name"
+      },
+      {
+        "field": "Average Age",
         "type": "quantitative",
-        "title": "Retiree percentage",
-        "format": ".1%"
+        "title": "Average age",
+        "format": ".1f"
       }
     ]
   },

@@ -1,0 +1,82 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Australian retiree dot-density map. Each dot represents approximately 100 retirees.",
+  "width": 800,
+  "height": 600,
+  "projection": {
+    "type": "mercator",
+    "center": [134, -27],
+    "scale": 700
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "/data/boundaries/states.geojson",
+        "format": {
+          "type": "json"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f3f3f3",
+        "stroke": "#666666",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "/data/clean/retiree_dots.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 10,
+        "opacity": 0.55,
+        "color": "#287D8E"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "SA1_CODE21",
+            "type": "nominal",
+            "title": "SA1 code"
+          },
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Retiree percentage",
+            "format": ".2%"
+          },
+          {
+            "field": "Retirees_estimated",
+            "type": "quantitative",
+            "title": "Estimated retirees",
+            "format": ",.0f"
+          },
+          {
+            "field": "Dot_count",
+            "type": "quantitative",
+            "title": "Dots in this SA1",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}
