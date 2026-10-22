@@ -697,222 +697,86 @@ gender <- raw_gender %>%
 write_csv(gender, here("src/data/clean", "gender.csv"))
 
 # Joining SA1 Dots and data
+
 library(sf)
 library(dplyr)
 library(readr)
 library(purrr)
-library(stringr)
 
-# Project root: src/
-
-retirees_path <- "src/data/clean/retirees.csv"
-
-sa1_path <- "src/data/boundaries/SA1_2021_AUST_GDA2020.shp"
-
-output_path <- "src/data/clean/retiree_dots.csv"
-
-unmatched_path <- "src/data/clean/unmatched_retiree_sa1.csv"
-
-# Create the output directory if it does not exist
-dir.create("data/clean", recursive = TRUE, showWarnings = FALSE)
-
-# Read retiree data
-retirees_raw <- read_csv(
-  retirees_path,
-  col_types = cols(
-    SA1 = col_character(),
-    .default = col_guess()
-  ),
-  show_col_types = FALSE
+# 1. Read the retirees data
+retirees <- read_csv(
+  "data/clean/retirees.csv",
+  col_types = cols(SA1 = col_character())
 )
 
-# Read ABS SA1 polygons
-sa1_boundaries <- st_read(
-  sa1_path,
+# 2. Read the SA1 boundaries
+sa1 <- st_read(
+  "data/boundaries/SA1_2021_AUST_GDA2020.shp",
   quiet = TRUE
 )
 
-# Inspect both datasets
-names(retirees_raw)
-names(sa1_boundaries)
+# Check the actual SA1 code column in the shapefile
+names(sa1)
 
-glimpse(retirees_raw)
-print(sa1_boundaries)
+# IMPORTANT:
+# Replace SA1_CODE21 below with the actual column name
+# returned by names(sa1), if it differs.
+sa1 <- sa1 %>%
+  mutate(SA1 = as.character(SA1_CODE21))
 
-# Standardise SA1 identifiers
-clean_sa1 <- function(x) {
-  x <- str_trim(as.character(x))
-  x <- str_replace(x, "\\.0$", "")
-  
-  # Standard ABS SA1 codes contain 11 digits
-  x <- if_else(
-    !is.na(x) & str_detect(x, "^\\d+$"),
-    str_pad(x, width = 11, side = "left", pad = "0"),
-    x
-  )
-  
-  x
-}
 
-retirees <- retirees_raw %>%
-  mutate(
-    SA1_clean = clean_sa1(SA1),
-    Percentage = parse_number(as.character(Percentage)),
-    Retirees = parse_number(as.character(Retirees))
-  ) %>%
-  filter(!is.na(SA1_clean))
+# 3. Join retiree counts to the boundaries
+sa1_retirees <- sa1 %>%
+  inner_join(retirees, by = "SA1") %>%
+  filter(!is.na(Retirees), Retirees > 0)
 
-sa1_boundaries <- sa1_boundaries %>%
-  mutate(
-    SA1_clean = clean_sa1(SA1_CODE21)
-  ) %>%
-  st_make_valid()
+# 4. Remove missing or empty geometries
+sa1_retirees <- sa1_retirees %>%
+  filter(!st_is_empty(geometry), !is.na(st_dimension(geometry)))
 
-# Stop if the source has duplicate SA1 records
-if (nrow(duplicate_retirees) > 0) {
-  stop(
-    "Duplicate SA1 codes found in retirees.csv. ",
-    "Inspect duplicate_retirees before continuing."
-  )
-}
+# Check how many observations were removed
+cat("SA1 areas remaining:", nrow(sa1_retirees), "\n")
 
-# Stop if the boundary file has duplicate SA1 codes
-if (nrow(duplicate_boundaries) > 0) {
-  stop(
-    "Duplicate SA1 codes found in the boundary file. ",
-    "Inspect duplicate_boundaries before continuing."
-  )
-}
+# 5. Project geometries
+sa1_retirees <- st_transform(sa1_retirees, 3577)
 
-# Join retiree statistics onto each SA1 polygon
-sa1_joined <- sa1_boundaries %>%
-  left_join(
-    retirees %>%
-      select(SA1_clean, Percentage, Retirees),
-    by = "SA1_clean"
-  )
+# 6. Generate points inside each SA1
+set.seed(123)
 
-# Report unmatched polygons
-cat(
-  "SA1 polygons without retiree data:",
-  sum(is.na(sa1_joined$Retirees)),
-  "\n"
-)
-
-cat(
-  "Retiree records without polygons:",
-  nrow(unmatched_retirees),
-  "\n"
-)
-
-# Convert polygons to a projected coordinate system
-sa1_projected <- sa1_joined %>%
-  st_transform(3577)
-
-# Keep polygons with valid retiree counts
-sa1_for_dots <- sa1_projected %>%
-  filter(
-    !is.na(Retirees),
-    is.finite(Retirees),
-    Retirees >= 0
-  ) %>%
-  mutate(
-    # Retirees is already divided by 100
-    Dot_count = as.integer(round(Retirees)),
-    
-    # Approximate original number of retirees
-    Retirees_estimated = round(Retirees * 100)
-  )
-
-# Only sample polygons that need at least one dot
-sa1_for_dots <- sa1_for_dots %>%
-  filter(Dot_count > 0)
-
-# Generate the points inside each polygon
-set.seed(3179)
-
-# Generate points inside each SA1 polygon separately
-point_list <- lapply(seq_len(nrow(sa1_for_dots)), function(i) {
-  
-  n_dots <- sa1_for_dots$Dot_count[i]
-  
-  if (is.na(n_dots) || n_dots <= 0) {
-    return(NULL)
+dot_points <- purrr::map2(
+  st_geometry(sa1_retirees),
+  sa1_retirees$Retirees,
+  function(polygon, n) {
+    sf::st_sample(
+      polygon,
+      size = as.integer(n),
+      type = "random"
+    )
   }
-  
-  sf::st_sample(
-    sf::st_geometry(sa1_for_dots[i, ]),
-    size = n_dots,
-    type = "random"
-  )
-})
-
-# Combine all sampled points
-sampled_points <- do.call(c, point_list)
-
-length(sampled_points)
-
-# Link each generated point to its original SA1 record.
-# st_sample returns the samples grouped by input feature.
-source_rows <- rep(
-  seq_len(nrow(sa1_for_dots)),
-  times = sa1_for_dots$Dot_count
 )
 
-dots_sf <- st_sf(
-  source_row = source_rows,
-  geometry = sampled_points
-) %>%
-  left_join(
-    sa1_for_dots %>%
-      st_drop_geometry() %>%
-      mutate(source_row = row_number()) %>%
-      select(
-        source_row,
-        SA1_CODE21,
-        Percentage,
-        Retirees_estimated,
-        Dot_count
-      ),
-    by = "source_row"
-  )
+# 7. Combine all generated points
+dot_points <- do.call(c, dot_points)
+dot_points <- st_sfc(
+  dot_points,
+  crs = st_crs(sa1_retirees)
+)
 
-# Convert to WGS84 longitude/latitude
-dots_wgs84 <- st_transform(dots_sf, 4326)
+# 8. Convert to longitude and latitude
+dot_points <- st_transform(dot_points, 4326)
+coords <- st_coordinates(dot_points)
 
-# Extract longitude and latitude
-coordinates <- st_coordinates(dots_wgs84)
+retiree_dots <- tibble(
+  longitude = coords[, 1],
+  latitude = coords[, 2]
+)
 
-retiree_dots <- dots_wgs84 %>%
-  st_drop_geometry() %>%
-  mutate(
-    Longitude = coordinates[, 1],
-    Latitude = coordinates[, 2],
-    Dot_ID = row_number()
-  ) %>%
-  select(
-    Dot_ID,
-    SA1_CODE21,
-    Longitude,
-    Latitude,
-    Percentage,
-    Retirees_estimated,
-    Dot_count
-  )
-
-# Export the clean data
+# 9. Export for Vega-Lite
 write_csv(
   retiree_dots,
-  output_path
+  "data/clean/retiree_dots.csv"
 )
 
-cat("Generated dots:", nrow(retiree_dots), "\n")
-cat("Saved to:", output_path, "\n")
-
-print(head(retiree_dots))
-
-# Age Maps 
-
-
-
+cat("Dots generated:", nrow(retiree_dots), "\n")
+cat("Expected dots:", sum(sa1_retirees$Retirees), "\n")
 
