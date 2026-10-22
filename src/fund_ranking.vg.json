@@ -123,11 +123,30 @@
     ]
   },
   "config": {
-    "view": {
-      "stroke": null
+    "font": "Inter",
+    "title": {
+        "font": "Inter",
+        "fontSize": 16,
+        "fontWeight": 600,
+        "color": "#172B4D",
+        "anchor": "start"
     },
     "axis": {
-      "grid": true
+        "labelFont": "Inter",
+        "titleFont": "Inter",
+        "labelColor": "#344054",
+        "titleColor": "#344054",
+        "gridColor": "#E8EEF2",
+        "domainColor": "#CBD5E1"
+    },
+    "legend": {
+        "labelFont": "Inter",
+        "titleFont": "Inter",
+        "labelColor": "#344054",
+        "titleColor": "#172B4D"
+    },
+    "view": {
+        "stroke": null
     }
-  }
+}
 }

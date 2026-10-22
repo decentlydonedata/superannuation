@@ -1,24 +1,28 @@
-
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Average age by Australian Statistical Area Level 2.",
-  "width": 800,
-  "height": 600,
-  "projection": {
-    "type": "mercator",
-    "center": [134, -27],
-    "scale": 700
-  },
+  "width": 600,
+  "height": 450,
+  "title": "SA2 Boundary Test",
   "data": {
-    "url": "data/clean/sa2_age_joined.geojson",
+    "url": "data/boundaries/abs-sa2-2021_2021-06-25.geojson",
     "format": {
-      "type": "json"
+      "type": "json",
+      "property": "features"
     }
   },
   "transform": [
     {
-      "filter": "isValid(datum['Average Age'])"
+      "lookup": "properties.sa2_2021_name",
+      "from": {
+        "data": {
+          "url": "data/clean/sa2_age.csv",
+          "format": {
+            "type": "csv"
+          }
+        },
+        "key": "SA2_NAME",
+        "fields": ["Average_Age"]
+      }
     }
   ],
   "mark": {
@@ -26,41 +30,30 @@
     "stroke": "white",
     "strokeWidth": 0.3
   },
+  "projection": {
+    "type": "mercator"
+  },
   "encoding": {
     "color": {
-      "field": "Average Age",
+      "field": "Average_Age",
       "type": "quantitative",
-      "title": "Average age (years)",
+      "title": "Average age",
       "scale": {
         "scheme": "viridis"
-      },
-      "legend": {
-        "format": ".1f",
-        "orient": "bottom"
       }
     },
     "tooltip": [
-      {
-        "field": "SA2",
-        "type": "nominal",
-        "title": "SA2 code"
-      },
-      {
-        "field": "SA2_NAME21",
-        "type": "nominal",
-        "title": "SA2 name"
-      },
-      {
-        "field": "Average Age",
-        "type": "quantitative",
-        "title": "Average age",
-        "format": ".1f"
-      }
-    ]
+  {
+    "field": "properties.sa2_2021_name",
+    "type": "nominal",
+    "title": "SA2"
   },
-  "config": {
-    "view": {
-      "stroke": null
-    }
+  {
+    "field": "Average_Age",
+    "type": "quantitative",
+    "title": "Average Age",
+    "format": ".1f"
+  }
+]
   }
 }

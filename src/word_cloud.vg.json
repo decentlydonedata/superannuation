@@ -1,89 +1,140 @@
 
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Superannuation word frequency visualisation",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Word cloud showing superannuation-related word frequencies",
   "width": 800,
   "height": 450,
+  "padding": 12,
+  "autosize": "none",
   "background": "#FAFAF7",
-  "data": {
-    "url": "data/clean/word_cloud.csv",
-    "format": {
-      "type": "csv"
-    }
-  },
-  "transform": [
+  "data": [
     {
-      "filter": "datum.name != null && datum.name !== '' && datum.n > 0"
+      "name": "table",
+      "url": "data/clean/word_cloud.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "n": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.name != null && trim(datum.name) !== '' && isValid(datum.n) && datum.n > 0"
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "n",
+            "order": "descending"
+          }
+        },
+        {
+          "type": "formula",
+          "as": "angle",
+          "expr": "[-45, 0, 0, 0, 0, 45][floor(random() * 6)]"
+        }
+      ]
     }
   ],
-  "mark": {
-    "type": "text",
-    "font": "Arial",
-    "fontWeight": "bold",
-    "align": "center",
-    "baseline": "middle"
-  },
-  "encoding": {
-    "x": {
-      "field": "name",
-      "type": "nominal",
-      "axis": null,
-      "sort": {
-        "field": "n",
-        "order": "descending"
+  "scales": [
+    {
+      "name": "wordColor",
+      "type": "ordinal",
+      "domain": {
+        "data": "table",
+        "field": "name"
       },
-      "scale": {
-        "padding": 0.5
+      "range": [
+        "#19324D",
+        "#247C83",
+        "#C49A45",
+        "#54718C",
+        "#718B7A"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "from": {
+        "data": "table"
+      },
+      "transform": [
+        {
+          "type": "wordcloud",
+          "size": [
+            800,
+            450
+          ],
+          "text": {
+            "field": "name"
+          },
+          "font": "Inter",
+          "fontWeight": "bold",
+          "fontSize": {
+            "field": "n"
+          },
+          "fontSizeRange": [
+            13,
+            60
+          ],
+          "rotate": {
+            "field": "angle"
+          },
+          "padding": 3,
+          "spiral": "archimedean"
+        }
+      ],
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "alphabetic"
+          },
+          "fill": {
+            "scale": "wordColor",
+            "field": "name"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "font": {
+            "field": "font"
+          },
+          "fontSize": {
+            "field": "fontSize"
+          },
+          "fontWeight": {
+            "field": "fontWeight"
+          },
+          "angle": {
+            "field": "angle"
+          },
+          "fillOpacity": {
+            "value": 1
+          },
+          "tooltip": {
+            "signal": "{'Word': datum.name, 'Frequency': datum.n}"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 0.65
+          }
+        }
       }
-    },
-    "y": {
-      "field": "n",
-      "type": "quantitative",
-      "axis": null,
-      "scale": {
-        "zero": false
-      }
-    },
-    "text": {
-      "field": "name"
-    },
-    "size": {
-      "field": "n",
-      "type": "quantitative",
-      "scale": {
-        "range": [12, 55],
-        "type": "sqrt"
-      },
-      "legend": null
-    },
-    "color": {
-      "field": "name",
-      "type": "nominal",
-      "scale": {
-        "range": [
-          "#19324D",
-          "#247C83",
-          "#C49A45",
-          "#54718C",
-          "#718B7A"
-        ]
-      },
-      "legend": null
-    },
-    "tooltip": [
-      {
-        "field": "name",
-        "type": "nominal",
-        "title": "Word"
-      },
-      {
-        "field": "n",
-        "type": "quantitative",
-        "title": "Frequency"
-      }
-    ]
-  },
+    }
+  ],
   "config": {
+    "font": "Inter",
     "view": {
       "stroke": null
     }

@@ -1,74 +1,62 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Australian retiree dot-density map. Each dot represents approximately 100 retirees.",
-  "width": 800,
-  "height": 600,
+  "description": "Dot map showing the distribution of retirees across Australian SA1 areas. Each dot represents 100 retirees.",
+  "width": 700,
+  "height": 650,
   "projection": {
-    "type": "mercator",
-    "center": [134, -27],
-    "scale": 700
+    "type": "mercator"
   },
   "layer": [
     {
       "data": {
-        "url": "/data/boundaries/states.geojson",
+        "url": "data/boundaries/states.geojson",
         "format": {
-          "type": "json"
+          "type": "json",
+          "property": "features"
         }
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#f3f3f3",
-        "stroke": "#666666",
-        "strokeWidth": 1
+        "fill": "#f2f2f2",
+        "stroke": "#999999",
+        "strokeWidth": 0.5
       }
     },
     {
       "data": {
-        "url": "/data/clean/retiree_dots.csv",
+        "url": "data/clean/retiree_dots.csv",
         "format": {
           "type": "csv"
         }
       },
       "mark": {
         "type": "circle",
-        "size": 10,
+        "color": "#2878B5",
         "opacity": 0.55,
-        "color": "#287D8E"
+        "size": 5
       },
       "encoding": {
         "longitude": {
-          "field": "Longitude",
+          "field": "longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "Latitude",
+          "field": "latitude",
           "type": "quantitative"
         },
         "tooltip": [
           {
-            "field": "SA1_CODE21",
-            "type": "nominal",
-            "title": "SA1 code"
+            "field": "longitude",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "Longitude"
           },
           {
-            "field": "Percentage",
+            "field": "latitude",
             "type": "quantitative",
-            "title": "Retiree percentage",
-            "format": ".2%"
-          },
-          {
-            "field": "Retirees_estimated",
-            "type": "quantitative",
-            "title": "Estimated retirees",
-            "format": ",.0f"
-          },
-          {
-            "field": "Dot_count",
-            "type": "quantitative",
-            "title": "Dots in this SA1",
-            "format": ",.0f"
+            "format": ".3f",
+            "title": "Latitude"
           }
         ]
       }

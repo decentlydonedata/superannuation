@@ -222,6 +222,126 @@ raw_censusage <- read_csv(paste0(here(),"/src/data/raw/Age Range.csv"), skip = 8
     ) / rowSums(across(`0`:`115`), na.rm = TRUE)
   ) %>% filter(!is.na(`Average Age`)) %>% rename(SA2 = `AGEP Age`) %>%
   select(c(SA2, `Average Age`))
+write_csv(raw_censusage, here("src/data/clean", "sa2_age.csv"))
+
+
+library(sf)
+library(dplyr)
+library(readr)
+library(stringr)
+
+# --------------------------------------------------
+# 1. Read the data
+# --------------------------------------------------
+
+age_raw <- read_csv(
+  "src/data/clean/sa2_age.csv",
+  col_types = cols(
+    SA2 = col_character(),
+    `Average Age` = col_double()
+  ),
+  show_col_types = FALSE
+)
+
+sa2_boundaries <- st_read(
+  "src/data/boundaries/SA2_2021_AUST_GDA2020.shp",
+  quiet = TRUE
+)
+
+# Inspect the columns before joining
+names(age_raw)
+names(sa2_boundaries)
+
+# --------------------------------------------------
+# 2. Clean the CSV
+# --------------------------------------------------
+
+sa2_age <- age_raw %>%
+  mutate(
+    SA2 = str_trim(as.character(SA2)),
+    `Average Age` = as.numeric(`Average Age`)
+  ) %>%
+  filter(
+    !is.na(SA2),
+    !is.na(`Average Age`),
+    is.finite(`Average Age`)
+  )
+
+# Check duplicate SA2 identifiers
+duplicates <- sa2_age %>%
+  count(SA2) %>%
+  filter(n > 1)
+
+print(duplicates)
+
+if (nrow(duplicates) > 0) {
+  stop("Duplicate SA2 identifiers found. Inspect duplicates before joining.")
+}
+
+# --------------------------------------------------
+# 3. Prepare the ABS boundaries
+# --------------------------------------------------
+
+sa2_boundaries <- sa2_boundaries %>%
+  st_make_valid() %>%
+  mutate(
+    SA2 = str_trim(as.character(SA2_CODE21))
+  )
+
+# --------------------------------------------------
+# 4. Join average age to the polygons
+# --------------------------------------------------
+
+sa2_map <- sa2_boundaries %>%
+  left_join(sa2_age, by = "SA2")
+
+# Check the join
+cat("Number of SA2 polygons:", nrow(sa2_map), "\n")
+cat(
+  "SA2 polygons with average age:",
+  sum(!is.na(sa2_map$`Average Age`)),
+  "\n"
+)
+cat(
+  "SA2 polygons without average age:",
+  sum(is.na(sa2_map$`Average Age`)),
+  "\n"
+)
+
+# Find CSV records without a matching boundary
+unmatched <- sa2_age %>%
+  anti_join(
+    st_drop_geometry(sa2_boundaries) %>% distinct(SA2),
+    by = "SA2"
+  )
+
+print(unmatched)
+
+# --------------------------------------------------
+# 5. Export clean data for Vega-Lite
+# --------------------------------------------------
+
+dir.create(
+  "data/clean",
+  recursive = TRUE,
+  showWarnings = FALSE
+)
+
+write_csv(
+  sa2_map %>%
+    st_drop_geometry() %>%
+    select(SA2, SA2_NAME21, `Average Age`),
+  "data/clean/sa2_age_clean.csv"
+)
+
+# Export joined boundaries for inspection if needed
+st_write(
+  sa2_map,
+  "data/clean/sa2_age_joined.geojson",
+  delete_dsn = TRUE,
+  quiet = TRUE
+)
+
 
 # Benefit Reasons
 raw_benefitpayments <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
@@ -790,3 +910,9 @@ cat("Generated dots:", nrow(retiree_dots), "\n")
 cat("Saved to:", output_path, "\n")
 
 print(head(retiree_dots))
+
+# Age Maps 
+
+
+
+

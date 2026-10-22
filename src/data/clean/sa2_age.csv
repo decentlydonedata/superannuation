@@ -1,2412 +1,2412 @@
-SA2,Average Age
-Braidwood,46.03427651253738
-Karabar,38.541212334388554
-Queanbeyan,39.67611336032389
-Queanbeyan - East,38.29958636990349
-Queanbeyan West - Jerrabomberra,36.27766837337534
-Googong,28.779432964920712
-Queanbeyan Surrounds,39.7580245421024
-Bombala,45.08608731130151
-Cooma,43.2239336492891
-Cooma Surrounds,45.13321799307958
-Jindabyne - Berridale,38.851699150424786
-Batemans Bay,46.90736646107297
-Batemans Bay - South,48.93685393258427
-Bega - Tathra,44.08406680207628
-Bega-Eden Hinterland,45.286282306163024
-Broulee - Tomakin,47.5637707948244
+SA2_NAME,Average_Age
+Braidwood,46.03427651
+Karabar,38.54121233
+Queanbeyan,39.67611336
+Queanbeyan - East,38.29958637
+Queanbeyan West - Jerrabomberra,36.27766837
+Googong,28.77943296
+Queanbeyan Surrounds,39.75802454
+Bombala,45.08608731
+Cooma,43.22393365
+Cooma Surrounds,45.13321799
+Jindabyne - Berridale,38.85169915
+Batemans Bay,46.90736646
+Batemans Bay - South,48.93685393
+Bega - Tathra,44.0840668
+Bega-Eden Hinterland,45.28628231
+Broulee - Tomakin,47.56377079
 Deua - Wadbilliga,61
-Eden,47.2356005788712
-Eurobodalla Hinterland,47.31741096664782
-Merimbula - Tura Beach,49.226518854748605
-Moruya - Tuross Head,49.464344166471825
-Narooma - Bermagui,51.349757673667206
-Goulburn,41.11484502446982
-Goulburn Surrounds,44.31373825018077
-Yass,41.794212690951824
-Yass Surrounds,40.22243226212981
-Young,41.42557061016641
-Young Surrounds,44.854120412694265
-Avoca Beach - Copacabana,40.33961512939615
-Box Head - MacMasters Beach,45.59068627450981
-Calga - Kulnura,44.03802039082413
-Erina - Green Point,47.64549152542373
-Gosford - Springfield,40.67672007540057
-Kariong,35.958243451463794
-Kincumber - Picketts Valley,46.026429980276134
-Narara,38.33640167364017
-Niagara Park - Lisarow,39.318662613981765
-Point Clare - Koolewong,43.540956151035324
-Saratoga - Davistown,43.184287505223566
-Terrigal - North Avoca,41.55053084262868
-Umina - Booker Bay - Patonga,45.12820824224759
-Wamberal - Forresters Beach,40.74569932685116
-Woy Woy - Blackwall,45.31952580195258
-Wyoming,41.96155190492835
-Bateau Bay - Killarney Vale,41.3213143483023
-Blue Haven - San Remo,35.98531493276716
-Budgewoi - Buff Point - Halekulani,43.742607802874744
-Chittaway Bay - Tumbi Umbi,40.390214946263434
-Gorokan - Kanwal - Charmhaven,42.42011887205613
-Jilliby - Yarramalong,40.61549665016021
-Lake Munmorah - Mannering Park,47.76706461314134
-Ourimbah - Fountaindale,39.530290791599356
-Summerland Point - Gwandalan,42.72657450076805
-The Entrance,45.45960616006059
-Toukley - Norah Head,45.230993563958165
-Tuggerah - Kangy Angy,38.142609699769054
-Warnervale - Wadalba,36.001597364348825
-Wyong,40.15140186915888
-Bathurst - East,37.758199044457044
-Bathurst Surrounds,42.887590187590185
-Oberon,44.666182271123105
-Bathurst - South,42.328707153502236
-Bathurst - West,37.933085501858734
-Condobolin,41.10332860072567
-Cowra,43.58187926736751
-Cowra Surrounds,45.487945492662476
-Forbes,42.23862275449102
-Grenfell,47.169105233539675
-Parkes (NSW),40.267840763162724
-Parkes Surrounds,42.12875270813989
-West Wyalong,42.314007922218224
-Lithgow,44.15292220878678
-Lithgow Surrounds,43.719729344729345
-Mudgee,39.04882315521628
-Mudgee Surrounds - East,48.10761932997332
-Mudgee Surrounds - West,42.4720115565186
-Blayney,41.054540605414054
-Orange,41.2223915099296
-Orange - North,36.05317009182335
-Orange Surrounds,40.908467400508044
-Grafton,42.671277757553696
-Grafton Surrounds,44.90849285841285
-Maclean - Yamba - Iluka,49.22602544355069
-Bellingen,42.817621288333605
-Coffs Harbour - North,42.48252443266523
-Coffs Harbour - South,44.788877081119374
-Coramba - Nana Glen - Bucca,41.30045523520486
-Dorrigo,47.75438596491228
-Korora - Emerald Beach,41.15431194452583
-Sawtell - Boambee,43.050459173487724
-Urunga,48.10973630831643
-Woolgoolga - Arrawarra,42.60455113084501
-Bourke - Brewarrina,37.755131540907776
-Cobar,38.84494815529298
-Coonamble,39.19344094286446
-Nyngan - Warren,42.5044613710555
-Walgett - Lightning Ridge,42.07778989458379
-Broken Hill,42.95377530134182
-Far West,40.82904085257549
-Coonabarabran,45.558083680950574
-Dubbo - East,37.51929034074909
-Dubbo - South,38.01539795033906
-Dubbo - West,36.95575911128435
-Dubbo Surrounds,40.37523012552301
-Gilgandra,43.44274982927384
-Narromine,40.75274640259941
-Wellington,41.62947392341779
-Branxton - Greta - Pokolbin,36.661101967238814
-Cessnock,40.2005873340143
-Cessnock Surrounds,40.44433497536946
-Dungog,42.90141139571354
-Kurri Kurri - Abermain,37.34364244510156
-Singleton,36.79274520162
-Singleton Surrounds,39.73289719626168
-Maitland,35.9239990689013
-Maitland - North,38.40994500458295
-East Maitland - Metford,39.34305431878896
-Rutherford (North) - Aberglasslyn,36.82170280036134
-Rutherford (South) - Telarah,36.85128849780013
-Tenambit - East Maitland,41.52611237736597
-Thornton - Millers Forest,34.09537899773357
-Anna Bay,47.196342786300946
-Lemon Tree Passage - Tanilba Bay,45.75385286420471
-Nelson Bay Peninsula,49.743515063256574
-Raymond Terrace,39.21071428571429
-Seaham - Woodville,39.97343420126671
-Tea Gardens - Hawks Nest,58.595192806501814
-Williamtown - Medowie - Karuah,39.49091272218894
-Muswellbrook,36.85475724991854
-Muswellbrook Surrounds,40.49889894788353
-Scone,40.44068359050937
-Scone Surrounds,42.72824762368998
-Dapto - Avondale,41.27282883031983
-Horsley - Kembla Grange,34.789595185093575
-Unanderra - Mount Kembla,40.816432078559735
-Berkeley - Lake Heights - Cringila,39.66941391941392
-Port Kembla - Warrawong,42.12048935951475
-Windang - Primbee,47.2601375385345
-Albion Park - Macquarie Pass,35.96210769392253
-Albion Park Rail,41.5985549132948
-Kiama,47.466126824817515
-Kiama Downs - Minnamurra,42.300775449595776
-Kiama Hinterland - Gerringong,45.116013272704926
-Shellharbour - Flinders,38.921213060549704
-Shellharbour - Oak Flats,42.55189301186664
-Warilla,42.31020929547018
-Balgownie - Fairy Meadow,41.34735571342341
-Corrimal - Tarrawanna - Bellambi,41.18278096187391
-Figtree - Keiraville,38.25654104920628
-Helensburgh,37.78960123375193
-Thirroul - Austinmer - Coalcliff,40.68735362997658
-Woonona - Bulli - Russell Vale,40.56621158763085
-Wollongong - East,42.15383177570094
-Wollongong - West,37.87964698059602
-Bulahdelah - Stroud,45.8692175899486
-Forster,50.89234433480776
-Forster-Tuncurry Surrounds,47.40641099026903
-Tuncurry,55.04439581053619
-Kempsey,41.858219440541575
-Kempsey Surrounds,45.41751376535366
-Macksville - Scotts Head,46.09138030332117
-Nambucca Heads,50.4250316767563
-Nambucca Heads Surrounds,44.7110125646711
-South West Rocks,51.09966306082639
-Lord Howe Island,45.333333333333336
-Laurieton - Bonny Hills,51.13311337083513
-Port Macquarie - West,45.43938677013343
-Port Macquarie Surrounds,44.92733106832767
-Wauchope,41.777404484725366
-Port Macquarie - East,43.42654189706508
-Port Macquarie - South,46.13418087258018
-Gloucester,49.10642722117202
-Old Bar - Manning Point - Red Head,47.65539129037442
-Taree,44.2075534284225
-Taree Surrounds,49.09143819880533
-Wingham,44.072153533862334
-Albury - East,37.607783759533426
-Albury - North,40.07170026626093
-Albury - South,44.015009024413416
-Albury Surrounds,41.28147202043586
-Lavington,40.9354097523615
-Hay,44.33069511355816
-Wentworth - Buronga,41.279341639747734
-Wentworth-Balranald Region,41.14564440780434
-Corowa,47.7030303030303
-Corowa Surrounds,45.87300055157198
-Deniliquin,44.73384791309319
-Deniliquin Surrounds,44.702714600146734
-Moama,45.91671486408328
-Tocumwal - Finley - Jerilderie,47.39846074910211
-Armidale,38.84952023362536
-Armidale Surrounds - North,42.21957146012812
-Armidale Surrounds - South,43.491379310344826
-Walcha,45.94213554987212
-Glen Innes,46.23864399194451
-Inverell,41.641910912402714
-Inverell Surrounds - East,43.26320845341018
-Inverell Surrounds - West,45.74290687554395
-Tenterfield,48.87093451066961
-Moree,39.197465145754116
-Moree Surrounds,38.19753086419753
-Narrabri,40.06806966618287
-Narrabri Surrounds,40.54839405044191
-Gunnedah,38.85315259806942
-Gunnedah Surrounds,40.34687357371063
-Quirindi,43.74720744680851
-Tamworth - East,39.56968077626213
-Tamworth - North,40.361843697072345
-Tamworth - West,33.515075376884425
-Tamworth Surrounds,42.28280815812929
-Belmont - Bennetts Green,43.08173211584785
-Belmont South - Blacksmiths,45.30471648118707
-Charlestown - Dudley,39.402264718691846
-Glendale - Cardiff - Hillsborough,39.27313723896969
-Mount Hutton - Windale,41.423818047804566
-Redhead,45.92975970425139
-Swansea - Caves Beach,45.510478922623314
-Valentine - Eleebana,42.663694977314336
-Warners Bay - Boolaroo,43.09914087003955
-Bolton Point - Teralba,42.2413247652002
-Bonnells Bay - Silverwater,42.27328039599876
-Edgeworth - Cameron Park,36.339707948921614
-Morisset - Cooranbong,44.713260857568564
-Toronto - Awaba,45.35436684353937
-Wangi Wangi - Rathmines,44.94900969237253
-West Wallsend - Barnsley - Killingworth,38.6815988973122
-Adamstown - Kotara,38.503404639951796
-Beresfield - Hexham,40.45781724702033
-Hamilton - Broadmeadow,41.44148310731363
-Lambton - New Lambton,40.02318071733364
-Maryland - Fletcher - Minmi,34.36577650708681
-Mayfield - Warabrook,39.56490121629449
-Merewether - The Junction,39.96091115546074
-Newcastle - Cooks Hill,41.20031225604996
+Eden,47.23560058
+Eurobodalla Hinterland,47.31741097
+Merimbula - Tura Beach,49.22651885
+Moruya - Tuross Head,49.46434417
+Narooma - Bermagui,51.34975767
+Goulburn,41.11484502
+Goulburn Surrounds,44.31373825
+Yass,41.79421269
+Yass Surrounds,40.22243226
+Young,41.42557061
+Young Surrounds,44.85412041
+Avoca Beach - Copacabana,40.33961513
+Box Head - MacMasters Beach,45.59068627
+Calga - Kulnura,44.03802039
+Erina - Green Point,47.64549153
+Gosford - Springfield,40.67672008
+Kariong,35.95824345
+Kincumber - Picketts Valley,46.02642998
+Narara,38.33640167
+Niagara Park - Lisarow,39.31866261
+Point Clare - Koolewong,43.54095615
+Saratoga - Davistown,43.18428751
+Terrigal - North Avoca,41.55053084
+Umina - Booker Bay - Patonga,45.12820824
+Wamberal - Forresters Beach,40.74569933
+Woy Woy - Blackwall,45.3195258
+Wyoming,41.9615519
+Bateau Bay - Killarney Vale,41.32131435
+Blue Haven - San Remo,35.98531493
+Budgewoi - Buff Point - Halekulani,43.7426078
+Chittaway Bay - Tumbi Umbi,40.39021495
+Gorokan - Kanwal - Charmhaven,42.42011887
+Jilliby - Yarramalong,40.61549665
+Lake Munmorah - Mannering Park,47.76706461
+Ourimbah - Fountaindale,39.53029079
+Summerland Point - Gwandalan,42.7265745
+The Entrance,45.45960616
+Toukley - Norah Head,45.23099356
+Tuggerah - Kangy Angy,38.1426097
+Warnervale - Wadalba,36.00159736
+Wyong,40.15140187
+Bathurst - East,37.75819904
+Bathurst Surrounds,42.88759019
+Oberon,44.66618227
+Bathurst - South,42.32870715
+Bathurst - West,37.9330855
+Condobolin,41.1033286
+Cowra,43.58187927
+Cowra Surrounds,45.48794549
+Forbes,42.23862275
+Grenfell,47.16910523
+Parkes (NSW),40.26784076
+Parkes Surrounds,42.12875271
+West Wyalong,42.31400792
+Lithgow,44.15292221
+Lithgow Surrounds,43.71972934
+Mudgee,39.04882316
+Mudgee Surrounds - East,48.10761933
+Mudgee Surrounds - West,42.47201156
+Blayney,41.05454061
+Orange,41.22239151
+Orange - North,36.05317009
+Orange Surrounds,40.9084674
+Grafton,42.67127776
+Grafton Surrounds,44.90849286
+Maclean - Yamba - Iluka,49.22602544
+Bellingen,42.81762129
+Coffs Harbour - North,42.48252443
+Coffs Harbour - South,44.78887708
+Coramba - Nana Glen - Bucca,41.30045524
+Dorrigo,47.75438596
+Korora - Emerald Beach,41.15431194
+Sawtell - Boambee,43.05045917
+Urunga,48.10973631
+Woolgoolga - Arrawarra,42.60455113
+Bourke - Brewarrina,37.75513154
+Cobar,38.84494816
+Coonamble,39.19344094
+Nyngan - Warren,42.50446137
+Walgett - Lightning Ridge,42.07778989
+Broken Hill,42.9537753
+Far West,40.82904085
+Coonabarabran,45.55808368
+Dubbo - East,37.51929034
+Dubbo - South,38.01539795
+Dubbo - West,36.95575911
+Dubbo Surrounds,40.37523013
+Gilgandra,43.44274983
+Narromine,40.7527464
+Wellington,41.62947392
+Branxton - Greta - Pokolbin,36.66110197
+Cessnock,40.20058733
+Cessnock Surrounds,40.44433498
+Dungog,42.9014114
+Kurri Kurri - Abermain,37.34364245
+Singleton,36.7927452
+Singleton Surrounds,39.7328972
+Maitland,35.92399907
+Maitland - North,38.409945
+East Maitland - Metford,39.34305432
+Rutherford (North) - Aberglasslyn,36.8217028
+Rutherford (South) - Telarah,36.8512885
+Tenambit - East Maitland,41.52611238
+Thornton - Millers Forest,34.095379
+Anna Bay,47.19634279
+Lemon Tree Passage - Tanilba Bay,45.75385286
+Nelson Bay Peninsula,49.74351506
+Raymond Terrace,39.21071429
+Seaham - Woodville,39.9734342
+Tea Gardens - Hawks Nest,58.59519281
+Williamtown - Medowie - Karuah,39.49091272
+Muswellbrook,36.85475725
+Muswellbrook Surrounds,40.49889895
+Scone,40.44068359
+Scone Surrounds,42.72824762
+Dapto - Avondale,41.27282883
+Horsley - Kembla Grange,34.78959519
+Unanderra - Mount Kembla,40.81643208
+Berkeley - Lake Heights - Cringila,39.66941392
+Port Kembla - Warrawong,42.12048936
+Windang - Primbee,47.26013754
+Albion Park - Macquarie Pass,35.96210769
+Albion Park Rail,41.59855491
+Kiama,47.46612682
+Kiama Downs - Minnamurra,42.30077545
+Kiama Hinterland - Gerringong,45.11601327
+Shellharbour - Flinders,38.92121306
+Shellharbour - Oak Flats,42.55189301
+Warilla,42.3102093
+Balgownie - Fairy Meadow,41.34735571
+Corrimal - Tarrawanna - Bellambi,41.18278096
+Figtree - Keiraville,38.25654105
+Helensburgh,37.78960123
+Thirroul - Austinmer - Coalcliff,40.68735363
+Woonona - Bulli - Russell Vale,40.56621159
+Wollongong - East,42.15383178
+Wollongong - West,37.87964698
+Bulahdelah - Stroud,45.86921759
+Forster,50.89234433
+Forster-Tuncurry Surrounds,47.40641099
+Tuncurry,55.04439581
+Kempsey,41.85821944
+Kempsey Surrounds,45.41751377
+Macksville - Scotts Head,46.0913803
+Nambucca Heads,50.42503168
+Nambucca Heads Surrounds,44.71101256
+South West Rocks,51.09966306
+Lord Howe Island,45.33333333
+Laurieton - Bonny Hills,51.13311337
+Port Macquarie - West,45.43938677
+Port Macquarie Surrounds,44.92733107
+Wauchope,41.77740448
+Port Macquarie - East,43.4265419
+Port Macquarie - South,46.13418087
+Gloucester,49.10642722
+Old Bar - Manning Point - Red Head,47.65539129
+Taree,44.20755343
+Taree Surrounds,49.0914382
+Wingham,44.07215353
+Albury - East,37.60778376
+Albury - North,40.07170027
+Albury - South,44.01500902
+Albury Surrounds,41.28147202
+Lavington,40.93540975
+Hay,44.33069511
+Wentworth - Buronga,41.27934164
+Wentworth-Balranald Region,41.14564441
+Corowa,47.7030303
+Corowa Surrounds,45.87300055
+Deniliquin,44.73384791
+Deniliquin Surrounds,44.7027146
+Moama,45.91671486
+Tocumwal - Finley - Jerilderie,47.39846075
+Armidale,38.84952023
+Armidale Surrounds - North,42.21957146
+Armidale Surrounds - South,43.49137931
+Walcha,45.94213555
+Glen Innes,46.23864399
+Inverell,41.64191091
+Inverell Surrounds - East,43.26320845
+Inverell Surrounds - West,45.74290688
+Tenterfield,48.87093451
+Moree,39.19746515
+Moree Surrounds,38.19753086
+Narrabri,40.06806967
+Narrabri Surrounds,40.54839405
+Gunnedah,38.8531526
+Gunnedah Surrounds,40.34687357
+Quirindi,43.74720745
+Tamworth - East,39.56968078
+Tamworth - North,40.3618437
+Tamworth - West,33.51507538
+Tamworth Surrounds,42.28280816
+Belmont - Bennetts Green,43.08173212
+Belmont South - Blacksmiths,45.30471648
+Charlestown - Dudley,39.40226472
+Glendale - Cardiff - Hillsborough,39.27313724
+Mount Hutton - Windale,41.42381805
+Redhead,45.9297597
+Swansea - Caves Beach,45.51047892
+Valentine - Eleebana,42.66369498
+Warners Bay - Boolaroo,43.09914087
+Bolton Point - Teralba,42.24132477
+Bonnells Bay - Silverwater,42.2732804
+Edgeworth - Cameron Park,36.33970795
+Morisset - Cooranbong,44.71326086
+Toronto - Awaba,45.35436684
+Wangi Wangi - Rathmines,44.94900969
+West Wallsend - Barnsley - Killingworth,38.6815989
+Adamstown - Kotara,38.50340464
+Beresfield - Hexham,40.45781725
+Hamilton - Broadmeadow,41.44148311
+Lambton - New Lambton,40.02318072
+Maryland - Fletcher - Minmi,34.36577651
+Mayfield - Warabrook,39.56490122
+Merewether - The Junction,39.96091116
+Newcastle - Cooks Hill,41.20031226
 Newcastle Port - Kooragang,27
-Shortland - Jesmond,34.76725916521187
-Stockton - Fullerton Cove,45.73174872665535
-Wallsend - Elermore Vale,41.75544748009345
-Waratah - North Lambton,40.18751940391183
-Wickham - Carrington - Tighes Hill,38.092665356908974
-Ballina,49.33148933884741
-Ballina Surrounds,43.52662850913055
-Bangalow,40.85167601783916
-Brunswick Heads - Ocean Shores,42.17212847033206
-Byron Bay,41.12259306803595
-Evans Head,46.07142857142857
-Lennox Head - Skennars Head,40.69356064719296
-Mullumbimby,42.911045722046175
-Casino,42.5096286666125
-Casino Surrounds,43.85066521857182
-Goonellabah,41.942394106814
-Kyogle,45.86450256275463
-Lismore,41.50939429772698
-Lismore Surrounds,43.47995447072214
-Kingscliff - Fingal Head,43.83105146017401
-Murwillumbah,44.18107427612254
-Murwillumbah Surrounds,43.90116054158607
-Pottsville,41.865688567580975
-Tweed Heads,47.24349767080745
-Banora Point,46.24998467855611
-Terranora - North Tumbulgum,40.42027677496991
-Tweed Heads South,50.075793462813834
-Griffith (NSW),38.74412608843703
-Griffith Surrounds,39.46076742364918
-Leeton,39.07248477819658
-Narrandera,42.40241209444539
-Tumbarumba,44.16572077185017
-Tumut,41.68065583634176
-Tumut Surrounds,44.16009232060428
-Cootamundra,46.58313786812614
-Gundagai,42.108230892570816
-Junee,41.34041548630784
-Temora,44.65001522997259
-Wagga Wagga - East,39.43631100082713
-Wagga Wagga - North,34.7868237814676
-Wagga Wagga - South,37.46506879715934
-Wagga Wagga - West,40.21615083006591
-Wagga Wagga Surrounds,37.664175750084276
-Berry - Kangaroo Valley,50.02315545732028
-Callala Bay - Currarong,48.476386600768805
-Culburra Beach,48.82056332479811
-Ettrema - Sassafras - Budawang,54.13461538461539
-Huskisson - Vincentia,47.320016390084
-North Nowra - Bomaderry,42.72431592039801
-Nowra,38.87109063524409
-St Georges Basin - Erowal Bay,46.47089669638175
-Sussex Inlet - Berrara,53.66695005313496
-Tomerong - Wandandian - Woollamia,43.54859611231102
-Ulladulla,47.506924069944844
-Ulladulla Surrounds,49.19121934488081
-Bowral,51.015750915750914
-Hill Top - Colo Vale,37.66488609583661
-Mittagong,43.152562574493444
-Moss Vale - Berrima,43.2428343200827
-Robertson - Fitzroy Falls,45.15191855912295
-Southern Highlands,47.64618585298197
-Baulkham Hills - East,38.502041641398826
-Baulkham Hills (West) - Bella Vista,39.562523071244
-Glenhaven,45.47205260685768
-West Pennant Hills,41.89970781015557
-Castle Hill - Central,38.81001951854262
-Castle Hill - East,51.279208267647576
-Castle Hill - North,40.9544185282523
-Castle Hill - South,39.47865620214395
-Castle Hill - West,38.814607824243595
-Cherrybrook,41.16118714278223
-Kellyville - East,36.741025496071
-Kellyville - West,36.8727032967033
-Dural - Kenthurst - Wisemans Ferry,41.55659286920957
-Galston - Laughtondale,43.588235294117645
-Bilpin - Colo - St Albans,43.99929627023223
-Kurrajong Heights - Ebenezer,38.940314704286486
-Pitt Town - McGraths Hill,38.40569176882662
-Box Hill - Nelson,30.303186322129395
-North Kellyville,31.57094439338235
-Rouse Hill - Beaumont Hills,35.0406397632193
-Blacktown (East) - Kings Park,35.57796331138288
-Blacktown (North) - Marayong,36.3046241933136
-Doonside - Woodcroft,36.84250555460605
-Lalor Park - Kings Langley,38.56673632743188
-Blacktown - South,36.92891145668042
-Blacktown - West,37.194130003500995
-Seven Hills - Prospect,38.45587938345561
-Toongabbie - West,35.95644283121597
-Glenwood,35.953109201213344
-Acacia Gardens,34.91805063980397
-Quakers Hill,34.24814469362099
-Kellyville Ridge - The Ponds,33.1810500332289
-Marsden Park - Shanes Park,29.405957830936874
-Riverstone,32.35554913712181
-Schofields (West) - Colebee,30.735135135135135
-Schofields - East,29.121455557764964
-Stanhope Gardens - Parklea,35.526778882938025
-Bidwill - Hebersham - Emerton,34.84588394062078
-Glendenning - Dean Park,34.679548727796444
-Hassall Grove - Plumpton,34.89777176953198
-Lethbridge Park - Tregear,33.11207016566894
-Mount Druitt - Whalan,34.63701828656222
+Shortland - Jesmond,34.76725917
+Stockton - Fullerton Cove,45.73174873
+Wallsend - Elermore Vale,41.75544748
+Waratah - North Lambton,40.1875194
+Wickham - Carrington - Tighes Hill,38.09266536
+Ballina,49.33148934
+Ballina Surrounds,43.52662851
+Bangalow,40.85167602
+Brunswick Heads - Ocean Shores,42.17212847
+Byron Bay,41.12259307
+Evans Head,46.07142857
+Lennox Head - Skennars Head,40.69356065
+Mullumbimby,42.91104572
+Casino,42.50962867
+Casino Surrounds,43.85066522
+Goonellabah,41.94239411
+Kyogle,45.86450256
+Lismore,41.5093943
+Lismore Surrounds,43.47995447
+Kingscliff - Fingal Head,43.83105146
+Murwillumbah,44.18107428
+Murwillumbah Surrounds,43.90116054
+Pottsville,41.86568857
+Tweed Heads,47.24349767
+Banora Point,46.24998468
+Terranora - North Tumbulgum,40.42027677
+Tweed Heads South,50.07579346
+Griffith (NSW),38.74412609
+Griffith Surrounds,39.46076742
+Leeton,39.07248478
+Narrandera,42.40241209
+Tumbarumba,44.16572077
+Tumut,41.68065584
+Tumut Surrounds,44.16009232
+Cootamundra,46.58313787
+Gundagai,42.10823089
+Junee,41.34041549
+Temora,44.65001523
+Wagga Wagga - East,39.436311
+Wagga Wagga - North,34.78682378
+Wagga Wagga - South,37.4650688
+Wagga Wagga - West,40.21615083
+Wagga Wagga Surrounds,37.66417575
+Berry - Kangaroo Valley,50.02315546
+Callala Bay - Currarong,48.4763866
+Culburra Beach,48.82056332
+Ettrema - Sassafras - Budawang,54.13461538
+Huskisson - Vincentia,47.32001639
+North Nowra - Bomaderry,42.72431592
+Nowra,38.87109064
+St Georges Basin - Erowal Bay,46.4708967
+Sussex Inlet - Berrara,53.66695005
+Tomerong - Wandandian - Woollamia,43.54859611
+Ulladulla,47.50692407
+Ulladulla Surrounds,49.19121934
+Bowral,51.01575092
+Hill Top - Colo Vale,37.6648861
+Mittagong,43.15256257
+Moss Vale - Berrima,43.24283432
+Robertson - Fitzroy Falls,45.15191856
+Southern Highlands,47.64618585
+Baulkham Hills - East,38.50204164
+Baulkham Hills (West) - Bella Vista,39.56252307
+Glenhaven,45.47205261
+West Pennant Hills,41.89970781
+Castle Hill - Central,38.81001952
+Castle Hill - East,51.27920827
+Castle Hill - North,40.95441853
+Castle Hill - South,39.4786562
+Castle Hill - West,38.81460782
+Cherrybrook,41.16118714
+Kellyville - East,36.7410255
+Kellyville - West,36.8727033
+Dural - Kenthurst - Wisemans Ferry,41.55659287
+Galston - Laughtondale,43.58823529
+Bilpin - Colo - St Albans,43.99929627
+Kurrajong Heights - Ebenezer,38.9403147
+Pitt Town - McGraths Hill,38.40569177
+Box Hill - Nelson,30.30318632
+North Kellyville,31.57094439
+Rouse Hill - Beaumont Hills,35.04063976
+Blacktown (East) - Kings Park,35.57796331
+Blacktown (North) - Marayong,36.30462419
+Doonside - Woodcroft,36.84250555
+Lalor Park - Kings Langley,38.56673633
+Blacktown - South,36.92891146
+Blacktown - West,37.19413
+Seven Hills - Prospect,38.45587938
+Toongabbie - West,35.95644283
+Glenwood,35.9531092
+Acacia Gardens,34.91805064
+Quakers Hill,34.24814469
+Kellyville Ridge - The Ponds,33.18105003
+Marsden Park - Shanes Park,29.40595783
+Riverstone,32.35554914
+Schofields (West) - Colebee,30.73513514
+Schofields - East,29.12145556
+Stanhope Gardens - Parklea,35.52677888
+Bidwill - Hebersham - Emerton,34.84588394
+Glendenning - Dean Park,34.67954873
+Hassall Grove - Plumpton,34.89777177
+Lethbridge Park - Tregear,33.11207017
+Mount Druitt - Whalan,34.63701829
 Prospect Reservoir,34
-Rooty Hill - Minchinbury,37.55259239796812
-Banksmeadow,33.87048832271762
-Botany,37.03964144965613
-Pagewood - Hillsdale - Daceyville,38.027312775330394
+Rooty Hill - Minchinbury,37.5525924
+Banksmeadow,33.87048832
+Botany,37.03964145
+Pagewood - Hillsdale - Daceyville,38.02731278
 Port Botany Industrial,64.5
 Sydney Airport,19
-Eastlakes,41.68426903835464
-Mascot,33.58547542957714
-Petersham - Stanmore,38.255141549756125
-Sydenham - Tempe - St Peters,37.52572463768116
-Marrickville - North,39.187525412702286
-Marrickville - South,40.00621986162555
-Darlinghurst,40.521120120686405
-Erskineville - Alexandria,35.949594347029574
-Glebe - Forest Lodge,39.09774362006109
-Potts Point - Woolloomooloo,43.3982845832417
-Surry Hills,39.44773100745797
-Camperdown - Darlington,33.27938691769249
-Chippendale,31.328628256127292
-Newtown (NSW),36.80175881109823
-Pyrmont,39.42490290877387
-Redfern,39.88880760790051
-Rosebery - Beaconsfield,34.58125915080527
-Sydney (North) - Millers Point,41.38941043935411
-Sydney (South) - Haymarket,33.54730918044319
-Ultimo,33.682535401213755
-Waterloo,37.12108610567515
-Zetland,31.690560962101433
-Bondi - Tamarama - Bronte,37.836683285226975
-Bondi Beach - North Bondi,36.077056862650366
-Bondi Junction - Waverly,39.444820773355914
-Dover Heights,38.97817657137704
-Paddington - Moore Park,39.81599242321742
-Rose Bay - Vaucluse - Watsons Bay,42.514084507042256
-Woollahra,43.15538171027785
-Bellevue Hill,41.14004421721708
-Double Bay - Darling Point,45.00953815261044
-Kensington (NSW),36.68667568481569
-Kingsford,37.60437945477258
-Maroubra - North,42.159209583290675
-Maroubra - South,40.64245709123758
-Maroubra - West,39.244765196178086
-Randwick - North,39.21157647640227
-Randwick - South,38.27260607011215
-Coogee - Clovelly,37.293292370711725
-Malabar - La Perouse,43.565796883799514
-Matraville - Chifley,40.349110213847766
-South Coogee,40.40952041362097
-Bass Hill - Georges Hall,37.11680637049455
-Chullora,31.65863453815261
-Condell Park,35.69106389626621
-Padstow,41.12187754153596
-Revesby,39.18889579917453
-Yagoona - Birrong,36.75470100704037
-Bankstown - North,35.304639660857276
-Bankstown - South,36.513726556129384
-Greenacre - North,36.64178900648685
-Greenacre - South,34.998358208955224
-Panania (North) - Milperra,38.60654436408538
-Panania (South) - Picnic Point,39.11364773580185
-Belmore - Belfield,39.9988204649334
-Punchbowl,35.90082836932241
-Roselands,38.70169048927983
-Lakemba,33.487853421530176
-Wiley Park,33.305448812690905
-Campsie - North,40.15464696499035
-Campsie - South,38.98949695964621
-Canterbury - South,38.13863654963581
-Earlwood,42.496129211918685
-Kingsgrove - North,40.632846363782306
-Narwee - Beverly Hills,41.330357142857146
-Oatley - Hurstville Grove,41.52584144201627
-Peakhurst - Lugarno,41.777073533052736
-Riverwood,41.45492933471217
-South Hurstville - Blakehurst,39.97594460929773
-Hurstville - Central,35.5973271353864
-Hurstville - North,41.381176665014046
-Mortdale - Oatley,39.91333605220228
-Penshurst,39.47458337700451
-Kingsgrove (South) - Bardwell Park,41.58751350517055
-Kogarah,38.28580199539524
-Kogarah Bay - Carlton - Allawah,40.0813444341659
-Monterey - Brighton-le-Sands - Kyeemagh,43.177691589456295
-Rockdale - Banksia,38.077581002213726
-Sans Souci - Ramsgate,43.54976587825669
-Arncliffe - Bardwell Valley,37.18404280904281
-Bexley - North,40.00327836280548
-Bexley - South,39.85229137735134
-Wolli Creek,31.58601099003446
-Concord - Mortlake - Cabarita,42.63706296728467
-Drummoyne - Rodd Point,41.89723190932868
-Five Dock - Abbotsford,42.051191442624514
-Concord West - North Strathfield,38.35931174089069
-Rhodes,33.60474446188732
-Balmain,41.61767531219981
-Lilyfield - Rozelle,39.49198671671961
-Annandale (NSW),38.97198525539758
-Leichhardt,37.59285673532265
-Canterbury (North) - Ashbury,39.46760493004663
-Croydon Park - Enfield,41.40810236988581
-Dulwich Hill - Lewisham,38.796442908117754
-Haberfield - Summer Hill,41.03193450844458
-Homebush,32.72478254601374
-Strathfield South,39.16009920088179
-Ashfield - North,39.03924482125689
-Ashfield - South,41.95502775057133
-Burwood (NSW),36.35298175205368
-Croydon,41.963752276867034
-Strathfield - East,36.31419700474857
-Strathfield - West,41.384740435677905
-Chatswood (West) - Lane Cove North,38.14587837202745
-St Leonards - Naremburn,37.17190775681342
-Artarmon,37.41286549707603
-Castle Cove - Northbridge,42.07906078169119
-Chatswood - East,38.78071428571429
-Greenwich - Riverview,40.46128232925507
-Lane Cove,38.27403120281832
-Willoughby,39.10691194581281
-Asquith - Mount Colah,37.93190890945382
-Berowra - Brooklyn - Cowan,39.69538278730266
-Normanhurst - Thornleigh - Westleigh,40.155508121615995
-Hornsby - East,37.86353730092205
-Hornsby - West,39.90625882352941
-Wahroonga (West) - Waitara,39.43956876947696
+Eastlakes,41.68426904
+Mascot,33.58547543
+Petersham - Stanmore,38.25514155
+Sydenham - Tempe - St Peters,37.52572464
+Marrickville - North,39.18752541
+Marrickville - South,40.00621986
+Darlinghurst,40.52112012
+Erskineville - Alexandria,35.94959435
+Glebe - Forest Lodge,39.09774362
+Potts Point - Woolloomooloo,43.39828458
+Surry Hills,39.44773101
+Camperdown - Darlington,33.27938692
+Chippendale,31.32862826
+Newtown (NSW),36.80175881
+Pyrmont,39.42490291
+Redfern,39.88880761
+Rosebery - Beaconsfield,34.58125915
+Sydney (North) - Millers Point,41.38941044
+Sydney (South) - Haymarket,33.54730918
+Ultimo,33.6825354
+Waterloo,37.12108611
+Zetland,31.69056096
+Bondi - Tamarama - Bronte,37.83668329
+Bondi Beach - North Bondi,36.07705686
+Bondi Junction - Waverly,39.44482077
+Dover Heights,38.97817657
+Paddington - Moore Park,39.81599242
+Rose Bay - Vaucluse - Watsons Bay,42.51408451
+Woollahra,43.15538171
+Bellevue Hill,41.14004422
+Double Bay - Darling Point,45.00953815
+Kensington (NSW),36.68667568
+Kingsford,37.60437945
+Maroubra - North,42.15920958
+Maroubra - South,40.64245709
+Maroubra - West,39.2447652
+Randwick - North,39.21157648
+Randwick - South,38.27260607
+Coogee - Clovelly,37.29329237
+Malabar - La Perouse,43.56579688
+Matraville - Chifley,40.34911021
+South Coogee,40.40952041
+Bass Hill - Georges Hall,37.11680637
+Chullora,31.65863454
+Condell Park,35.6910639
+Padstow,41.12187754
+Revesby,39.1888958
+Yagoona - Birrong,36.75470101
+Bankstown - North,35.30463966
+Bankstown - South,36.51372656
+Greenacre - North,36.64178901
+Greenacre - South,34.99835821
+Panania (North) - Milperra,38.60654436
+Panania (South) - Picnic Point,39.11364774
+Belmore - Belfield,39.99882046
+Punchbowl,35.90082837
+Roselands,38.70169049
+Lakemba,33.48785342
+Wiley Park,33.30544881
+Campsie - North,40.15464696
+Campsie - South,38.98949696
+Canterbury - South,38.13863655
+Earlwood,42.49612921
+Kingsgrove - North,40.63284636
+Narwee - Beverly Hills,41.33035714
+Oatley - Hurstville Grove,41.52584144
+Peakhurst - Lugarno,41.77707353
+Riverwood,41.45492933
+South Hurstville - Blakehurst,39.97594461
+Hurstville - Central,35.59732714
+Hurstville - North,41.38117667
+Mortdale - Oatley,39.91333605
+Penshurst,39.47458338
+Kingsgrove (South) - Bardwell Park,41.58751351
+Kogarah,38.285802
+Kogarah Bay - Carlton - Allawah,40.08134443
+Monterey - Brighton-le-Sands - Kyeemagh,43.17769159
+Rockdale - Banksia,38.077581
+Sans Souci - Ramsgate,43.54976588
+Arncliffe - Bardwell Valley,37.18404281
+Bexley - North,40.00327836
+Bexley - South,39.85229138
+Wolli Creek,31.58601099
+Concord - Mortlake - Cabarita,42.63706297
+Drummoyne - Rodd Point,41.89723191
+Five Dock - Abbotsford,42.05119144
+Concord West - North Strathfield,38.35931174
+Rhodes,33.60474446
+Balmain,41.61767531
+Lilyfield - Rozelle,39.49198672
+Annandale (NSW),38.97198526
+Leichhardt,37.59285674
+Canterbury (North) - Ashbury,39.46760493
+Croydon Park - Enfield,41.40810237
+Dulwich Hill - Lewisham,38.79644291
+Haberfield - Summer Hill,41.03193451
+Homebush,32.72478255
+Strathfield South,39.1600992
+Ashfield - North,39.03924482
+Ashfield - South,41.95502775
+Burwood (NSW),36.35298175
+Croydon,41.96375228
+Strathfield - East,36.314197
+Strathfield - West,41.38474044
+Chatswood (West) - Lane Cove North,38.14587837
+St Leonards - Naremburn,37.17190776
+Artarmon,37.4128655
+Castle Cove - Northbridge,42.07906078
+Chatswood - East,38.78071429
+Greenwich - Riverview,40.46128233
+Lane Cove,38.2740312
+Willoughby,39.10691195
+Asquith - Mount Colah,37.93190891
+Berowra - Brooklyn - Cowan,39.69538279
+Normanhurst - Thornleigh - Westleigh,40.15550812
+Hornsby - East,37.8635373
+Hornsby - West,39.90625882
+Wahroonga (West) - Waitara,39.43956877
 Gordon - Killara,40.42875
-Lindfield - Roseville,39.683114347313186
-Pymble,39.396341463414636
-St Ives,41.663681683899554
-Turramurra,43.37312475325701
-Wahroonga (East) - Warrawee,41.57713468309859
-Cremorne - Cammeray,41.24861118459341
-Crows Nest - Waverton,39.585277374707
-Neutral Bay - Kirribilli,42.60257380772142
-North Sydney - Lavender Bay,41.095031355523396
-Mosman - North,44.4395293092177
-Mosman - South,42.1595138364348
-Balgowlah - Clontarf - Seaforth,39.36601464636732
-Manly - Fairlight,40.2202489848735
-Avalon - Palm Beach,44.50445605408728
-Bayview - Elanora Heights,45.17526690391459
-Newport - Bilgola,42.782828282828284
-Mona Vale - Warriewood (North),43.9125436255389
-North Narrabeen - Warriewood (South),38.47501150483203
-Beacon Hill - Narraweena,40.35877548218821
-Cromer,41.050292543259054
-Forestville - Killarney Heights,40.69292055542909
-Freshwater - Brookvale,37.91628503388899
-Manly Vale - Allambie Heights,39.021640091116176
-Terrey Hills - Duffys Forest,43.51332805489575
-Belrose,44.34287693373355
-Collaroy - Collaroy Plateau,40.13464837049743
-Dee Why (South) - North Curl Curl,37.70253863134658
-Dee Why - North,38.07966739704478
-Frenchs Forest - Oxford Falls,39.05083362481054
-Narrabeen - Wheeler Heights,45.746771176627774
-Camden - Ellis Lane,42.10987440776115
-Currans Hill,31.696658896658896
-Elderslie - Narellan,35.21302325581395
-Harrington Park,34.72867045858514
-Mount Annan,34.718534867833306
-Spring Farm,28.974652923853597
+Lindfield - Roseville,39.68311435
+Pymble,39.39634146
+St Ives,41.66368168
+Turramurra,43.37312475
+Wahroonga (East) - Warrawee,41.57713468
+Cremorne - Cammeray,41.24861118
+Crows Nest - Waverton,39.58527737
+Neutral Bay - Kirribilli,42.60257381
+North Sydney - Lavender Bay,41.09503136
+Mosman - North,44.43952931
+Mosman - South,42.15951384
+Balgowlah - Clontarf - Seaforth,39.36601465
+Manly - Fairlight,40.22024898
+Avalon - Palm Beach,44.50445605
+Bayview - Elanora Heights,45.1752669
+Newport - Bilgola,42.78282828
+Mona Vale - Warriewood (North),43.91254363
+North Narrabeen - Warriewood (South),38.4750115
+Beacon Hill - Narraweena,40.35877548
+Cromer,41.05029254
+Forestville - Killarney Heights,40.69292056
+Freshwater - Brookvale,37.91628503
+Manly Vale - Allambie Heights,39.02164009
+Terrey Hills - Duffys Forest,43.51332805
+Belrose,44.34287693
+Collaroy - Collaroy Plateau,40.13464837
+Dee Why (South) - North Curl Curl,37.70253863
+Dee Why - North,38.0796674
+Frenchs Forest - Oxford Falls,39.05083362
+Narrabeen - Wheeler Heights,45.74677118
+Camden - Ellis Lane,42.10987441
+Currans Hill,31.6966589
+Elderslie - Narellan,35.21302326
+Harrington Park,34.72867046
+Mount Annan,34.71853487
+Spring Farm,28.97465292
 Bradbury - Wedderburn,34.9768
-Campbelltown - Woodbine,36.90922281672259
-Claymore - Eagle Vale - Raby,35.62292325949367
-Leumeah - Minto Heights,38.36774270541202
-Minto - St Andrews,35.591759246238226
-Rosemeadow - Glen Alpine,38.31706165612312
-Denham Court - Bardia,30.71530440632358
-Glenfield,37.26916508538899
-Ingleburn,37.55240318429401
-Macquarie Fields,36.27242641881425
-Bargo,39.59839491723792
-Douglas Park - Appin,36.95677570093458
-Picton - Tahmoor - Buxton,37.886569204880104
-The Oaks - Oakdale,38.09326002850743
-Blackheath - Megalong Valley,47.90886998784933
-Blaxland - Warrimoo - Lapstone,40.161327713382505
+Campbelltown - Woodbine,36.90922282
+Claymore - Eagle Vale - Raby,35.62292326
+Leumeah - Minto Heights,38.36774271
+Minto - St Andrews,35.59175925
+Rosemeadow - Glen Alpine,38.31706166
+Denham Court - Bardia,30.71530441
+Glenfield,37.26916509
+Ingleburn,37.55240318
+Macquarie Fields,36.27242642
+Bargo,39.59839492
+Douglas Park - Appin,36.9567757
+Picton - Tahmoor - Buxton,37.8865692
+The Oaks - Oakdale,38.09326003
+Blackheath - Megalong Valley,47.90886999
+Blaxland - Warrimoo - Lapstone,40.16132771
 Blue Mountains - North,60
-Katoomba - Leura,46.66298881633266
-Lawson - Hazelbrook - Linden,41.08668649405178
-Springwood - Winmalee,41.74002000545603
-Wentworth Falls,46.44003127443315
-Cambridge Park,36.91051482059282
-Emu Plains - Leonay,40.241106719367586
-Glenmore Park - Regentville,35.15935191803669
-Jamisontown - South Penrith,38.36023088023088
-Kingswood - Werrington,34.47064789646639
-Mulgoa - Luddenham - Orchard Hills,35.3981149386938
-Penrith,39.28940482155782
-Warragamba - Silverdale,35.49699097291876
-Cranebrook - Castlereagh,35.00521474189957
-Jordan Springs - Llandilo,29.937318110588762
-Richmond - Clarendon,41.55925974537341
-Windsor - Bligh Park,36.762425512409145
-Yarramundi - Londonderry,38.46476241324079
-Erskine Park,36.98846863468635
-St Clair,36.85818054303176
-Colyton - Oxley Park,35.43428834779937
-St Marys - North St Marys,36.47501008819969
-Auburn - Central,34.39678394018539
-Auburn - North,33.925333585691305
-Auburn - South,35.88511070944419
-Berala,39.04344787419919
-Lidcombe,37.767981109799294
-Regents Park,38.1217626594511
-Silverwater - Newington,36.066810577441984
-Wentworth Point - Sydney Olympic Park,32.402139247338205
-Ermington - Rydalmere,37.778876550214804
-Oatlands - Dundas Valley,39.484889368591475
-Carlingford - East,40.82278045423262
-Carlingford - West,38.011428571428574
-Chester Hill - Sefton,36.34705233366911
-Fairfield - East,38.47274926779575
-Granville - Clyde,34.55313667396625
-Guildford - South Granville,34.00764587525151
-Guildford West - Merrylands West,35.31544445415611
+Katoomba - Leura,46.66298882
+Lawson - Hazelbrook - Linden,41.08668649
+Springwood - Winmalee,41.74002001
+Wentworth Falls,46.44003127
+Cambridge Park,36.91051482
+Emu Plains - Leonay,40.24110672
+Glenmore Park - Regentville,35.15935192
+Jamisontown - South Penrith,38.36023088
+Kingswood - Werrington,34.4706479
+Mulgoa - Luddenham - Orchard Hills,35.39811494
+Penrith,39.28940482
+Warragamba - Silverdale,35.49699097
+Cranebrook - Castlereagh,35.00521474
+Jordan Springs - Llandilo,29.93731811
+Richmond - Clarendon,41.55925975
+Windsor - Bligh Park,36.76242551
+Yarramundi - Londonderry,38.46476241
+Erskine Park,36.98846863
+St Clair,36.85818054
+Colyton - Oxley Park,35.43428835
+St Marys - North St Marys,36.47501009
+Auburn - Central,34.39678394
+Auburn - North,33.92533359
+Auburn - South,35.88511071
+Berala,39.04344787
+Lidcombe,37.76798111
+Regents Park,38.12176266
+Silverwater - Newington,36.06681058
+Wentworth Point - Sydney Olympic Park,32.40213925
+Ermington - Rydalmere,37.77887655
+Oatlands - Dundas Valley,39.48488937
+Carlingford - East,40.82278045
+Carlingford - West,38.01142857
+Chester Hill - Sefton,36.34705233
+Fairfield - East,38.47274927
+Granville - Clyde,34.55313667
+Guildford - South Granville,34.00764588
+Guildford West - Merrylands West,35.31544445
 Smithfield Industrial,50
-Greystanes - South,39.127344877344875
-Merrylands - Holroyd,35.29954652334565
-Pemulwuy - Greystanes (North),37.57174311926605
-South Wentworthville,36.26003298515668
-North Parramatta,36.50319083836
-North Rocks,40.44449704142012
-Northmead,35.35645909404915
-Toongabbie - Constitution Hill,39.44422084171843
-Winston Hills,39.76962837536762
-Pendle Hill - Girraween,36.197375026895216
-Wentworthville - Westmead,33.67904496986555
-Parramatta - North,31.255114718794005
-Parramatta - South,33.192657766990294
-Rosehill - Harris Park,33.45391092399734
-Pennant Hills - Cheltenham,41.26014166130071
-Epping (East) - North Epping,37.81565253590509
-Epping (NSW) - West,37.87889162298064
-Gladesville - Huntleys Point,40.50365814179346
-Hunters Hill - Woolwich,44.01779178527857
-Macquarie Park - Marsfield,37.62154788886091
-North Ryde - East Ryde,39.14336045096406
-West Ryde - Meadowbank,37.96245462230842
-Putney,41.46300313328513
-Denistone,41.06730769230769
-Eastwood,40.369048875752135
-Ryde - North,39.819695551505
-Ryde - South,35.706279709782336
-Ashcroft - Busby - Miller,35.14593062041361
-Austral - Greendale,35.891663342640605
+Greystanes - South,39.12734488
+Merrylands - Holroyd,35.29954652
+Pemulwuy - Greystanes (North),37.57174312
+South Wentworthville,36.26003299
+North Parramatta,36.50319084
+North Rocks,40.44449704
+Northmead,35.35645909
+Toongabbie - Constitution Hill,39.44422084
+Winston Hills,39.76962838
+Pendle Hill - Girraween,36.19737503
+Wentworthville - Westmead,33.67904497
+Parramatta - North,31.25511472
+Parramatta - South,33.19265777
+Rosehill - Harris Park,33.45391092
+Pennant Hills - Cheltenham,41.26014166
+Epping (East) - North Epping,37.81565254
+Epping (NSW) - West,37.87889162
+Gladesville - Huntleys Point,40.50365814
+Hunters Hill - Woolwich,44.01779179
+Macquarie Park - Marsfield,37.62154789
+North Ryde - East Ryde,39.14336045
+West Ryde - Meadowbank,37.96245462
+Putney,41.46300313
+Denistone,41.06730769
+Eastwood,40.36904888
+Ryde - North,39.81969555
+Ryde - South,35.70627971
+Ashcroft - Busby - Miller,35.14593062
+Austral - Greendale,35.89166334
 Badgerys Creek,63
-Cecil Hills,37.650485436893206
-Green Valley,37.250906286155036
-Hinchinbrook,35.344046525864705
-Hoxton Park - Carnes Hill - Horningsea Park,33.64841455148
-West Hoxton - Middleton Grange,32.69347407709803
-Cobbitty - Bringelly,37.206496519721576
-Gledswood Hills - Gregory Hills,29.12822845943865
-Leppington - Catherine Field,34.01527324795163
-Oran Park,28.843255206855456
-Bonnyrigg Heights - Bonnyrigg,38.5267451345997
-Bossley Park - Abbotsbury,40.74827621172176
-Cabramatta - Lansvale,40.514435259419265
-Cabramatta West - Mount Pritchard,37.96697802197802
-Canley Vale - Canley Heights,38.78600933908046
-Edensor Park,39.67478885545093
-Fairfield,40.18916250754127
-Fairfield - West,38.017116524028964
-Greenfield Park - Prairiewood,40.332127515261135
-Horsley Park - Kemps Creek,42.37083045778698
-Smithfield - Wetherill Park,39.64419917864476
-St Johns Park - Wakeley,41.85766783185444
-Wetherill Park Industrial,49.473684210526315
-Casula,37.01925398358281
-Chipping Norton - Moorebank,37.29967285673049
-Holsworthy - Wattle Grove,36.107995649912525
-Lurnea - Cartwright,35.35318242763625
-Warwick Farm,36.9078947368421
-Edmondson Park,29.782976605276257
-Liverpool - East,34.07656784492588
-Liverpool - West,38.018985031033225
-Prestons,35.05739008716676
-Gymea - Grays Point,39.92269065224589
-Miranda - Yowie Bay,41.40538450384262
-Sylvania - Taren Point,44.906111009565585
-Caringbah,39.06729872552067
-Caringbah South,40.69050545398679
-Cronulla - Kurnell - Bundeena,42.47333607230895
-Lilli Pilli - Port Hacking - Dolans Bay,39.739580254212235
-Woolooware - Burraneer,40.3186197624916
-Heathcote - Waterfall,42.0957687095317
-Illawong - Alfords Point,41.43468788481576
-Menai - Lucas Heights - Woronora,39.45168067226891
-Oyster Bay - Como - Jannali,39.31549564270153
-Royal National Park,25.612903225806452
-Sutherland - Kirrawee,39.94673029794918
-Engadine,38.74779500778232
-Loftus - Yarrawarrah,39.51852354457864
-Woronora Heights,39.84286116586877
-No usual address (NSW),39.72721669454962
-Alfredton,35.15237698577973
-Ballarat,43.69296076491922
-Buninyong,39.877318312955076
-Delacombe,36.24116268166901
-Smythes Creek,38.74658502119642
-Wendouree - Miners Rest,40.46051429317321
-Ballarat East - Warrenheip,42.669898906540126
-Ballarat North - Invermay,40.74989838775234
-Canadian - Mount Clear,39.3132223952783
-Sebastopol - Redan,41.152789437533386
-Bacchus Marsh Surrounds,41.35225197808886
-Creswick - Clunes,45.64746686485817
-Daylesford,48.35583868378812
-Gordon (Vic.),41.064142678347935
-Avoca,47.389172335600904
-Beaufort,45.847523053828006
-Golden Plains - North,40.82670221493027
-Maryborough (Vic.),47.549612689044636
-Maryborough Surrounds,47.76311979732175
-Bendigo,41.39207814799946
+Cecil Hills,37.65048544
+Green Valley,37.25090629
+Hinchinbrook,35.34404653
+Hoxton Park - Carnes Hill - Horningsea Park,33.64841455
+West Hoxton - Middleton Grange,32.69347408
+Cobbitty - Bringelly,37.20649652
+Gledswood Hills - Gregory Hills,29.12822846
+Leppington - Catherine Field,34.01527325
+Oran Park,28.84325521
+Bonnyrigg Heights - Bonnyrigg,38.52674513
+Bossley Park - Abbotsbury,40.74827621
+Cabramatta - Lansvale,40.51443526
+Cabramatta West - Mount Pritchard,37.96697802
+Canley Vale - Canley Heights,38.78600934
+Edensor Park,39.67478886
+Fairfield,40.18916251
+Fairfield - West,38.01711652
+Greenfield Park - Prairiewood,40.33212752
+Horsley Park - Kemps Creek,42.37083046
+Smithfield - Wetherill Park,39.64419918
+St Johns Park - Wakeley,41.85766783
+Wetherill Park Industrial,49.47368421
+Casula,37.01925398
+Chipping Norton - Moorebank,37.29967286
+Holsworthy - Wattle Grove,36.10799565
+Lurnea - Cartwright,35.35318243
+Warwick Farm,36.90789474
+Edmondson Park,29.78297661
+Liverpool - East,34.07656784
+Liverpool - West,38.01898503
+Prestons,35.05739009
+Gymea - Grays Point,39.92269065
+Miranda - Yowie Bay,41.4053845
+Sylvania - Taren Point,44.90611101
+Caringbah,39.06729873
+Caringbah South,40.69050545
+Cronulla - Kurnell - Bundeena,42.47333607
+Lilli Pilli - Port Hacking - Dolans Bay,39.73958025
+Woolooware - Burraneer,40.31861976
+Heathcote - Waterfall,42.09576871
+Illawong - Alfords Point,41.43468788
+Menai - Lucas Heights - Woronora,39.45168067
+Oyster Bay - Como - Jannali,39.31549564
+Royal National Park,25.61290323
+Sutherland - Kirrawee,39.9467303
+Engadine,38.74779501
+Loftus - Yarrawarrah,39.51852354
+Woronora Heights,39.84286117
+No usual address (NSW),39.72721669
+Alfredton,35.15237699
+Ballarat,43.69296076
+Buninyong,39.87731831
+Delacombe,36.24116268
+Smythes Creek,38.74658502
+Wendouree - Miners Rest,40.46051429
+Ballarat East - Warrenheip,42.66989891
+Ballarat North - Invermay,40.74989839
+Canadian - Mount Clear,39.3132224
+Sebastopol - Redan,41.15278944
+Bacchus Marsh Surrounds,41.35225198
+Creswick - Clunes,45.64746686
+Daylesford,48.35583868
+Gordon (Vic.),41.06414268
+Avoca,47.38917234
+Beaufort,45.84752305
+Golden Plains - North,40.82670221
+Maryborough (Vic.),47.54961269
+Maryborough Surrounds,47.7631198
+Bendigo,41.39207815
 California Gully - Eaglehawk,39.5875
-East Bendigo - Kennington,43.95824679510134
-Flora Hill - Spring Gully,39.401020082881736
-Kangaroo Flat - Golden Square,42.85599390853281
-Maiden Gully,36.13411764705882
-Strathfieldsaye,37.71622126705289
-White Hills - Ascot,35.66880784638762
-Bendigo Surrounds - South,39.0101784217459
-Castlemaine,47.32228782938222
-Castlemaine Surrounds,47.3227622037017
-Heathcote,48.027486652165315
-Kyneton,44.023374656950885
-Woodend,42.503946873825335
-Bendigo Surrounds - North,42.868447682655336
-Loddon,47.587078267996176
-Bannockburn,36.48758203577403
-Golden Plains - South,38.44349969192853
-Winchelsea,41.002117042189624
-Belmont,39.783735180498205
-Geelong,41.42459173871278
-Geelong West - Hamlyn Heights,38.592375643629836
-Highton,39.154888593282344
-Lara,38.0486876956417
-Leopold,41.49367088607595
-Newcomb - Moolap,44.12785506308638
-Newtown (Vic.),39.8668132708672
-North Geelong - Bell Park,43.12041851616994
-Charlemont,34.685508935508935
-Corio - Lovely Banks,37.79037894506934
-Grovedale - Mount Duneed,38.82806068920991
-Norlane,40.212312113174185
-Clifton Springs,43.524883914751754
-Lorne - Anglesea,49.035560516664006
-Portarlington,52.65679350690419
-Point Lonsdale - Queenscliff,53.470588235294116
-Torquay,38.96744960988296
-Barwon Heads - Armstrong Creek,36.3559292191214
-Ocean Grove,42.30018596962496
-Alexandra,48.70001460493647
-Euroa,49.23375126098861
-Kilmore - Broadford,40.521015424164524
-Mansfield (Vic.),44.591621544599604
-Nagambie,46.70130444395313
-Seymour,43.757580374828585
-Seymour Surrounds,39.17540453074434
-Upper Yarra Valley,38.36764705882353
-Yea,47.91585220500596
-Benalla,47.39827921176797
-Benalla Surrounds,46.0709711846318
-Rutherglen,44.97420781134856
-Wangaratta,43.277607284801526
-Wangaratta Surrounds,43.7296561460119
-Beechworth,45.72444089456869
-Bright - Mount Beauty,44.6687675858188
-Chiltern - Indigo Valley,43.51314965560426
-Myrtleford,46.369753216620964
-Towong,47.16416706982745
-West Wodonga,39.68502861602497
-Yackandandah,41.79907887161773
-Baranduda - Leneva,35.05856137607506
-Wodonga,41.354023292747485
-Drouin,40.16571312844919
-Mount Baw Baw Region,43.79362901996647
-Trafalgar (Vic.),42.18939666546719
-Warragul,41.18563862116871
-Bairnsdale,43.961634057740106
-Bruthen - Omeo,44.25301640926641
-Lakes Entrance,49.007267181051496
-Orbost,48.85196733481811
-Paynesville,54.01827788090818
-Foster,48.2002750740584
-French Island,46.728813559322035
-Korumburra,43.193929517213284
-Leongatha,44.175575836592785
-Phillip Island,47.089253450892535
+East Bendigo - Kennington,43.9582468
+Flora Hill - Spring Gully,39.40102008
+Kangaroo Flat - Golden Square,42.85599391
+Maiden Gully,36.13411765
+Strathfieldsaye,37.71622127
+White Hills - Ascot,35.66880785
+Bendigo Surrounds - South,39.01017842
+Castlemaine,47.32228783
+Castlemaine Surrounds,47.3227622
+Heathcote,48.02748665
+Kyneton,44.02337466
+Woodend,42.50394687
+Bendigo Surrounds - North,42.86844768
+Loddon,47.58707827
+Bannockburn,36.48758204
+Golden Plains - South,38.44349969
+Winchelsea,41.00211704
+Belmont,39.78373518
+Geelong,41.42459174
+Geelong West - Hamlyn Heights,38.59237564
+Highton,39.15488859
+Lara,38.0486877
+Leopold,41.49367089
+Newcomb - Moolap,44.12785506
+Newtown (Vic.),39.86681327
+North Geelong - Bell Park,43.12041852
+Charlemont,34.68550894
+Corio - Lovely Banks,37.79037895
+Grovedale - Mount Duneed,38.82806069
+Norlane,40.21231211
+Clifton Springs,43.52488391
+Lorne - Anglesea,49.03556052
+Portarlington,52.65679351
+Point Lonsdale - Queenscliff,53.47058824
+Torquay,38.96744961
+Barwon Heads - Armstrong Creek,36.35592922
+Ocean Grove,42.30018597
+Alexandra,48.7000146
+Euroa,49.23375126
+Kilmore - Broadford,40.52101542
+Mansfield (Vic.),44.59162154
+Nagambie,46.70130444
+Seymour,43.75758037
+Seymour Surrounds,39.17540453
+Upper Yarra Valley,38.36764706
+Yea,47.91585221
+Benalla,47.39827921
+Benalla Surrounds,46.07097118
+Rutherglen,44.97420781
+Wangaratta,43.27760728
+Wangaratta Surrounds,43.72965615
+Beechworth,45.72444089
+Bright - Mount Beauty,44.66876759
+Chiltern - Indigo Valley,43.51314966
+Myrtleford,46.36975322
+Towong,47.16416707
+West Wodonga,39.68502862
+Yackandandah,41.79907887
+Baranduda - Leneva,35.05856138
+Wodonga,41.35402329
+Drouin,40.16571313
+Mount Baw Baw Region,43.79362902
+Trafalgar (Vic.),42.18939667
+Warragul,41.18563862
+Bairnsdale,43.96163406
+Bruthen - Omeo,44.25301641
+Lakes Entrance,49.00726718
+Orbost,48.85196733
+Paynesville,54.01827788
+Foster,48.20027507
+French Island,46.72881356
+Korumburra,43.19392952
+Leongatha,44.17557584
+Phillip Island,47.08925345
 Wilsons Promontory,25
-Wonthaggi - Inverloch,46.848730395817775
-Churchill,41.12398014971823
-Moe - Newborough,43.52392233907315
-Morwell,42.56882577069622
-Yallourn North - Glengarry,40.01924703891709
-Traralgon - East,41.4662776156732
-Traralgon - West,39.96530174979169
+Wonthaggi - Inverloch,46.8487304
+Churchill,41.12398015
+Moe - Newborough,43.52392234
+Morwell,42.56882577
+Yallourn North - Glengarry,40.01924704
+Traralgon - East,41.46627762
+Traralgon - West,39.96530175
 Alps - West,63.6875
-Longford - Loch Sport,46.54294416243655
-Maffra,42.20555291562012
-Rosedale,40.10374697824335
-Sale,41.72324288983328
-Yarram,47.93083676760437
-Brunswick East,36.4956467173896
-Brunswick West,37.81655606007684
-Pascoe Vale South,39.24517059106199
-Brunswick - North,37.72775924920499
-Brunswick - South,37.41803782869445
-Coburg - East,39.12219829305256
-Coburg - West,38.61617385108657
-Alphington - Fairfield,38.950837864831875
-Thornbury,39.03415228211374
-Northcote - East,39.26119798568778
-Northcote - West,38.481923039643306
-Ascot Vale,37.969637223974765
-Flemington,37.260292018882424
-Moonee Ponds,40.14938705106881
-Essendon (West) - Aberfeldie,40.3855263978059
-Essendon - East,39.42967213114754
-Carlton,33.11509411341566
-Docklands,35.044952528579735
-East Melbourne,45.589141004862235
-Flemington Racecourse,31.606060606060606
-Kensington (Vic.),36.754564083457524
-Parkville,32.92073921971252
-South Yarra - West,43.97806130387428
-Melbourne CBD - East,34.33831756688028
-Melbourne CBD - North,28.662116446079885
-Melbourne CBD - West,31.084559293846745
-North Melbourne,34.402539112592976
-Southbank (West) - South Wharf,36.637480559875584
-Southbank - East,33.22506060041022
-West Melbourne - Residential,33.288554540569585
-Albert Park,42.26312456462542
-Elwood,38.918610153450956
-Port Melbourne,42.41447165504904
-St Kilda East,37.00246882319428
-Port Melbourne Industrial,33.07296587926509
-South Melbourne,41.5775758614778
-St Kilda - Central,38.459518784297174
-St Kilda - West,41.31136034732272
-Armadale,41.24841789123673
-Prahran - Windsor,38.8723660130719
-Toorak,45.98888030888031
-South Yarra - North,36.15385993193623
-South Yarra - South,39.77122807017544
-Abbotsford,37.07809921900781
-Carlton North - Princes Hill,39.101827040194884
-Collingwood,35.68614411860896
-Fitzroy,38.19526910553534
-Fitzroy North,39.763083672829836
-Clifton Hill - Alphington,39.26458906202261
-Richmond (South) - Cremorne,37.53486533792558
-Richmond - North,38.292237772327226
-Ashburton (Vic.),39.99962245154795
-Balwyn,42.61206204041278
-Balwyn North,40.63595037408845
-Camberwell,42.37959818902094
-Glen Iris - East,39.67898301057384
-Hawthorn East,38.73694958519464
-Kew East,40.45281264528126
-Surrey Hills (West) - Canterbury,42.580582157258064
-Hawthorn - North,38.41481631005248
-Hawthorn - South,38.353594389246055
-Kew - South,41.66499827407663
-Kew - West,41.405521472392635
-Bulleen,44.611920529801324
-Doncaster,42.53024696323707
-Templestowe,44.648733058338244
-Templestowe Lower,44.21002605083433
-Doncaster East - North,42.76043998209375
-Doncaster East - South,40.76936528497409
-Blackburn,40.59492123845736
-Blackburn South,42.06694752266691
-Box Hill,38.72416060313842
-Box Hill North,39.6171210950436
-Burwood (Vic.),38.60345526806716
-Burwood East,42.894096734961174
-Surrey Hills (East) - Mont Albert,41.64879012345679
-Beaumaris,43.53856050318062
-Brighton (Vic.),44.97705797037753
-Brighton East,41.930680514461685
-Highett (West) - Cheltenham,38.74923694779117
-Hampton,41.259643916913944
-Sandringham - Black Rock,44.79739240798431
-Bentleigh - McKinnon,39.6052779562982
-Carnegie,39.16776970675276
-Caulfield - North,38.680663625793756
-Caulfield - South,41.676894107221976
-Elsternwick,39.45053464679633
-Hughesdale,39.47501322051824
-Murrumbeena,39.05442755394919
-Ormond - Glen Huntly,38.023287775826525
-Bentleigh East - North,38.098464317976514
-Bentleigh East - South,40.00938633293038
-Aspendale Gardens - Waterways,39.827301515494234
+Longford - Loch Sport,46.54294416
+Maffra,42.20555292
+Rosedale,40.10374698
+Sale,41.72324289
+Yarram,47.93083677
+Brunswick East,36.49564672
+Brunswick West,37.81655606
+Pascoe Vale South,39.24517059
+Brunswick - North,37.72775925
+Brunswick - South,37.41803783
+Coburg - East,39.12219829
+Coburg - West,38.61617385
+Alphington - Fairfield,38.95083786
+Thornbury,39.03415228
+Northcote - East,39.26119799
+Northcote - West,38.48192304
+Ascot Vale,37.96963722
+Flemington,37.26029202
+Moonee Ponds,40.14938705
+Essendon (West) - Aberfeldie,40.3855264
+Essendon - East,39.42967213
+Carlton,33.11509411
+Docklands,35.04495253
+East Melbourne,45.589141
+Flemington Racecourse,31.60606061
+Kensington (Vic.),36.75456408
+Parkville,32.92073922
+South Yarra - West,43.9780613
+Melbourne CBD - East,34.33831757
+Melbourne CBD - North,28.66211645
+Melbourne CBD - West,31.08455929
+North Melbourne,34.40253911
+Southbank (West) - South Wharf,36.63748056
+Southbank - East,33.2250606
+West Melbourne - Residential,33.28855454
+Albert Park,42.26312456
+Elwood,38.91861015
+Port Melbourne,42.41447166
+St Kilda East,37.00246882
+Port Melbourne Industrial,33.07296588
+South Melbourne,41.57757586
+St Kilda - Central,38.45951878
+St Kilda - West,41.31136035
+Armadale,41.24841789
+Prahran - Windsor,38.87236601
+Toorak,45.98888031
+South Yarra - North,36.15385993
+South Yarra - South,39.77122807
+Abbotsford,37.07809922
+Carlton North - Princes Hill,39.10182704
+Collingwood,35.68614412
+Fitzroy,38.19526911
+Fitzroy North,39.76308367
+Clifton Hill - Alphington,39.26458906
+Richmond (South) - Cremorne,37.53486534
+Richmond - North,38.29223777
+Ashburton (Vic.),39.99962245
+Balwyn,42.61206204
+Balwyn North,40.63595037
+Camberwell,42.37959819
+Glen Iris - East,39.67898301
+Hawthorn East,38.73694959
+Kew East,40.45281265
+Surrey Hills (West) - Canterbury,42.58058216
+Hawthorn - North,38.41481631
+Hawthorn - South,38.35359439
+Kew - South,41.66499827
+Kew - West,41.40552147
+Bulleen,44.61192053
+Doncaster,42.53024696
+Templestowe,44.64873306
+Templestowe Lower,44.21002605
+Doncaster East - North,42.76043998
+Doncaster East - South,40.76936528
+Blackburn,40.59492124
+Blackburn South,42.06694752
+Box Hill,38.7241606
+Box Hill North,39.6171211
+Burwood (Vic.),38.60345527
+Burwood East,42.89409673
+Surrey Hills (East) - Mont Albert,41.64879012
+Beaumaris,43.5385605
+Brighton (Vic.),44.97705797
+Brighton East,41.93068051
+Highett (West) - Cheltenham,38.74923695
+Hampton,41.25964392
+Sandringham - Black Rock,44.79739241
+Bentleigh - McKinnon,39.60527796
+Carnegie,39.16776971
+Caulfield - North,38.68066363
+Caulfield - South,41.67689411
+Elsternwick,39.45053465
+Hughesdale,39.47501322
+Murrumbeena,39.05442755
+Ormond - Glen Huntly,38.02328778
+Bentleigh East - North,38.09846432
+Bentleigh East - South,40.00938633
+Aspendale Gardens - Waterways,39.82730152
 Braeside,44.5
-Carrum - Patterson Lakes,42.432088497047324
-Chelsea - Bonbeach,41.720714191593096
-Chelsea Heights,40.269923834293145
-Highett (East) - Cheltenham,41.33006644518272
-Edithvale - Aspendale,39.28982725527831
-Mentone,42.287045454545456
-Moorabbin - Heatherton,39.441631042420255
-Moorabbin Airport,22.272727272727273
-Mordialloc - Parkdale,40.55030868561195
-Malvern - Glen Iris,41.60271537891879
-Malvern East,39.841879366238985
-Bundoora - East,40.83940565845715
-Greensborough,41.31276155659243
-Heidelberg - Rosanna,41.04165107868812
-Heidelberg West,37.64400135180804
-Ivanhoe,41.430808565036756
-Ivanhoe East - Eaglemont,42.82559938128384
-Montmorency - Briar Hill,41.3796004842615
-Viewbank - Yallambie,40.45943199443761
-Watsonia,40.04106332396801
-Kingsbury,38.14069722650231
-Preston - East,38.68297276414912
-Preston - West,38.98899371069182
-Reservoir - North East,39.21654501216545
-Reservoir - North West,44.08404732762138
-Reservoir - South East,40.65657987332864
-Reservoir - South West,37.93946920238433
-Eltham,40.65600614046309
-Hurstbridge,39.44771516680684
-Kinglake,39.710451306413304
-Panton Hill - St Andrews,43.20327287066246
-Plenty - Yarrambat,40.907421091523275
-Research - North Warrandyte,39.90361271676301
-Wattle Glen - Diamond Creek,38.37876893149924
-Bundoora - North,38.52908323116742
-Bundoora - West,42.790434642106966
-Mill Park - North,40.372824288078526
-Mill Park - South,40.32039268183846
-Thomastown,41.596595447284344
-Wallan,33.714676792652774
-Whittlesea,38.62939357015653
-Epping - East,38.75056964909616
-Epping - South,39.999023675860386
-Epping (Vic.) - West,31.53932399010717
-South Morang - North,33.61474888747616
-South Morang - South,38.38267818225845
-Wollert,28.96271283562541
-Doreen - North,33.14559950935296
-Doreen - South,31.033035628541246
-Lalor - East,40.7893572075244
-Lalor - West,38.57063650476824
-Mernda - North,33.121044789201505
-Mernda - South,30.477200335289186
-Airport West,41.12126408623224
-Essendon Airport,45.333333333333336
-Keilor,43.72878185644143
-Niddrie - Essendon West,39.61572343833422
-Strathmore,39.83973338639077
-Avondale Heights,44.80004851228978
-Keilor East,42.56205203079374
-Gisborne,38.932978126752666
-Macedon,41.86298627002288
-Riddells Creek,40.207297962838595
-Romsey,39.63238024507984
-Coburg North,38.83964841430099
-Fawkner,37.1698880251052
-Gowanbrae,39.11694587628866
-Hadfield,39.02096335413666
-Glenroy - East,37.37388423045713
-Glenroy - West,36.98338607594937
-Oak Park,37.4579699153078
-Pascoe Vale,38.18189740312555
-Sunbury,38.479976615024846
-Diggers Rest,33.27775650842266
-Sunbury - South,39.531615143219604
-Sunbury - West,37.607774798927615
-Broadmeadows,35.423966464296036
-Campbellfield - Coolaroo,37.03458374875374
-Gladstone Park - Westmeadows,41.17560596816241
-Greenvale - Bulla,35.84691749773346
-Meadow Heights,35.64144869215292
-Melbourne Airport,35.70796460176991
-Tullamarine,41.42647508407215
-Craigieburn - Central,35.65529179030663
-Craigieburn - North,31.80304386750224
-Craigieburn - South,32.10341801385681
-Mickleham - Yuroke,27.98188034188034
-Craigieburn - North West,27.979173016356803
-Craigieburn - West,31.364104139467013
-Roxburgh Park (South) - Somerton,35.238351822503965
-Roxburgh Park - North,32.44381678350235
-Bayswater,40.16702491839822
-Knoxfield - Scoresby,39.16909057992879
-Lysterfield,38.6021325209444
-Rowville - Central,40.593565544528765
-Rowville - North,39.39959354756763
-Rowville - South,40.42672205584002
-Wantirna,41.47878787878788
-Wantirna South,43.56463952644217
-Boronia,40.57871509802258
-Ferntree Gully - North,41.19821731748727
-Ferntree Gully (South) - Upper Ferntree Gully,39.47415085729187
-The Basin,38.75051641037411
-Donvale - Park Orchards,42.71253766217795
-Warrandyte - Wonga Park,41.93750618995741
-Bayswater North,39.22777029302796
-Croydon Hills - Warranwood,39.55127707906255
-Ringwood,39.43978609625668
-Ringwood East,39.47473077649726
-Ringwood North,41.39791386966849
-Croydon - East,39.85963821719401
-Croydon - West,42.05590896239751
-Croydon South,38.91136409839398
-Forest Hill,42.727669452181985
-Mitcham (Vic.),39.41699875096651
-Nunawading,40.25078269246207
-Vermont,39.82998454404946
-Vermont South,44.99756874580818
-Belgrave - Selby,39.00801201802704
-Chirnside Park,38.92037649453065
-Healesville - Yarra Glen,43.10251120438216
-Kilsyth,40.170630502985524
-Lilydale - Coldstream,40.46512340947417
-Monbulk - Silvan,40.635908934115214
-Montrose,40.651088994663205
-Mooroolbark,37.95712745309467
-Mount Dandenong - Olinda,42.528097982708935
-Mount Evelyn,37.97826978269783
-Upwey - Tecoma,39.315681864649356
-Wandin - Seville,39.10286077558805
-Yarra Valley,41.171374091288286
-Emerald - Cockatoo,39.30247410508238
-Beaconsfield - Officer,33.332191346275856
-Bunyip - Garfield,39.82267706961191
-Koo Wee Rup,37.728695996829174
-Pakenham - North East,34.09057924063755
-Pakenham - North West,32.24919657204071
-Pakenham - South East,39.076947089121276
-Pakenham - South West,33.72648135694538
-Berwick - North,42.54363937570843
-Doveton,36.441089899924314
-Hallam,38.46141787145097
-Narre Warren North,40.658117590128235
-Endeavour Hills - North,39.88324369052545
-Endeavour Hills - South,39.77245195543259
-Narre Warren - North East,36.79104035542392
-Narre Warren - South West,36.55735373781148
-Berwick - South East,34.21709748268289
-Berwick - South West,32.72616506581288
-Cranbourne,36.35466591485763
-Cranbourne South,33.53789183603169
-Cranbourne West,31.427316256798846
-Lynbrook - Lyndhurst,32.548102529960055
-Pearcedale - Tooradin,39.261970074812965
-Narre Warren South - East,35.918207410789016
-Narre Warren South - West,33.808775180823716
-Clyde North - North,30.524207328650085
-Clyde North - South,27.52388352138369
-Cranbourne East - North,31.494531784005467
+Carrum - Patterson Lakes,42.4320885
+Chelsea - Bonbeach,41.72071419
+Chelsea Heights,40.26992383
+Highett (East) - Cheltenham,41.33006645
+Edithvale - Aspendale,39.28982726
+Mentone,42.28704545
+Moorabbin - Heatherton,39.44163104
+Moorabbin Airport,22.27272727
+Mordialloc - Parkdale,40.55030869
+Malvern - Glen Iris,41.60271538
+Malvern East,39.84187937
+Bundoora - East,40.83940566
+Greensborough,41.31276156
+Heidelberg - Rosanna,41.04165108
+Heidelberg West,37.64400135
+Ivanhoe,41.43080857
+Ivanhoe East - Eaglemont,42.82559938
+Montmorency - Briar Hill,41.37960048
+Viewbank - Yallambie,40.45943199
+Watsonia,40.04106332
+Kingsbury,38.14069723
+Preston - East,38.68297276
+Preston - West,38.98899371
+Reservoir - North East,39.21654501
+Reservoir - North West,44.08404733
+Reservoir - South East,40.65657987
+Reservoir - South West,37.9394692
+Eltham,40.65600614
+Hurstbridge,39.44771517
+Kinglake,39.71045131
+Panton Hill - St Andrews,43.20327287
+Plenty - Yarrambat,40.90742109
+Research - North Warrandyte,39.90361272
+Wattle Glen - Diamond Creek,38.37876893
+Bundoora - North,38.52908323
+Bundoora - West,42.79043464
+Mill Park - North,40.37282429
+Mill Park - South,40.32039268
+Thomastown,41.59659545
+Wallan,33.71467679
+Whittlesea,38.62939357
+Epping - East,38.75056965
+Epping - South,39.99902368
+Epping (Vic.) - West,31.53932399
+South Morang - North,33.61474889
+South Morang - South,38.38267818
+Wollert,28.96271284
+Doreen - North,33.14559951
+Doreen - South,31.03303563
+Lalor - East,40.78935721
+Lalor - West,38.5706365
+Mernda - North,33.12104479
+Mernda - South,30.47720034
+Airport West,41.12126409
+Essendon Airport,45.33333333
+Keilor,43.72878186
+Niddrie - Essendon West,39.61572344
+Strathmore,39.83973339
+Avondale Heights,44.80004851
+Keilor East,42.56205203
+Gisborne,38.93297813
+Macedon,41.86298627
+Riddells Creek,40.20729796
+Romsey,39.63238025
+Coburg North,38.83964841
+Fawkner,37.16988803
+Gowanbrae,39.11694588
+Hadfield,39.02096335
+Glenroy - East,37.37388423
+Glenroy - West,36.98338608
+Oak Park,37.45796992
+Pascoe Vale,38.1818974
+Sunbury,38.47997662
+Diggers Rest,33.27775651
+Sunbury - South,39.53161514
+Sunbury - West,37.6077748
+Broadmeadows,35.42396646
+Campbellfield - Coolaroo,37.03458375
+Gladstone Park - Westmeadows,41.17560597
+Greenvale - Bulla,35.8469175
+Meadow Heights,35.64144869
+Melbourne Airport,35.7079646
+Tullamarine,41.42647508
+Craigieburn - Central,35.65529179
+Craigieburn - North,31.80304387
+Craigieburn - South,32.10341801
+Mickleham - Yuroke,27.98188034
+Craigieburn - North West,27.97917302
+Craigieburn - West,31.36410414
+Roxburgh Park (South) - Somerton,35.23835182
+Roxburgh Park - North,32.44381678
+Bayswater,40.16702492
+Knoxfield - Scoresby,39.16909058
+Lysterfield,38.60213252
+Rowville - Central,40.59356554
+Rowville - North,39.39959355
+Rowville - South,40.42672206
+Wantirna,41.47878788
+Wantirna South,43.56463953
+Boronia,40.5787151
+Ferntree Gully - North,41.19821732
+Ferntree Gully (South) - Upper Ferntree Gully,39.47415086
+The Basin,38.75051641
+Donvale - Park Orchards,42.71253766
+Warrandyte - Wonga Park,41.93750619
+Bayswater North,39.22777029
+Croydon Hills - Warranwood,39.55127708
+Ringwood,39.4397861
+Ringwood East,39.47473078
+Ringwood North,41.39791387
+Croydon - East,39.85963822
+Croydon - West,42.05590896
+Croydon South,38.9113641
+Forest Hill,42.72766945
+Mitcham (Vic.),39.41699875
+Nunawading,40.25078269
+Vermont,39.82998454
+Vermont South,44.99756875
+Belgrave - Selby,39.00801202
+Chirnside Park,38.92037649
+Healesville - Yarra Glen,43.1025112
+Kilsyth,40.1706305
+Lilydale - Coldstream,40.46512341
+Monbulk - Silvan,40.63590893
+Montrose,40.65108899
+Mooroolbark,37.95712745
+Mount Dandenong - Olinda,42.52809798
+Mount Evelyn,37.97826978
+Upwey - Tecoma,39.31568186
+Wandin - Seville,39.10286078
+Yarra Valley,41.17137409
+Emerald - Cockatoo,39.30247411
+Beaconsfield - Officer,33.33219135
+Bunyip - Garfield,39.82267707
+Koo Wee Rup,37.728696
+Pakenham - North East,34.09057924
+Pakenham - North West,32.24919657
+Pakenham - South East,39.07694709
+Pakenham - South West,33.72648136
+Berwick - North,42.54363938
+Doveton,36.4410899
+Hallam,38.46141787
+Narre Warren North,40.65811759
+Endeavour Hills - North,39.88324369
+Endeavour Hills - South,39.77245196
+Narre Warren - North East,36.79104036
+Narre Warren - South West,36.55735374
+Berwick - South East,34.21709748
+Berwick - South West,32.72616507
+Cranbourne,36.35466591
+Cranbourne South,33.53789184
+Cranbourne West,31.42731626
+Lynbrook - Lyndhurst,32.54810253
+Pearcedale - Tooradin,39.26197007
+Narre Warren South - East,35.91820741
+Narre Warren South - West,33.80877518
+Clyde North - North,30.52420733
+Clyde North - South,27.52388352
+Cranbourne East - North,31.49453178
 Cranbourne East - South,31
-Cranbourne North - East,29.515444470643715
-Cranbourne North - West,34.409641595153964
-Hampton Park - East,34.27760748251199
-Hampton Park - West,35.57345688237932
-Clarinda - Oakleigh South,44.012534578146614
-Clayton South,38.27257811917369
-Dandenong North,39.90170636331319
-Dingley Village,42.76627585549519
-Noble Park North,40.785771920387305
-Springvale,39.17924952758031
-Springvale South,39.258586499563734
-Noble Park - East,37.71298190401259
-Noble Park - West,38.619358457850986
-Dandenong - North,37.567470664928294
-Dandenong - South,34.86592418076676
-Keysborough - North,41.11320254506893
-Keysborough - South,33.810206383967085
-Ashwood - Chadstone,38.740227179697094
-Glen Waverley - East,41.88165214166512
-Glen Waverley - West,40.511486325802615
-Mount Waverley - North,40.7031795511222
-Mount Waverley - South,40.848340001039126
-Mulgrave,40.6773917852295
-Oakleigh - Huntingdale,38.99563204333013
-Wheelers Hill,46.38432131623518
-Clayton (North) - Notting Hill,31.428629482881234
-Clayton - Central,35.59538627499793
-Ardeer - Albion,38.792490646712984
-Cairnlea,36.25097334531297
-Delahey,39.74387527839644
-Keilor Downs,41.88832913518052
-Kings Park (Vic.),38.98578672951932
-St Albans - North,38.665500995677306
-St Albans - South,40.32555740241875
-Sunshine,37.69991546914624
-Sunshine North,39.38781599668462
-Sunshine West,39.793817769865676
-Sydenham,38.31078781691339
-Taylors Lakes,41.91070793311989
-Deer Park,36.818832141074694
-Derrimut,30.959953703703704
-Altona,41.79191306918983
-Altona Meadows,41.13261493474847
-Altona North,39.29141863420507
-Newport,37.02845896058301
-Seabrook,36.88188816855754
-Williamstown,41.95527537322795
-Braybrook,36.67989099103821
-Footscray,37.4683271115259
-Maribyrnong,37.695485723400864
-Seddon - Kingsville,36.68537378114843
-West Footscray - Tottenham,36.376711746193756
-Yarraville,37.141774611398965
-Bacchus Marsh,38.117340128625166
-Melton West,33.24338474600255
-Rockbank - Mount Cottrell,29.396200581892863
-Taylors Hill,33.31354283959464
-Burnside,38.465120304656395
-Burnside Heights,31.173584905660377
-Caroline Springs,34.59524977917362
-Brookfield,33.850117096018735
-Cobblebank - Strathtulloh,26.765845302411385
-Eynesbury - Exford,32.64879356568365
-Fraser Rise - Plumpton,29.66415543219667
-Hillside,35.992101203332304
-Kurunjang - Toolern Vale,35.90197764402408
-Melton,40.095117632178095
-Melton South - Weir Views,32.88965641518501
-Hoppers Crossing - North,37.706147007805725
-Hoppers Crossing - South,38.053405820275024
-Laverton,32.36187314345623
-Werribee - South,38.2692376361364
-Point Cook - East,31.412985934499403
-Point Cook - South,29.06804609743321
-Werribee - East,38.129780630227785
-Werribee - West,32.70703947663216
-Manor Lakes - Quandong,28.44382657869934
-Point Cook - North East,35.06515901060071
-Point Cook - North West,32.31565735801694
-Tarneit (West) - Mount Cottrell,26.212828850133018
-Tarneit - Central,29.507201024145655
-Tarneit - North,25.97420607405353
-Tarneit - South,30.419892473118278
-Truganina - North,27.711978609625668
-Truganina - South East,28.237941452234608
-Truganina - South West,28.554872603099554
-Wyndham Vale - North,28.71859073786838
-Wyndham Vale - South,33.50493736182756
-Carrum Downs,37.68529945553539
-Frankston,40.164767190611364
-Frankston North,40.19358321764615
-Frankston South,42.40307152726113
-Langwarrin,38.50747824692249
-Seaford (Vic.),40.562844382576415
-Skye - Sandhurst,36.8555238667067
-Dromana,47.74509657134301
-Flinders,49.776326803951115
-Hastings - Somers,41.77586494372655
-Mount Eliza,42.36843509820666
-Mount Martha,43.26123808082337
-Point Nepean,48.58667542175977
-Rosebud - McCrae,48.52873262754324
-Somerville,40.92120722177311
-Mornington - East,43.90140288480537
-Mornington - West,51.87906273620559
-Ararat,44.14220398593201
-Ararat Surrounds,44.544378698224854
-Horsham,41.3804392627922
-Horsham Surrounds,42.39988324576766
-Nhill Region,46.23832712689774
-St Arnaud,47.333236405931956
-Stawell,44.757273580478646
-West Wimmera,46.5158273381295
-Yarriambiack,46.89870888410698
-Irymple,39.72386895475819
-Merbein,41.56813627254509
-Mildura Surrounds,43.61066666666667
-Red Cliffs,40.692846667752974
-Mildura - North,40.684228039041706
-Mildura - South,40.484737707914455
-Buloke,47.14425860405275
-Gannawarra,47.05679785330948
-Kerang,46.84866093986862
-Robinvale,38.54398086633005
-Swan Hill,40.70973782771536
-Swan Hill Surrounds,41.65149645171243
-Echuca,43.55217196596507
-Kyabram,43.3215859030837
-Lockington - Gunbower,42.09113924050633
-Rochester,46.514485514485514
-Rushworth,46.93385676897454
-Cobram,45.69806094182825
-Moira,43.13617171006334
-Numurkah,43.31723040191007
-Yarrawonga,47.78992472495657
-Mooroopna,42.402266972145185
-Shepparton - North,39.35722531747227
-Shepparton Surrounds - East,40.217282717282714
-Shepparton Surrounds - West,42.42390253335912
-Kialla,38.24583655012683
-Shepparton - South East,39.594276399203046
-Glenelg (Vic.),46.338633818589024
-Hamilton (Vic.),43.97001455604076
-Portland,44.54840718989144
-Southern Grampians,44.58928287486087
+Cranbourne North - East,29.51544447
+Cranbourne North - West,34.4096416
+Hampton Park - East,34.27760748
+Hampton Park - West,35.57345688
+Clarinda - Oakleigh South,44.01253458
+Clayton South,38.27257812
+Dandenong North,39.90170636
+Dingley Village,42.76627586
+Noble Park North,40.78577192
+Springvale,39.17924953
+Springvale South,39.2585865
+Noble Park - East,37.7129819
+Noble Park - West,38.61935846
+Dandenong - North,37.56747066
+Dandenong - South,34.86592418
+Keysborough - North,41.11320255
+Keysborough - South,33.81020638
+Ashwood - Chadstone,38.74022718
+Glen Waverley - East,41.88165214
+Glen Waverley - West,40.51148633
+Mount Waverley - North,40.70317955
+Mount Waverley - South,40.84834
+Mulgrave,40.67739179
+Oakleigh - Huntingdale,38.99563204
+Wheelers Hill,46.38432132
+Clayton (North) - Notting Hill,31.42862948
+Clayton - Central,35.59538627
+Ardeer - Albion,38.79249065
+Cairnlea,36.25097335
+Delahey,39.74387528
+Keilor Downs,41.88832914
+Kings Park (Vic.),38.98578673
+St Albans - North,38.665501
+St Albans - South,40.3255574
+Sunshine,37.69991547
+Sunshine North,39.387816
+Sunshine West,39.79381777
+Sydenham,38.31078782
+Taylors Lakes,41.91070793
+Deer Park,36.81883214
+Derrimut,30.9599537
+Altona,41.79191307
+Altona Meadows,41.13261493
+Altona North,39.29141863
+Newport,37.02845896
+Seabrook,36.88188817
+Williamstown,41.95527537
+Braybrook,36.67989099
+Footscray,37.46832711
+Maribyrnong,37.69548572
+Seddon - Kingsville,36.68537378
+West Footscray - Tottenham,36.37671175
+Yarraville,37.14177461
+Bacchus Marsh,38.11734013
+Melton West,33.24338475
+Rockbank - Mount Cottrell,29.39620058
+Taylors Hill,33.31354284
+Burnside,38.4651203
+Burnside Heights,31.17358491
+Caroline Springs,34.59524978
+Brookfield,33.8501171
+Cobblebank - Strathtulloh,26.7658453
+Eynesbury - Exford,32.64879357
+Fraser Rise - Plumpton,29.66415543
+Hillside,35.9921012
+Kurunjang - Toolern Vale,35.90197764
+Melton,40.09511763
+Melton South - Weir Views,32.88965642
+Hoppers Crossing - North,37.70614701
+Hoppers Crossing - South,38.05340582
+Laverton,32.36187314
+Werribee - South,38.26923764
+Point Cook - East,31.41298593
+Point Cook - South,29.0680461
+Werribee - East,38.12978063
+Werribee - West,32.70703948
+Manor Lakes - Quandong,28.44382658
+Point Cook - North East,35.06515901
+Point Cook - North West,32.31565736
+Tarneit (West) - Mount Cottrell,26.21282885
+Tarneit - Central,29.50720102
+Tarneit - North,25.97420607
+Tarneit - South,30.41989247
+Truganina - North,27.71197861
+Truganina - South East,28.23794145
+Truganina - South West,28.5548726
+Wyndham Vale - North,28.71859074
+Wyndham Vale - South,33.50493736
+Carrum Downs,37.68529946
+Frankston,40.16476719
+Frankston North,40.19358322
+Frankston South,42.40307153
+Langwarrin,38.50747825
+Seaford (Vic.),40.56284438
+Skye - Sandhurst,36.85552387
+Dromana,47.74509657
+Flinders,49.7763268
+Hastings - Somers,41.77586494
+Mount Eliza,42.3684351
+Mount Martha,43.26123808
+Point Nepean,48.58667542
+Rosebud - McCrae,48.52873263
+Somerville,40.92120722
+Mornington - East,43.90140288
+Mornington - West,51.87906274
+Ararat,44.14220399
+Ararat Surrounds,44.5443787
+Horsham,41.38043926
+Horsham Surrounds,42.39988325
+Nhill Region,46.23832713
+St Arnaud,47.33323641
+Stawell,44.75727358
+West Wimmera,46.51582734
+Yarriambiack,46.89870888
+Irymple,39.72386895
+Merbein,41.56813627
+Mildura Surrounds,43.61066667
+Red Cliffs,40.69284667
+Mildura - North,40.68422804
+Mildura - South,40.48473771
+Buloke,47.1442586
+Gannawarra,47.05679785
+Kerang,46.84866094
+Robinvale,38.54398087
+Swan Hill,40.70973783
+Swan Hill Surrounds,41.65149645
+Echuca,43.55217197
+Kyabram,43.3215859
+Lockington - Gunbower,42.09113924
+Rochester,46.51448551
+Rushworth,46.93385677
+Cobram,45.69806094
+Moira,43.13617171
+Numurkah,43.3172304
+Yarrawonga,47.78992472
+Mooroopna,42.40226697
+Shepparton - North,39.35722532
+Shepparton Surrounds - East,40.21728272
+Shepparton Surrounds - West,42.42390253
+Kialla,38.24583655
+Shepparton - South East,39.5942764
+Glenelg (Vic.),46.33863382
+Hamilton (Vic.),43.97001456
+Portland,44.54840719
+Southern Grampians,44.58928287
 Camperdown,47
-Colac,42.86150840171942
-Colac Surrounds,41.888358947182475
-Corangamite - North,45.21850613154961
-Corangamite - South,42.7038740245262
-Otway,47.58695652173913
-Moyne - East,40.93882789105946
-Moyne - West,43.26159369701805
-Warrnambool - North,40.567771622587564
-Warrnambool - South,43.73619770149478
+Colac,42.8615084
+Colac Surrounds,41.88835895
+Corangamite - North,45.21850613
+Corangamite - South,42.70387402
+Otway,47.58695652
+Moyne - East,40.93882789
+Moyne - West,43.2615937
+Warrnambool - North,40.56777162
+Warrnambool - South,43.7361977
 Migratory - Offshore - Shipping (Vic.),49.7
-No usual address (Vic.),37.357473035439135
-Alexandra Hills,38.81083197782999
-Belmont - Gumdale,39.50158814187401
-Birkdale,41.88351936966514
-Capalaba,39.9960580344922
-Thorneside,40.37706185567011
-Wellington Point,41.06170248488919
-Cleveland,48.00201994697639
-Ormiston,44.38757627914254
-Redland Bay,38.98879882922436
-Sheldon - Mount Cotton,35.848336126406515
-Thornlands,37.088438555468954
-Victoria Point,46.26899424717318
-North Stradbroke Island,47.327466419638725
-Southern Moreton Bay Islands,54.598190151604186
-Manly - Lota,42.52845528455285
-Manly West,39.402508839872034
-Murarrie,35.57457160990057
-Tingalpa,38.5503536544291
-Wakerley,33.81449644486894
-Wynnum,41.11605295821266
-Wynnum West - Hemmant,39.1568039790843
-Bald Hills,37.00953713123093
-Bridgeman Downs,39.136762740981105
-Carseldine,42.43920016240357
-Everton Park,37.02685231228244
-McDowall,37.9879047499055
-Aspley,43.1161890007746
-Chermside,40.4583880283539
-Chermside West,38.85011424219345
-Geebung,39.382327016306746
-Kedron - Gordon Park,36.06924304447374
-Stafford,37.17176233054514
-Stafford Heights,40.88760445682451
-Wavell Heights,36.440720408359816
-Boondall,39.09540158135664
+No usual address (Vic.),37.35747304
+Alexandra Hills,38.81083198
+Belmont - Gumdale,39.50158814
+Birkdale,41.88351937
+Capalaba,39.99605803
+Thorneside,40.37706186
+Wellington Point,41.06170248
+Cleveland,48.00201995
+Ormiston,44.38757628
+Redland Bay,38.98879883
+Sheldon - Mount Cotton,35.84833613
+Thornlands,37.08843856
+Victoria Point,46.26899425
+North Stradbroke Island,47.32746642
+Southern Moreton Bay Islands,54.59819015
+Manly - Lota,42.52845528
+Manly West,39.40250884
+Murarrie,35.57457161
+Tingalpa,38.55035365
+Wakerley,33.81449644
+Wynnum,41.11605296
+Wynnum West - Hemmant,39.15680398
+Bald Hills,37.00953713
+Bridgeman Downs,39.13676274
+Carseldine,42.43920016
+Everton Park,37.02685231
+McDowall,37.98790475
+Aspley,43.116189
+Chermside,40.45838803
+Chermside West,38.85011424
+Geebung,39.38232702
+Kedron - Gordon Park,36.06924304
+Stafford,37.17176233
+Stafford Heights,40.88760446
+Wavell Heights,36.44072041
+Boondall,39.09540158
 Brisbane Airport,36.5
-Eagle Farm - Pinkenba,41.797984644913626
-Northgate - Virginia,35.87455705173636
-Nudgee - Banyo,37.8886420438767
-Nundah,37.64799879400015
-Bracken Ridge,37.779658109885084
-Brighton (Qld),40.24942839326543
-Deagon,41.13961467405648
-Sandgate - Shorncliffe,45.14939158481161
-Taigum - Fitzgibbon,39.82144376684158
-Zillmere,37.09731004179616
-Camp Hill,34.957525773195876
-Cannon Hill,35.283998842592595
-Carina,39.22277815468114
-Carina Heights,37.912043104703656
-Carindale,41.540707535740246
-Annerley,35.741367750586654
-Coorparoo,37.65029502669289
-Fairfield - Dutton Park,35.56971634039153
-Greenslopes,36.645489078822415
-Holland Park,36.66934389140272
-Holland Park West,37.7305053025577
-Woolloongabba,33.59305846727231
-Yeronga,40.40354505169867
-Eight Mile Plains,37.63850105374078
-Macgregor (Qld),38.37688190030111
-Mansfield (Qld),38.136792452830186
-Mount Gravatt,36.88867900768165
-Rochedale - Burbank,33.69347964088147
-Upper Mount Gravatt,37.74570571662274
-Wishart,38.898652196744266
-Coopers Plains,36.54321855235418
-Moorooka,37.227549889135254
-Robertson,40.23812436289501
-Salisbury - Nathan,36.378085808580856
-Tarragindi,36.45541750411109
-Algester,36.90679094540612
-Calamvale - Stretton,35.58010856242339
-Pallara - Willawong,30.700919945194755
-Parkinson - Drewvale,35.88581357825493
-Rocklea - Acacia Ridge,37.09077839392072
-Kuraby,35.879042977403635
-Runcorn,35.94052282926134
-Sunnybank,38.597497508581554
-Sunnybank Hills,39.052134011499334
-Jindalee - Mount Ommaney,41.11607259433347
-Middle Park - Jamboree Heights,39.31127313516545
-Riverhills,36.95250723240116
-Seventeen Mile Rocks - Sinnamon Park,41.68280622231379
-Westlake,40.8863432165319
-Bellbowrie - Moggill,37.96981239881916
-Brookfield - Kenmore Hills,43.21060864618885
-Chapel Hill,40.26138909634055
-Fig Tree Pocket,37.275528978840846
-Kenmore,38.872488898287166
-Pinjarra Hills - Pullenvale,42.61573747353564
-Chelmer - Graceville,38.17243581555754
-Corinda,39.79114877589454
-Indooroopilly,35.78297112235784
-Sherwood,38.86833904643191
-St Lucia,32.57166257166257
-Taringa,36.88697190886972
-Enoggera,34.32987414440274
-Enoggera Reservoir,39.23529411764706
-Keperra,41.63492063492063
-Mitchelton,36.79495836146748
-The Gap,39.66853768344735
-Upper Kedron - Ferny Grove,36.27313904794462
-Brisbane City,35.90287174860923
-Fortitude Valley,34.37260677466863
-Highgate Hill,38.82625786163522
-Kangaroo Point,40.78972010178117
-New Farm,42.08976833976834
-South Brisbane,33.14888842134792
-Spring Hill,34.73729556074766
-West End,36.306785451135376
-Balmoral,36.02094818081588
-Bulimba,39.33994066882416
-East Brisbane,36.42421759790267
-Hawthorne,36.22588144130182
-Morningside - Seven Hills,35.41908423628102
-Norman Park,35.21601053709937
-Albion,37.19166666666667
-Alderley,35.97971541023312
-Ascot,40.27884449057257
-Clayfield,38.634087537091986
-Grange,34.927284566963316
-Hamilton (Qld),42.98685182449402
-Hendra,38.473271704180064
-Kelvin Grove - Herston,32.54896728925783
-Newmarket,35.91532099251674
-Newstead - Bowen Hills,37.17927668071888
-Wilston,36.827032369656536
-Windsor,34.95573112616002
-Wooloowin - Lutwyche,36.64022508622254
-Ashgrove,36.9199154703782
-Auchenflower,36.795950704225355
-Bardon,36.70109379537315
-Paddington - Milton,35.60103160307843
-Red Hill (Qld),35.264973082099594
-Toowong,35.05935194096888
-Brinsmead,37.33218930635838
-Clifton Beach - Kewarra Beach,43.810670964458396
-Freshwater - Stratford,39.16226415094339
-Redlynch,36.9020999275887
-Trinity Beach - Smithfield,37.601084107695975
-Yorkeys Knob - Machans Beach,43.27342474698008
-Bentley Park,32.94354742255711
-Cairns City,39.90178145379354
-Earlville - Bayview Heights,42.47756027691573
-Edmonton,34.904820333041194
-Gordonvale - Trinity,37.841777323799796
-Kanimbla - Mooroobool,39.45221398517331
-Manoora,37.483482506102526
-Manunda,39.48872180451128
-Mount Sheridan,36.86044629436929
-Westcourt - Bungalow,41.47581879400061
-White Rock,37.87360519375127
-Whitfield - Edge Hill,42.05033476805356
-Woree,38.85212786820945
-Babinda,43.71264113349568
-Innisfail,41.753288764287255
-Johnstone,43.38909045414738
-Tully,44.840966921119595
-Yarrabah,28.845508982035927
-Daintree,42.96994167788246
-Port Douglas,44.138615632266145
-Atherton,43.782249742002065
-Herberton,45.59803921568628
-Kuranda,43.140475197999166
-Malanda - Yungaburra,45.827363347573666
-Mareeba,41.836295920094805
-Balonne,39.15950069348128
-Chinchilla,36.84349315068493
-Goondiwindi,38.76910699919549
-Inglewood - Waggamba,42.4934873433276
-Miles - Wandoan,39.37615768226075
-Roma,36.70371991247265
-Roma Surrounds,40.56345769487009
-Tara,43.097057305110994
-Crows Nest - Rosalie,45.659207510097154
-Jondaryan,40.039545810493344
-Millmerran,43.677609166924746
-Pittsworth,41.411754507628295
-Wambo,38.30154820548909
-Clifton - Greenmount,43.42103197959584
-Southern Downs - East,46.0644864117918
-Southern Downs - West,45.58860124423038
-Stanthorpe,46.9890359168242
-Stanthorpe Surrounds,44.58726339428938
-Warwick,42.731496975157675
-Central Highlands - East,32.63423852183651
-Central Highlands - West,39.81644736842105
-Emerald,32.57241330301308
-Berserker,37.27744596131968
-Bouldercombe,42.581761006289305
-Emu Park,45.32726648351648
-Frenchville - Mount Archer,38.74103188662533
-Glenlee - Rockyview,38.34740882917466
-Gracemere,34.16204414975338
-Lakes Creek,37.09710531718333
-Mount Morgan,47.52116491703352
-Norman Gardens,38.20707683689665
-Park Avenue,39.10204855842185
-Parkhurst - Kawana,37.175709905345954
-Rockhampton - West,40.741574936494494
-Rockhampton City,41.090257023311416
-Rockhampton Surrounds - East,42.81820784425995
-Rockhampton Surrounds - North,41.49545060658579
-Rockhampton Surrounds - West,40.956608811749
-Shoalwater Bay,68.85714285714286
-The Range - Allenstown,39.79897679061642
-Yeppoon,41.574257914752806
-Banana,39.78003173164098
-Biloela,36.97259311314125
-Agnes Water - Miriam Vale,46.550512445095166
-Boyne Island - Tannum Sands,37.870173697270474
-Callemondah,66.76923076923077
-Clinton - New Auckland,34.19749681798897
-Gladstone,39.77325109560137
-Gladstone Hinterland,37.17622595737307
-Kin Kora - Sun Valley,37.27214125560538
-Telina - Toolooa,34.82260572139303
-West Gladstone,39.90195263813876
-Broadbeach Waters,41.86927140926404
-Burleigh Heads,44.35570836061995
-Burleigh Waters,41.53068316074779
-Mermaid Beach - Broadbeach,42.82911482911483
-Mermaid Waters,40.690953248330295
-Miami,39.22238725357818
-Coolangatta,47.72848801475108
-Currumbin - Tugun,41.57569365568717
-Currumbin Waters,41.48525961440375
-Elanora,41.232047288122054
-Palm Beach,40.573199023199024
-Arundel,41.242462199158986
-Biggera Waters,43.648022373152216
-Coombabah,48.338761579717215
-Labrador,44.30174081237911
-Paradise Point - Hollywell,48.11774128954746
-Runaway Bay,50.134171232140936
-Guanaba - Springbrook,42.2666516143599
-Tamborine - Canungra,43.11622876773332
-Currumbin Valley - Tallebudgera,40.71944698056606
-Mudgeeraba - Bonogin,37.96231142930197
-Reedy Creek - Andrews,35.653246900943934
-Carrara,42.03500113886569
-Highland Park,40.390394674274845
-Nerang - Mount Nathan,40.0550389781159
-Pacific Pines - Gaven,34.7430350704687
-Worongary - Tallai,40.794432045107484
-Coomera,30.832393669634026
-Helensvale,40.01077597591252
-Hope Island,46.97602786504576
-Jacobs Well - Alberton,40.878722016952835
-Oxenford - Maudsland,35.733604502145205
-Ormeau (East) - Stapylton,32.64904882391529
-Ormeau (West) - Yatala,35.321157415218494
-Pimpama - North,33.8227886359057
-Pimpama - South,26.94003241491086
-Upper Coomera (South) - Wongawallan,34.543425183118245
-Upper Coomera - North,33.33729239564339
-Willow Vale - Pimpama (West),30.917937028066675
-Clear Island Waters,47.40200546946217
-Merrimac,39.38647410081933
-Varsity Lakes,37.3645376434537
-Robina - East,39.83044613194115
-Robina - West,42.23834492191953
-Ashmore,42.76700515796261
-Molendinar,37.50209010682768
-Parkwood,38.353200633340876
-Southport - North,40.62006266084816
-Southport - South,41.28174161767043
-Benowa,41.93812658227848
-Bundall,40.08226691042047
-Main Beach,52.260989010989015
-Surfers Paradise - North,45.723220881556266
-Surfers Paradise - South,42.53076165000704
-Darra - Sumner,36.287662476028125
-Durack,40.711561816856936
-Inala - Richlands,34.366797306803335
-Oxley (Qld),36.485510633325546
-Wacol,35.648657392429634
-Doolandella,31.648907582661526
-Forest Lake - Ellen Grove,36.85733333333334
-Boonah,43.906967506157144
-Esk,49.03821907013396
-Lockyer Valley - East,40.27683962264151
-Lowood,39.72488375369875
-Rosewood,39.05008100302881
-Brassall,36.8443673030829
-Bundamba,37.48701716738197
-Churchill - Yamanto,36.092839361546346
-Ipswich - Central,40.79940652818991
-Ipswich - East,40.34664438874965
-Ipswich - North,37.82938703252932
-Karalee - Barellan Point,36.556767254257544
-Karana Downs,39.08502158751246
-Leichhardt - One Mile,34.89308555568964
-North Ipswich - Tivoli,41.825795383655645
-Raceview,37.698707805907176
-Ripley,29.141583229036296
-Riverview,39.16934163118244
-Camira - Gailes,37.725384115992206
-Collingwood Park - Redbank,32.61177781587519
-Goodna,34.4996336996337
+Eagle Farm - Pinkenba,41.79798464
+Northgate - Virginia,35.87455705
+Nudgee - Banyo,37.88864204
+Nundah,37.64799879
+Bracken Ridge,37.77965811
+Brighton (Qld),40.24942839
+Deagon,41.13961467
+Sandgate - Shorncliffe,45.14939158
+Taigum - Fitzgibbon,39.82144377
+Zillmere,37.09731004
+Camp Hill,34.95752577
+Cannon Hill,35.28399884
+Carina,39.22277815
+Carina Heights,37.9120431
+Carindale,41.54070754
+Annerley,35.74136775
+Coorparoo,37.65029503
+Fairfield - Dutton Park,35.56971634
+Greenslopes,36.64548908
+Holland Park,36.66934389
+Holland Park West,37.7305053
+Woolloongabba,33.59305847
+Yeronga,40.40354505
+Eight Mile Plains,37.63850105
+Macgregor (Qld),38.3768819
+Mansfield (Qld),38.13679245
+Mount Gravatt,36.88867901
+Rochedale - Burbank,33.69347964
+Upper Mount Gravatt,37.74570572
+Wishart,38.8986522
+Coopers Plains,36.54321855
+Moorooka,37.22754989
+Robertson,40.23812436
+Salisbury - Nathan,36.37808581
+Tarragindi,36.4554175
+Algester,36.90679095
+Calamvale - Stretton,35.58010856
+Pallara - Willawong,30.70091995
+Parkinson - Drewvale,35.88581358
+Rocklea - Acacia Ridge,37.09077839
+Kuraby,35.87904298
+Runcorn,35.94052283
+Sunnybank,38.59749751
+Sunnybank Hills,39.05213401
+Jindalee - Mount Ommaney,41.11607259
+Middle Park - Jamboree Heights,39.31127314
+Riverhills,36.95250723
+Seventeen Mile Rocks - Sinnamon Park,41.68280622
+Westlake,40.88634322
+Bellbowrie - Moggill,37.9698124
+Brookfield - Kenmore Hills,43.21060865
+Chapel Hill,40.2613891
+Fig Tree Pocket,37.27552898
+Kenmore,38.8724889
+Pinjarra Hills - Pullenvale,42.61573747
+Chelmer - Graceville,38.17243582
+Corinda,39.79114878
+Indooroopilly,35.78297112
+Sherwood,38.86833905
+St Lucia,32.57166257
+Taringa,36.88697191
+Enoggera,34.32987414
+Enoggera Reservoir,39.23529412
+Keperra,41.63492063
+Mitchelton,36.79495836
+The Gap,39.66853768
+Upper Kedron - Ferny Grove,36.27313905
+Brisbane City,35.90287175
+Fortitude Valley,34.37260677
+Highgate Hill,38.82625786
+Kangaroo Point,40.7897201
+New Farm,42.08976834
+South Brisbane,33.14888842
+Spring Hill,34.73729556
+West End,36.30678545
+Balmoral,36.02094818
+Bulimba,39.33994067
+East Brisbane,36.4242176
+Hawthorne,36.22588144
+Morningside - Seven Hills,35.41908424
+Norman Park,35.21601054
+Albion,37.19166667
+Alderley,35.97971541
+Ascot,40.27884449
+Clayfield,38.63408754
+Grange,34.92728457
+Hamilton (Qld),42.98685182
+Hendra,38.4732717
+Kelvin Grove - Herston,32.54896729
+Newmarket,35.91532099
+Newstead - Bowen Hills,37.17927668
+Wilston,36.82703237
+Windsor,34.95573113
+Wooloowin - Lutwyche,36.64022509
+Ashgrove,36.91991547
+Auchenflower,36.7959507
+Bardon,36.7010938
+Paddington - Milton,35.6010316
+Red Hill (Qld),35.26497308
+Toowong,35.05935194
+Brinsmead,37.33218931
+Clifton Beach - Kewarra Beach,43.81067096
+Freshwater - Stratford,39.16226415
+Redlynch,36.90209993
+Trinity Beach - Smithfield,37.60108411
+Yorkeys Knob - Machans Beach,43.27342475
+Bentley Park,32.94354742
+Cairns City,39.90178145
+Earlville - Bayview Heights,42.47756028
+Edmonton,34.90482033
+Gordonvale - Trinity,37.84177732
+Kanimbla - Mooroobool,39.45221399
+Manoora,37.48348251
+Manunda,39.4887218
+Mount Sheridan,36.86044629
+Westcourt - Bungalow,41.47581879
+White Rock,37.87360519
+Whitfield - Edge Hill,42.05033477
+Woree,38.85212787
+Babinda,43.71264113
+Innisfail,41.75328876
+Johnstone,43.38909045
+Tully,44.84096692
+Yarrabah,28.84550898
+Daintree,42.96994168
+Port Douglas,44.13861563
+Atherton,43.78224974
+Herberton,45.59803922
+Kuranda,43.1404752
+Malanda - Yungaburra,45.82736335
+Mareeba,41.83629592
+Balonne,39.15950069
+Chinchilla,36.84349315
+Goondiwindi,38.769107
+Inglewood - Waggamba,42.49348734
+Miles - Wandoan,39.37615768
+Roma,36.70371991
+Roma Surrounds,40.56345769
+Tara,43.09705731
+Crows Nest - Rosalie,45.65920751
+Jondaryan,40.03954581
+Millmerran,43.67760917
+Pittsworth,41.41175451
+Wambo,38.30154821
+Clifton - Greenmount,43.42103198
+Southern Downs - East,46.06448641
+Southern Downs - West,45.58860124
+Stanthorpe,46.98903592
+Stanthorpe Surrounds,44.58726339
+Warwick,42.73149698
+Central Highlands - East,32.63423852
+Central Highlands - West,39.81644737
+Emerald,32.5724133
+Berserker,37.27744596
+Bouldercombe,42.58176101
+Emu Park,45.32726648
+Frenchville - Mount Archer,38.74103189
+Glenlee - Rockyview,38.34740883
+Gracemere,34.16204415
+Lakes Creek,37.09710532
+Mount Morgan,47.52116492
+Norman Gardens,38.20707684
+Park Avenue,39.10204856
+Parkhurst - Kawana,37.17570991
+Rockhampton - West,40.74157494
+Rockhampton City,41.09025702
+Rockhampton Surrounds - East,42.81820784
+Rockhampton Surrounds - North,41.49545061
+Rockhampton Surrounds - West,40.95660881
+Shoalwater Bay,68.85714286
+The Range - Allenstown,39.79897679
+Yeppoon,41.57425791
+Banana,39.78003173
+Biloela,36.97259311
+Agnes Water - Miriam Vale,46.55051245
+Boyne Island - Tannum Sands,37.8701737
+Callemondah,66.76923077
+Clinton - New Auckland,34.19749682
+Gladstone,39.7732511
+Gladstone Hinterland,37.17622596
+Kin Kora - Sun Valley,37.27214126
+Telina - Toolooa,34.82260572
+West Gladstone,39.90195264
+Broadbeach Waters,41.86927141
+Burleigh Heads,44.35570836
+Burleigh Waters,41.53068316
+Mermaid Beach - Broadbeach,42.82911483
+Mermaid Waters,40.69095325
+Miami,39.22238725
+Coolangatta,47.72848801
+Currumbin - Tugun,41.57569366
+Currumbin Waters,41.48525961
+Elanora,41.23204729
+Palm Beach,40.57319902
+Arundel,41.2424622
+Biggera Waters,43.64802237
+Coombabah,48.33876158
+Labrador,44.30174081
+Paradise Point - Hollywell,48.11774129
+Runaway Bay,50.13417123
+Guanaba - Springbrook,42.26665161
+Tamborine - Canungra,43.11622877
+Currumbin Valley - Tallebudgera,40.71944698
+Mudgeeraba - Bonogin,37.96231143
+Reedy Creek - Andrews,35.6532469
+Carrara,42.03500114
+Highland Park,40.39039467
+Nerang - Mount Nathan,40.05503898
+Pacific Pines - Gaven,34.74303507
+Worongary - Tallai,40.79443205
+Coomera,30.83239367
+Helensvale,40.01077598
+Hope Island,46.97602787
+Jacobs Well - Alberton,40.87872202
+Oxenford - Maudsland,35.7336045
+Ormeau (East) - Stapylton,32.64904882
+Ormeau (West) - Yatala,35.32115742
+Pimpama - North,33.82278864
+Pimpama - South,26.94003241
+Upper Coomera (South) - Wongawallan,34.54342518
+Upper Coomera - North,33.3372924
+Willow Vale - Pimpama (West),30.91793703
+Clear Island Waters,47.40200547
+Merrimac,39.3864741
+Varsity Lakes,37.36453764
+Robina - East,39.83044613
+Robina - West,42.23834492
+Ashmore,42.76700516
+Molendinar,37.50209011
+Parkwood,38.35320063
+Southport - North,40.62006266
+Southport - South,41.28174162
+Benowa,41.93812658
+Bundall,40.08226691
+Main Beach,52.26098901
+Surfers Paradise - North,45.72322088
+Surfers Paradise - South,42.53076165
+Darra - Sumner,36.28766248
+Durack,40.71156182
+Inala - Richlands,34.36679731
+Oxley (Qld),36.48551063
+Wacol,35.64865739
+Doolandella,31.64890758
+Forest Lake - Ellen Grove,36.85733333
+Boonah,43.90696751
+Esk,49.03821907
+Lockyer Valley - East,40.27683962
+Lowood,39.72488375
+Rosewood,39.050081
+Brassall,36.8443673
+Bundamba,37.48701717
+Churchill - Yamanto,36.09283936
+Ipswich - Central,40.79940653
+Ipswich - East,40.34664439
+Ipswich - North,37.82938703
+Karalee - Barellan Point,36.55676725
+Karana Downs,39.08502159
+Leichhardt - One Mile,34.89308556
+North Ipswich - Tivoli,41.82579538
+Raceview,37.69870781
+Ripley,29.14158323
+Riverview,39.16934163
+Camira - Gailes,37.72538412
+Collingwood Park - Redbank,32.61177782
+Goodna,34.4996337
 New Chum,91
-Redbank Plains,29.56545275590551
-Springfield,32.334657534246574
-Springfield Lakes,29.7189628746594
-Augustine Heights - Brookwater,31.32520235059319
-Bellbird Park,31.97055947854427
-Beaudesert,42.73308783415166
-Beenleigh,39.034170734611266
-Eagleby,39.82093623295245
-Edens Landing - Holmview,33.27362142931882
-Mount Warren Park,41.25873761085029
-Wolffdene - Bahrs Scrub,34.56688815060908
-Boronia Heights - Park Ridge,35.67966181305778
-Browns Plains,33.88436962398624
-Chambers Flat - Logan Reserve,33.62111801242236
-Crestmead,31.71378033730975
-Hillcrest,36.498243626062326
-Marsden,31.071665519183828
-Munruben - Park Ridge South,40.41760977818017
-Regents Park - Heritage Park,35.34454148471616
-Logan Village,39.310244807982365
-Flagstone (East) - Riverbend,33.73640483383686
-Flagstone (West) - New Beith,32.50508982035928
-Greenbank - North Maclean,37.30982037498361
-Jimboomba - Glenlogan,36.78780812791472
-Yarrabilba,26.294586734215216
-Bethania - Waterford,40.99167628152299
-Cornubia - Carbrook,39.634235229155166
-Loganholme - Tanah Merah,35.88946593958279
-Loganlea,34.381461675579324
-Shailer Park,38.20812981207054
-Waterford West,37.38560081988214
-Daisy Hill,37.76296725586786
-Kingston (Qld),34.70094539841791
-Logan Central,34.83940578577013
-Rochedale South - Priestdale,37.746488946684
-Slacks Creek,36.90327237728585
-Springwood,40.774092107932645
-Underwood,34.38543803105772
-Woodridge,35.782107447544384
-Bowen,41.468410911672244
-Broadsound - Nebo,36.28332569857994
-Clermont,37.09974226804124
-Collinsville,41.46699456381051
-Moranbah,30.86357362777365
-Andergrove - Beaconsfield,37.590599369085176
-East Mackay,42.08628904182107
-Eimeo - Rural View,33.2728147435423
+Redbank Plains,29.56545276
+Springfield,32.33465753
+Springfield Lakes,29.71896287
+Augustine Heights - Brookwater,31.32520235
+Bellbird Park,31.97055948
+Beaudesert,42.73308783
+Beenleigh,39.03417073
+Eagleby,39.82093623
+Edens Landing - Holmview,33.27362143
+Mount Warren Park,41.25873761
+Wolffdene - Bahrs Scrub,34.56688815
+Boronia Heights - Park Ridge,35.67966181
+Browns Plains,33.88436962
+Chambers Flat - Logan Reserve,33.62111801
+Crestmead,31.71378034
+Hillcrest,36.49824363
+Marsden,31.07166552
+Munruben - Park Ridge South,40.41760978
+Regents Park - Heritage Park,35.34454148
+Logan Village,39.31024481
+Flagstone (East) - Riverbend,33.73640483
+Flagstone (West) - New Beith,32.50508982
+Greenbank - North Maclean,37.30982037
+Jimboomba - Glenlogan,36.78780813
+Yarrabilba,26.29458673
+Bethania - Waterford,40.99167628
+Cornubia - Carbrook,39.63423523
+Loganholme - Tanah Merah,35.88946594
+Loganlea,34.38146168
+Shailer Park,38.20812981
+Waterford West,37.38560082
+Daisy Hill,37.76296726
+Kingston (Qld),34.7009454
+Logan Central,34.83940579
+Rochedale South - Priestdale,37.74648895
+Slacks Creek,36.90327238
+Springwood,40.77409211
+Underwood,34.38543803
+Woodridge,35.78210745
+Bowen,41.46841091
+Broadsound - Nebo,36.2833257
+Clermont,37.09974227
+Collinsville,41.46699456
+Moranbah,30.86357363
+Andergrove - Beaconsfield,37.59059937
+East Mackay,42.08628904
+Eimeo - Rural View,33.27281474
 Eungella Hinterland,66
-Mackay,39.52751611303917
-Mackay Harbour,46.192495921696576
-Mount Pleasant - Glenella,39.31757805761601
-North Mackay,40.987808739708676
-Ooralea - Bakers Creek,37.091001353179976
-Pioneer Valley,35.90497635667642
-Sarina,40.499198109225965
-Seaforth - Calen,43.17255717255717
-Shoal Point - Bucasia,35.80671163020234
-Slade Point,39.702648244099024
-South Mackay,39.69489072224634
-Walkerston - Eton,38.279824665324014
-West Mackay,41.95102487873572
-Airlie - Whitsundays,37.562052834342325
-Proserpine,42.487611720782894
-Beachmere - Sandstone Point,48.277353226589035
-Bribie Island,55.79582445262546
-Burpengary - East,35.92363307727067
-Caboolture - South,36.50396539293439
-Elimbah,38.83620689655172
-Morayfield - East,34.80437138728324
-Wamuran,40.90133779264214
-Caboolture - East,37.1008341787848
-Caboolture - West,40.56731165088514
-Kilcoy,42.71633287292818
-Woodford - D'Aguilar,40.3868412366597
-Burpengary,37.78895966029724
-Deception Bay,41.30266748833524
-Morayfield,38.54097802010564
-Narangba,33.9054286533499
-Upper Caboolture,40.17506874427131
-Clontarf,43.57719235789723
-Margate - Woody Point,45.236330244594704
-Redcliffe,48.44328913478966
-Rothwell - Kippa-Ring,42.96524541112837
-Moreton Island,44.9153605015674
-Scarborough - Newport,45.89384706113623
-Albany Creek,39.43921592500152
-Cashmere,35.178840284842316
-Dayboro,40.37019386981479
-Eatons Hill,36.32523651240092
-The Hills District,37.841102653774946
-Samford Valley,41.136385658914726
-Murrumba Downs - Griffin,33.32396930680193
-Dakabin,32.10829231351761
-Kallangur,37.11506987863185
-Mango Hill,30.781614590317822
-North Lakes,34.97189156312451
-Bray Park,37.67716151671703
-Lawnton,37.26539486604012
-Petrie,37.42916283348666
-Strathpine - Brendale,37.78853150924174
-Aurukun,30.435897435897434
-Cape York,36.875989782886336
-Croydon - Etheridge,40.88652482269504
-Kowanyama - Pormpuraaw,31.656891495601172
-Northern Peninsula,27.114647377938518
+Mackay,39.52751611
+Mackay Harbour,46.19249592
+Mount Pleasant - Glenella,39.31757806
+North Mackay,40.98780874
+Ooralea - Bakers Creek,37.09100135
+Pioneer Valley,35.90497636
+Sarina,40.49919811
+Seaforth - Calen,43.17255717
+Shoal Point - Bucasia,35.80671163
+Slade Point,39.70264824
+South Mackay,39.69489072
+Walkerston - Eton,38.27982467
+West Mackay,41.95102488
+Airlie - Whitsundays,37.56205283
+Proserpine,42.48761172
+Beachmere - Sandstone Point,48.27735323
+Bribie Island,55.79582445
+Burpengary - East,35.92363308
+Caboolture - South,36.50396539
+Elimbah,38.8362069
+Morayfield - East,34.80437139
+Wamuran,40.90133779
+Caboolture - East,37.10083418
+Caboolture - West,40.56731165
+Kilcoy,42.71633287
+Woodford - D'Aguilar,40.38684124
+Burpengary,37.78895966
+Deception Bay,41.30266749
+Morayfield,38.54097802
+Narangba,33.90542865
+Upper Caboolture,40.17506874
+Clontarf,43.57719236
+Margate - Woody Point,45.23633024
+Redcliffe,48.44328913
+Rothwell - Kippa-Ring,42.96524541
+Moreton Island,44.9153605
+Scarborough - Newport,45.89384706
+Albany Creek,39.43921593
+Cashmere,35.17884028
+Dayboro,40.37019387
+Eatons Hill,36.32523651
+The Hills District,37.84110265
+Samford Valley,41.13638566
+Murrumba Downs - Griffin,33.32396931
+Dakabin,32.10829231
+Kallangur,37.11506988
+Mango Hill,30.78161459
+North Lakes,34.97189156
+Bray Park,37.67716152
+Lawnton,37.26539487
+Petrie,37.42916283
+Strathpine - Brendale,37.78853151
+Aurukun,30.43589744
+Cape York,36.87598978
+Croydon - Etheridge,40.88652482
+Kowanyama - Pormpuraaw,31.6568915
+Northern Peninsula,27.11464738
 Tablelands,42.17168
-Torres,31.77807094693638
-Torres Strait Islands,29.576866764275255
-Weipa,30.477582846003898
-Carpentaria,33.34314123376623
-Mount Isa,33.16274617067834
-Mount Isa Surrounds,35.6795061728395
-Northern Highlands,39.156433703461786
-Barcaldine - Blackall,42.7655623549272
-Charleville,41.61053692966978
-Far Central West,40.37407063197026
-Far South West,40.121212121212125
-Longreach,40.25034387895461
-Buderim - North,46.2880800222284
-Buderim - South,40.92054872820806
-Mountain Creek,35.94056265130645
-Sippy Downs,37.28362598391143
-Aroona - Currimundi,43.01425154474786
-Buddina - Minyama,44.49877750611247
-Caloundra - Kings Beach,51.50157547980521
-Golden Beach - Pelican Waters,50.1055133808757
-Moffat Beach - Battery Hill,44.82029520295203
-Parrearra - Warana,44.09370481056589
-Wurtulla - Birtinya,40.14842873176207
-Caloundra West - Baringa,34.02768584521385
-Meridan Plains - Little Mountain (North),42.107444891168726
-Coolum Beach,42.3433489827856
-Marcoola - Mudjimba,45.575914481376316
-Maroochydore - Kuluin,45.465401259694076
-Mooloolaba - Alexandra Headland,43.90910552117656
-Noosa Heads,49.23166699085781
-Noosaville,51.308211835334475
-Sunshine Beach,43.20096181871175
-Tewantin,48.315849270971405
-Peregian Beach - Marcus Beach,42.528481012658226
-Peregian Springs,37.33040306742729
-Beerwah,40.690765228701494
-Caloundra Hinterland,50.46042375672412
-Glass House Mountains,41.21901397634772
-Landsborough,36.692297875055836
-Maroochy Hinterland,47.34364916397771
-Palmwoods,42.345201238390096
-Bli Bli,41.02543794260156
-Diddillibah - Rosemount,43.2654363180679
-Eumundi - Yandina,40.46569024113934
-Nambour,40.59697710602356
-Noosa Hinterland,44.7314306924568
-Cambooya - Wyreema,35.32769075290551
-Darling Heights,37.68483103708273
-Drayton - Harristown,40.43550175568287
-Gatton,37.980007544322895
-Gowrie (Qld),34.83989798809861
-Highfields,40.24969173859433
-Lockyer Valley - West,39.54844102649837
-Middle Ridge,42.11295637274285
-Newtown (Qld),38.060497154836774
-North Toowoomba - Harlaxton,37.52710890166227
-Rangeville,42.889003673094585
-Toowoomba - Central,39.642759807788856
-Toowoomba - East,39.71544019775623
-Toowoomba - West,37.068378224941654
-Wilsonton,42.690198572539046
-Ayr,43.10916981971956
-Burdekin,43.80570456626979
-Charters Towers,40.54396702473145
-Dalrymple,42.367095391211144
-Ingham,46.280430396772026
-Ingham Surrounds,47.38249419054996
-Palm Island,29.37158984007526
-Aitkenvale,38.29859803306131
-Annandale (Qld),36.45243527427834
-Belgian Gardens - Pallarenda,43.29123468426013
-Bohle Plains,33.553659684631675
-Condon - Rasmussen,37.955236329935126
-Cranbrook,40.9591280653951
-Douglas,32.392748478701826
-Garbutt - West End,40.596135419993615
-Gulliver - Currajong - Vincent,38.15918690601901
-Heatley,40.49588053553038
-Hermit Park - Rosslea,37.781504818383986
-Hyde Park - Pimlico,40.05459162082099
-Kelso,35.20453056257605
-Kirwan - East,39.907868980816914
-Kirwan - West,37.110992386803794
-Magnetic Island,51.7456530529721
-Mount Louisa,35.06992110453649
-Mundingburra,43.23540748898679
-Northern Beaches,41.77777777777778
-Oonoonba,35.082965703714244
-South Townsville - Railway Estate,39.77963869025216
-Townsville - South,41.93096190275732
-Townsville City - North Ward,41.25650027427318
-Wulguru - Roseneath,40.65920235371036
-Burdell - Mount Low,31.331438904675796
-Deeragun - Jensen,34.13747521480502
-Ashfield - Kepnock,41.23063349214752
-Bargara - Burnett Heads,46.905024703037945
-Branyan - Kensington,38.980100427747814
-Bundaberg,40.17554808769403
-Bundaberg East - Kalkie,40.83729338842975
-Bundaberg North - Gooburrum,46.06832884097035
-Bundaberg Surrounds - North,44.43732470334412
-Bundaberg Surrounds - South,47.728317272053374
-Millbank - Avoca,46.35065460925901
-Svensson Heights - Norville,43.69896907216495
-Walkervale - Avenell Heights,42.461636595589574
-Gayndah - Mundubbera,45.01892399124179
-Gin Gin,47.10176665439823
-Kingaroy,39.9949696279423
-Kingaroy Surrounds - North,43.95257124829109
-Kingaroy Surrounds - South,42.615477048786346
-Monto - Eidsvold,46.22376669392205
-Nanango,48.21786427145709
+Torres,31.77807095
+Torres Strait Islands,29.57686676
+Weipa,30.47758285
+Carpentaria,33.34314123
+Mount Isa,33.16274617
+Mount Isa Surrounds,35.67950617
+Northern Highlands,39.1564337
+Barcaldine - Blackall,42.76556235
+Charleville,41.61053693
+Far Central West,40.37407063
+Far South West,40.12121212
+Longreach,40.25034388
+Buderim - North,46.28808002
+Buderim - South,40.92054873
+Mountain Creek,35.94056265
+Sippy Downs,37.28362598
+Aroona - Currimundi,43.01425154
+Buddina - Minyama,44.49877751
+Caloundra - Kings Beach,51.50157548
+Golden Beach - Pelican Waters,50.10551338
+Moffat Beach - Battery Hill,44.8202952
+Parrearra - Warana,44.09370481
+Wurtulla - Birtinya,40.14842873
+Caloundra West - Baringa,34.02768585
+Meridan Plains - Little Mountain (North),42.10744489
+Coolum Beach,42.34334898
+Marcoola - Mudjimba,45.57591448
+Maroochydore - Kuluin,45.46540126
+Mooloolaba - Alexandra Headland,43.90910552
+Noosa Heads,49.23166699
+Noosaville,51.30821184
+Sunshine Beach,43.20096182
+Tewantin,48.31584927
+Peregian Beach - Marcus Beach,42.52848101
+Peregian Springs,37.33040307
+Beerwah,40.69076523
+Caloundra Hinterland,50.46042376
+Glass House Mountains,41.21901398
+Landsborough,36.69229788
+Maroochy Hinterland,47.34364916
+Palmwoods,42.34520124
+Bli Bli,41.02543794
+Diddillibah - Rosemount,43.26543632
+Eumundi - Yandina,40.46569024
+Nambour,40.59697711
+Noosa Hinterland,44.73143069
+Cambooya - Wyreema,35.32769075
+Darling Heights,37.68483104
+Drayton - Harristown,40.43550176
+Gatton,37.98000754
+Gowrie (Qld),34.83989799
+Highfields,40.24969174
+Lockyer Valley - West,39.54844103
+Middle Ridge,42.11295637
+Newtown (Qld),38.06049715
+North Toowoomba - Harlaxton,37.5271089
+Rangeville,42.88900367
+Toowoomba - Central,39.64275981
+Toowoomba - East,39.7154402
+Toowoomba - West,37.06837822
+Wilsonton,42.69019857
+Ayr,43.10916982
+Burdekin,43.80570457
+Charters Towers,40.54396702
+Dalrymple,42.36709539
+Ingham,46.2804304
+Ingham Surrounds,47.38249419
+Palm Island,29.37158984
+Aitkenvale,38.29859803
+Annandale (Qld),36.45243527
+Belgian Gardens - Pallarenda,43.29123468
+Bohle Plains,33.55365968
+Condon - Rasmussen,37.95523633
+Cranbrook,40.95912807
+Douglas,32.39274848
+Garbutt - West End,40.59613542
+Gulliver - Currajong - Vincent,38.15918691
+Heatley,40.49588054
+Hermit Park - Rosslea,37.78150482
+Hyde Park - Pimlico,40.05459162
+Kelso,35.20453056
+Kirwan - East,39.90786898
+Kirwan - West,37.11099239
+Magnetic Island,51.74565305
+Mount Louisa,35.0699211
+Mundingburra,43.23540749
+Northern Beaches,41.77777778
+Oonoonba,35.0829657
+South Townsville - Railway Estate,39.77963869
+Townsville - South,41.9309619
+Townsville City - North Ward,41.25650027
+Wulguru - Roseneath,40.65920235
+Burdell - Mount Low,31.3314389
+Deeragun - Jensen,34.13747521
+Ashfield - Kepnock,41.23063349
+Bargara - Burnett Heads,46.9050247
+Branyan - Kensington,38.98010043
+Bundaberg,40.17554809
+Bundaberg East - Kalkie,40.83729339
+Bundaberg North - Gooburrum,46.06832884
+Bundaberg Surrounds - North,44.4373247
+Bundaberg Surrounds - South,47.72831727
+Millbank - Avoca,46.35065461
+Svensson Heights - Norville,43.69896907
+Walkervale - Avenell Heights,42.4616366
+Gayndah - Mundubbera,45.01892399
+Gin Gin,47.10176665
+Kingaroy,39.99496963
+Kingaroy Surrounds - North,43.95257125
+Kingaroy Surrounds - South,42.61547705
+Monto - Eidsvold,46.22376669
+Nanango,48.21786427
 North Burnett,21.2
-Cooloola,54.77935346142117
-Gympie - North,42.04104703586569
-Gympie - South,42.946707220312085
-Gympie Surrounds,43.449405639060814
-Kilkivan,45.380678851174935
-Booral - River Heads,44.38594049069079
-Craignish - Dundowran Beach,43.897903867003976
-Pialba - Eli Waters,48.22616421954755
-Point Vernon,47.996188496188495
-Torquay - Scarness - Kawungan,48.232012678288434
-Urangan - Wondunna,46.38550626481544
-Burrum - Fraser,48.67096713438177
-Granville,44.75008177952241
-Maryborough (Qld),44.69648734689473
-Maryborough Surrounds - South,48.917425431711145
-Tinana,45.581106382978724
-Migratory - Offshore - Shipping (Qld),37.6140350877193
-No usual address (Qld),42.781771152406236
-Adelaide,36.80649585779339
-North Adelaide,43.49155529446321
-Adelaide Hills,42.87572705348276
-Aldgate - Stirling,41.64383787346222
-Hahndorf - Echunga,45.337231554327026
-Lobethal - Woodside,42.57047477744807
-Mount Barker,38.457798662570035
-Mount Barker Surrounds,40.76262700633191
-Nairne,36.45089201877934
-Uraidla - Summertown,40.95963606286187
-Burnside - Wattle Park,42.83209229155742
-Beaumont - Glen Osmond,41.75506445672192
-Toorak Gardens,44.128436503639534
-Athelstone,41.7650256088638
-Paradise - Newton,42.23967401370624
-Rostrevor - Magill,40.97469200250574
-Norwood (SA),42.212822878228785
-Payneham - Felixstow,42.84115495962212
-St Peters - Marden,41.75157209439964
-Nailsworth - Broadview,38.94519067469508
-Prospect,38.584080361116406
-Walkerville,43.9251929300473
-Goodwood - Millswood,41.69945045606481
-Unley - Parkside,43.849033241261075
-Gawler - North,38.693316546007765
-Gawler - South,42.17812081157277
-Lewiston - Two Wells,37.83464082448854
-Craigmore - Blakeview,35.808241206030154
-Davoren Park,32.53315852725882
-Elizabeth,38.28918669131239
-Elizabeth East,37.99230824015383
-Munno Para West - Angle Vale,31.509517649233043
-One Tree Hill,41.90222222222222
-Smithfield - Elizabeth North,37.69033816425121
-Virginia - Waterloo Corner,40.352796341892365
-Enfield - Blair Athol,36.58177981005979
-Windsor Gardens,37.557440212577504
-Northgate - Northfield,36.84949428320141
-Valley View - Gilles Plains,39.39633797444211
-Ingle Farm,41.284566326530616
-Para Hills,38.84337588464845
+Cooloola,54.77935346
+Gympie - North,42.04104704
+Gympie - South,42.94670722
+Gympie Surrounds,43.44940564
+Kilkivan,45.38067885
+Booral - River Heads,44.38594049
+Craignish - Dundowran Beach,43.89790387
+Pialba - Eli Waters,48.22616422
+Point Vernon,47.9961885
+Torquay - Scarness - Kawungan,48.23201268
+Urangan - Wondunna,46.38550626
+Burrum - Fraser,48.67096713
+Granville,44.75008178
+Maryborough (Qld),44.69648735
+Maryborough Surrounds - South,48.91742543
+Tinana,45.58110638
+Migratory - Offshore - Shipping (Qld),37.61403509
+No usual address (Qld),42.78177115
+Adelaide,36.80649586
+North Adelaide,43.49155529
+Adelaide Hills,42.87572705
+Aldgate - Stirling,41.64383787
+Hahndorf - Echunga,45.33723155
+Lobethal - Woodside,42.57047478
+Mount Barker,38.45779866
+Mount Barker Surrounds,40.76262701
+Nairne,36.45089202
+Uraidla - Summertown,40.95963606
+Burnside - Wattle Park,42.83209229
+Beaumont - Glen Osmond,41.75506446
+Toorak Gardens,44.1284365
+Athelstone,41.76502561
+Paradise - Newton,42.23967401
+Rostrevor - Magill,40.974692
+Norwood (SA),42.21282288
+Payneham - Felixstow,42.84115496
+St Peters - Marden,41.75157209
+Nailsworth - Broadview,38.94519067
+Prospect,38.58408036
+Walkerville,43.92519293
+Goodwood - Millswood,41.69945046
+Unley - Parkside,43.84903324
+Gawler - North,38.69331655
+Gawler - South,42.17812081
+Lewiston - Two Wells,37.83464082
+Craigmore - Blakeview,35.80824121
+Davoren Park,32.53315853
+Elizabeth,38.28918669
+Elizabeth East,37.99230824
+Munno Para West - Angle Vale,31.50951765
+One Tree Hill,41.90222222
+Smithfield - Elizabeth North,37.69033816
+Virginia - Waterloo Corner,40.35279634
+Enfield - Blair Athol,36.58177981
+Windsor Gardens,37.55744021
+Northgate - Northfield,36.84949428
+Valley View - Gilles Plains,39.39633797
+Ingle Farm,41.28456633
+Para Hills,38.84337588
 Parafield,19.9
-Parafield Gardens,37.15940224159402
-Paralowie,35.81609066427289
-Salisbury,39.17836587596149
-Salisbury East,40.21263214963405
-Salisbury North,35.40567260940033
-Mawson Lakes - Globe Derby Park,34.46271771987909
-Pooraka - Cavan,38.98291233283804
-Golden Grove,42.73272779978742
-Greenwith,38.45996213386791
-Highbury - Dernancourt,41.638911417500225
-Hope Valley - Modbury,43.15195517951064
-Modbury Heights,40.88939087085216
-Redwood Park,40.17156351591731
-St Agnes - Ridgehaven,43.35939163498099
-Brighton (SA),46.09345794392523
-Glenelg (SA),46.43260096458323
-Edwardstown,39.32737768004398
-Hallett Cove,41.775786886545625
-Marino - Seaview Downs,41.77300423422493
-Mitchell Park,40.90641048879222
-Morphettville,41.69475530820882
+Parafield Gardens,37.15940224
+Paralowie,35.81609066
+Salisbury,39.17836588
+Salisbury East,40.21263215
+Salisbury North,35.40567261
+Mawson Lakes - Globe Derby Park,34.46271772
+Pooraka - Cavan,38.98291233
+Golden Grove,42.7327278
+Greenwith,38.45996213
+Highbury - Dernancourt,41.63891142
+Hope Valley - Modbury,43.15195518
+Modbury Heights,40.88939087
+Redwood Park,40.17156352
+St Agnes - Ridgehaven,43.35939163
+Brighton (SA),46.09345794
+Glenelg (SA),46.43260096
+Edwardstown,39.32737768
+Hallett Cove,41.77578689
+Marino - Seaview Downs,41.77300423
+Mitchell Park,40.90641049
+Morphettville,41.69475531
 Sheidow Park - Trott Park,37.87421875
-Warradale,41.49589328722288
-Belair,44.61747295366401
-Bellevue Heights,41.73356083475522
-Blackwood,41.39354888494483
-Colonel Light Gardens,40.348397699260474
-Mitcham (SA),42.690285367334546
-Panorama,42.74227536403457
-Aberfoyle Park,41.786518742645825
-Aldinga,39.950892857142854
-Christie Downs,40.982142857142854
-Christies Beach,42.26927272727273
-Clarendon,43.67190929041697
-Coromandel Valley,38.94389807778275
-Flagstaff Hill,41.40146323393221
-Hackham - Onkaparinga Hills,41.4397204426325
-Hackham West - Huntfield Heights,39.5130668716372
-Happy Valley,41.98332731865752
+Warradale,41.49589329
+Belair,44.61747295
+Bellevue Heights,41.73356083
+Blackwood,41.39354888
+Colonel Light Gardens,40.3483977
+Mitcham (SA),42.69028537
+Panorama,42.74227536
+Aberfoyle Park,41.78651874
+Aldinga,39.95089286
+Christie Downs,40.98214286
+Christies Beach,42.26927273
+Clarendon,43.67190929
+Coromandel Valley,38.94389808
+Flagstaff Hill,41.40146323
+Hackham - Onkaparinga Hills,41.43972044
+Hackham West - Huntfield Heights,39.51306687
+Happy Valley,41.98332732
 Lonsdale,13
-McLaren Vale,43.29487702133442
-Morphett Vale - East,41.859585828703366
-Morphett Vale - West,40.70758620689655
-Reynella,41.44420600858369
-Willunga,43.96422628951747
-Woodcroft,41.275685525859075
-Seaford - Seaford Meadows,38.328436219805056
-Seaford Rise - Moana,39.655751548132855
-Beverley,37.85516074450084
-Flinders Park,40.94896526463586
-Henley Beach,42.592706333973126
-Hindmarsh - Brompton,39.80873715124817
-Royal Park - Hendon - Albert Park,39.83287122612446
-Seaton - Grange,43.60357939276116
-West Lakes,47.85346077785102
-Woodville - Cheltenham,39.3175320962628
-Largs Bay - Semaphore,43.1463447622912
-North Haven,43.0722891566265
-Port Adelaide,41.25358314626144
-The Parks,38.36177700703866
-Fulham,43.30499653018737
-Lockleys,41.51303441084463
-Plympton,39.92369295859776
-Richmond (SA),39.70749499941169
-West Beach,43.782625482625484
-Barossa - Angaston,42.75196063355374
-Light,39.81997748439259
-Lyndoch,40.540304007369876
-Mallala,41.90143798681846
-Nuriootpa,44.05352627142456
-Tanunda,45.98969514813225
-Clare,43.66251830161054
-Gilbert Valley,45.81957735247209
-Goyder,46.03712810425375
-Wakefield - Barunga West,44.48992020159597
-Jamestown,44.63822823478071
-Peterborough - Mount Remarkable,48.70037523452157
-Port Pirie,42.4630123172225
-Port Pirie Surrounds,42.966127098321344
-Kadina,43.68216336358585
-Moonta,52.2226736312633
-Wallaroo,50.19162895927602
-Yorke Peninsula - North,50.123521505376345
-Yorke Peninsula - South,50.77874818049491
-Ceduna,39.52219321148825
-Eyre Peninsula,44.5575935436537
-Kimba - Cleve - Franklin Harbour,44.614622641509435
-Le Hunte - Elliston,42.09345794392523
-Port Lincoln,41.31314432989691
-West Coast (SA),41.87734288864388
-Western,36.52713178294574
-Whyalla,40.94539265282965
-APY Lands,29.898924731182795
-Coober Pedy,46.18175809649703
-Quorn - Lake Gilles,48.61882352941176
-Outback,41.06053026513256
-Port Augusta,39.61356583419536
-Roxby Downs,30.137323943661972
-Goolwa - Port Elliot,54.03562869467966
-Kangaroo Island,45.77427928848906
-Strathalbyn,44.12090424180848
-Strathalbyn Surrounds,43.25768557860535
-Victor Harbor,53.10034667507091
-Yankalilla,49.02448413920542
-Grant,42.9107346473367
-Kingston - Robe,47.54828660436137
-Millicent,45.791121229368244
-Naracoorte,41.40241193271977
-Naracoorte Surrounds,42.01162308011623
-Penola,43.35290322580645
-Tatiara,41.22500363848057
-Wattle Range,44.07130484988453
-Mount Gambier - East,41.21657843597132
-Mount Gambier - West,41.652557562387976
-Barmera,44.616106333072715
-Berri,42.704103671706264
-Karoonda - Lameroo,44.29494190020506
-Loxton,43.88942739185065
-Loxton Surrounds,44.671045117075955
-Mannum,49.140759800211896
-Murray Bridge,42.54928959350485
-Murray Bridge Surrounds,42.588093322606596
-Renmark,44.02343255224826
-Renmark Surrounds,41.476002370136285
-The Coorong,44.65305378304467
-Waikerie,46.009650180940895
-Migratory - Offshore - Shipping (SA),47.611111111111114
-No usual address (SA),39.68642048838594
-Augusta,43.610324349017816
-Busselton Surrounds,41.5761600537996
-Margaret River,38.420272789716414
-Busselton - East,43.66817107242639
-Busselton - West,43.473820632452046
-Australind - Leschenault,37.871260905691734
-Capel,41.751647144948755
-College Grove - Carey Park,40.52378223495702
-Collie,42.40049977283053
-Dardanup,42.53498319584479
+McLaren Vale,43.29487702
+Morphett Vale - East,41.85958583
+Morphett Vale - West,40.70758621
+Reynella,41.44420601
+Willunga,43.96422629
+Woodcroft,41.27568553
+Seaford - Seaford Meadows,38.32843622
+Seaford Rise - Moana,39.65575155
+Beverley,37.85516074
+Flinders Park,40.94896526
+Henley Beach,42.59270633
+Hindmarsh - Brompton,39.80873715
+Royal Park - Hendon - Albert Park,39.83287123
+Seaton - Grange,43.60357939
+West Lakes,47.85346078
+Woodville - Cheltenham,39.3175321
+Largs Bay - Semaphore,43.14634476
+North Haven,43.07228916
+Port Adelaide,41.25358315
+The Parks,38.36177701
+Fulham,43.30499653
+Lockleys,41.51303441
+Plympton,39.92369296
+Richmond (SA),39.707495
+West Beach,43.78262548
+Barossa - Angaston,42.75196063
+Light,39.81997748
+Lyndoch,40.54030401
+Mallala,41.90143799
+Nuriootpa,44.05352627
+Tanunda,45.98969515
+Clare,43.6625183
+Gilbert Valley,45.81957735
+Goyder,46.0371281
+Wakefield - Barunga West,44.4899202
+Jamestown,44.63822823
+Peterborough - Mount Remarkable,48.70037523
+Port Pirie,42.46301232
+Port Pirie Surrounds,42.9661271
+Kadina,43.68216336
+Moonta,52.22267363
+Wallaroo,50.19162896
+Yorke Peninsula - North,50.12352151
+Yorke Peninsula - South,50.77874818
+Ceduna,39.52219321
+Eyre Peninsula,44.55759354
+Kimba - Cleve - Franklin Harbour,44.61462264
+Le Hunte - Elliston,42.09345794
+Port Lincoln,41.31314433
+West Coast (SA),41.87734289
+Western,36.52713178
+Whyalla,40.94539265
+APY Lands,29.89892473
+Coober Pedy,46.1817581
+Quorn - Lake Gilles,48.61882353
+Outback,41.06053027
+Port Augusta,39.61356583
+Roxby Downs,30.13732394
+Goolwa - Port Elliot,54.03562869
+Kangaroo Island,45.77427929
+Strathalbyn,44.12090424
+Strathalbyn Surrounds,43.25768558
+Victor Harbor,53.10034668
+Yankalilla,49.02448414
+Grant,42.91073465
+Kingston - Robe,47.5482866
+Millicent,45.79112123
+Naracoorte,41.40241193
+Naracoorte Surrounds,42.01162308
+Penola,43.35290323
+Tatiara,41.22500364
+Wattle Range,44.07130485
+Mount Gambier - East,41.21657844
+Mount Gambier - West,41.65255756
+Barmera,44.61610633
+Berri,42.70410367
+Karoonda - Lameroo,44.2949419
+Loxton,43.88942739
+Loxton Surrounds,44.67104512
+Mannum,49.1407598
+Murray Bridge,42.54928959
+Murray Bridge Surrounds,42.58809332
+Renmark,44.02343255
+Renmark Surrounds,41.47600237
+The Coorong,44.65305378
+Waikerie,46.00965018
+Migratory - Offshore - Shipping (SA),47.61111111
+No usual address (SA),39.68642049
+Augusta,43.61032435
+Busselton Surrounds,41.57616005
+Margaret River,38.42027279
+Busselton - East,43.66817107
+Busselton - West,43.47382063
+Australind - Leschenault,37.87126091
+Capel,41.75164714
+College Grove - Carey Park,40.52378223
+Collie,42.40049977
+Dardanup,42.5349832
 Davenport,54
-Eaton - Pelican Point,39.782848342384696
-Harvey,42.230802184855946
-East Bunbury - Glen Iris,41.21007473014116
-Waroona,44.38805615036878
-Dalyellup,34.09255286546123
-Gelorup - Stratham,41.091297208538585
-South Bunbury - Bunbury,44.72203496119777
-Withers - Usher,39.41494342567304
-Bridgetown - Boyup Brook,45.44471086036671
-Donnybrook - Balingup,44.82623537061119
-Manjimup,41.577863577863575
-Pemberton,47.893731918997105
-Dawesville - Bouvard,42.7418177537085
-Falcon - Wannanup,45.35550506093782
-Greenfields,44.97686218794398
-Halls Head - Erskine,45.57280578429403
-Mandurah,46.56589071783384
-Mandurah - East,45.333485262838046
-Mandurah - North,37.56435690109063
-Mandurah - South,47.514088861408005
-Pinjarra,41.494737867862014
-City Beach,43.78821632712883
-Claremont (WA),44.296476964769646
-Cottesloe,42.67531964354901
-Floreat,39.18419530255698
-Mosman Park - Peppermint Grove,41.11213303604608
-Nedlands - Dalkeith - Crawley,39.37150852737737
-Swanbourne - Mount Claremont,40.561028952301605
-Kings Park (WA),68.28947368421052
-Mount Hawthorn - Leederville,37.12839318833249
-Mount Lawley - Inglewood,39.958706937234545
-North Perth,39.61113389378716
-Subiaco - Shenton Park,41.73921982980182
-Wembley - West Leederville - Glendalough,38.44099476439791
-East Perth,39.41915812653511
-Perth (North) - Highgate,37.02672859521515
-Perth (West) - Northbridge,36.81326294952161
-Bassendean - Eden Hill - Ashfield,40.26871666143709
-Bayswater - Embleton - Bedford,39.75426801939453
-Maylands,38.391079460269864
-Morley,40.57409362900387
-Noranda,43.67629407351838
-Chidlow,40.417387543252595
-Glen Forrest - Darlington,42.245288248337026
-Helena Valley - Koongamia,40.99843532684284
-Mundaring,41.91124482888304
-Swan View - Greenmount - Midvale,41.927102803738315
-Ballajura,37.912256041520244
-Beechboro,34.68960180104123
-Bullsbrook,37.623594502944854
-Gidgegannup,42.42184154175589
-Hazelmere - Guildford,38.150730534492325
-Lockridge - Kiara,35.43528566868816
-Malaga,39.705882352941174
-Middle Swan - Herne Hill,41.12752858399296
-Midland - Guildford,41.88498690981313
-Stratton - Jane Brook,36.67696709585122
-The Vines,35.69110200144683
-Aveley,31.22640789055043
-Brabham - Henley Brook,30.04551575545381
-Ellenbrook,34.3094611660703
-Craigie - Beldon,36.85866290018832
-Currambine - Kinross,38.22799276672694
-Duncraig,40.483671171171174
-Greenwood - Warwick,40.303769725306836
-Heathridge - Connolly,39.016471033699354
-Hillarys,41.56171847088246
-Iluka - Burns Beach,39.025298231180585
-Joondalup - Edgewater,40.94563806777217
-Kingsley,43.067881170156475
-Mullaloo - Kallaroo,41.17368284003125
-Ocean Reef,41.18783917118895
-Padbury,38.12261738726174
-Sorrento - Marmion,43.29453262786596
-Woodvale,41.139918554871045
-Balcatta - Hamersley,41.17912122156435
-Balga - Mirrabooka,35.139972442628405
-Innaloo - Doubleview,38.626699160574056
-Karrinyup - Gwelup - Carine,41.290991947615254
-Nollamara - Westminster,36.08882159979813
-Osborne Park Industrial,31.552884615384617
-Scarborough,38.17859997716113
-Stirling - Osborne Park,40.18044803726793
-Trigg - North Beach - Watermans Bay,42.944166249374064
-Tuart Hill - Joondanna,39.187583183277226
-Wembley Downs - Churchlands - Woodlands,40.67032747603834
-Yokine - Coolbinia - Menora,42.46511491557223
-Dianella - North,43.36956156559718
-Dianella - South,42.31562740569669
-Alexander Heights - Koondoola,38.122892597347025
-Butler - Merriwa - Ridgewood,36.208509558450345
-Carramar,32.14872620005363
-Clarkson,34.507644820903025
-Girrawheen,37.089506867822564
-Marangaroo,39.90828317569504
-Mindarie - Quinns Rocks - Jindalee,38.3888166449935
-Tapping - Ashby - Sinagra,36.44093791476183
-Alkimos - Eglinton,30.358624650061014
-Carabooda - Pinjar,40.9243937232525
-Two Rocks,38.32089746934516
-Yanchep,35.86920634920635
-Hocking - Pearsall,36.30393953275309
-Landsdale,32.71305026334612
-Madeley - Darch,36.53583497606308
-Wanneroo - Sinagra,39.244832526093184
-Armadale - Wungong - Brookdale,35.78022452504318
+Eaton - Pelican Point,39.78284834
+Harvey,42.23080218
+East Bunbury - Glen Iris,41.21007473
+Waroona,44.38805615
+Dalyellup,34.09255287
+Gelorup - Stratham,41.09129721
+South Bunbury - Bunbury,44.72203496
+Withers - Usher,39.41494343
+Bridgetown - Boyup Brook,45.44471086
+Donnybrook - Balingup,44.82623537
+Manjimup,41.57786358
+Pemberton,47.89373192
+Dawesville - Bouvard,42.74181775
+Falcon - Wannanup,45.35550506
+Greenfields,44.97686219
+Halls Head - Erskine,45.57280578
+Mandurah,46.56589072
+Mandurah - East,45.33348526
+Mandurah - North,37.5643569
+Mandurah - South,47.51408886
+Pinjarra,41.49473787
+City Beach,43.78821633
+Claremont (WA),44.29647696
+Cottesloe,42.67531964
+Floreat,39.1841953
+Mosman Park - Peppermint Grove,41.11213304
+Nedlands - Dalkeith - Crawley,39.37150853
+Swanbourne - Mount Claremont,40.56102895
+Kings Park (WA),68.28947368
+Mount Hawthorn - Leederville,37.12839319
+Mount Lawley - Inglewood,39.95870694
+North Perth,39.61113389
+Subiaco - Shenton Park,41.73921983
+Wembley - West Leederville - Glendalough,38.44099476
+East Perth,39.41915813
+Perth (North) - Highgate,37.0267286
+Perth (West) - Northbridge,36.81326295
+Bassendean - Eden Hill - Ashfield,40.26871666
+Bayswater - Embleton - Bedford,39.75426802
+Maylands,38.39107946
+Morley,40.57409363
+Noranda,43.67629407
+Chidlow,40.41738754
+Glen Forrest - Darlington,42.24528825
+Helena Valley - Koongamia,40.99843533
+Mundaring,41.91124483
+Swan View - Greenmount - Midvale,41.9271028
+Ballajura,37.91225604
+Beechboro,34.6896018
+Bullsbrook,37.6235945
+Gidgegannup,42.42184154
+Hazelmere - Guildford,38.15073053
+Lockridge - Kiara,35.43528567
+Malaga,39.70588235
+Middle Swan - Herne Hill,41.12752858
+Midland - Guildford,41.88498691
+Stratton - Jane Brook,36.6769671
+The Vines,35.691102
+Aveley,31.22640789
+Brabham - Henley Brook,30.04551576
+Ellenbrook,34.30946117
+Craigie - Beldon,36.8586629
+Currambine - Kinross,38.22799277
+Duncraig,40.48367117
+Greenwood - Warwick,40.30376973
+Heathridge - Connolly,39.01647103
+Hillarys,41.56171847
+Iluka - Burns Beach,39.02529823
+Joondalup - Edgewater,40.94563807
+Kingsley,43.06788117
+Mullaloo - Kallaroo,41.17368284
+Ocean Reef,41.18783917
+Padbury,38.12261739
+Sorrento - Marmion,43.29453263
+Woodvale,41.13991855
+Balcatta - Hamersley,41.17912122
+Balga - Mirrabooka,35.13997244
+Innaloo - Doubleview,38.62669916
+Karrinyup - Gwelup - Carine,41.29099195
+Nollamara - Westminster,36.0888216
+Osborne Park Industrial,31.55288462
+Scarborough,38.17859998
+Stirling - Osborne Park,40.18044804
+Trigg - North Beach - Watermans Bay,42.94416625
+Tuart Hill - Joondanna,39.18758318
+Wembley Downs - Churchlands - Woodlands,40.67032748
+Yokine - Coolbinia - Menora,42.46511492
+Dianella - North,43.36956157
+Dianella - South,42.31562741
+Alexander Heights - Koondoola,38.1228926
+Butler - Merriwa - Ridgewood,36.20850956
+Carramar,32.1487262
+Clarkson,34.50764482
+Girrawheen,37.08950687
+Marangaroo,39.90828318
+Mindarie - Quinns Rocks - Jindalee,38.38881664
+Tapping - Ashby - Sinagra,36.44093791
+Alkimos - Eglinton,30.35862465
+Carabooda - Pinjar,40.92439372
+Two Rocks,38.32089747
+Yanchep,35.86920635
+Hocking - Pearsall,36.30393953
+Landsdale,32.71305026
+Madeley - Darch,36.53583498
+Wanneroo - Sinagra,39.24483253
+Armadale - Wungong - Brookdale,35.78022453
 Ashendon - Lesley,46
-Camillo - Champion Lakes,38.71167565686445
-Kelmscott,40.55393916493482
-Mount Nasura - Mount Richon - Bedfordale,42.371386932232205
-Roleystone,41.70348436854428
-Seville Grove,31.684040227372105
-Harrisdale,30.461505413301253
-Piara Waters - Forrestdale,29.268919087395588
-Belmont - Ascot - Redcliffe,40.06865612122823
-East Victoria Park - Carlisle,37.12823781653822
+Camillo - Champion Lakes,38.71167566
+Kelmscott,40.55393916
+Mount Nasura - Mount Richon - Bedfordale,42.37138693
+Roleystone,41.70348437
+Seville Grove,31.68404023
+Harrisdale,30.46150541
+Piara Waters - Forrestdale,29.26891909
+Belmont - Ascot - Redcliffe,40.06865612
+East Victoria Park - Carlisle,37.12823782
 Perth Airport,37
-Victoria Park - Lathlain - Burswood,37.9906536154089
-Cloverdale,36.960099188458074
-Kewdale,37.52814029363785
-Rivervale,37.43105031215571
-Bentley - Wilson - St James,38.670416525238814
-Canning Vale - West,39.37843215280541
+Victoria Park - Lathlain - Burswood,37.99065362
+Cloverdale,36.96009919
+Kewdale,37.52814029
+Rivervale,37.43105031
+Bentley - Wilson - St James,38.67041653
+Canning Vale - West,39.37843215
 Canning Vale Commercial,60
-Cannington - Queens Park,33.26167998063423
-Parkwood - Ferndale - Lynwood,41.03594608087868
-Riverton - Shelley - Rossmoyne,41.19593663911846
+Cannington - Queens Park,33.26167998
+Parkwood - Ferndale - Lynwood,41.03594608
+Riverton - Shelley - Rossmoyne,41.19593664
 Welshpool,72
-Willetton,37.98006851448147
-Beckenham - Kenwick - Langford,36.15191682270622
-Canning Vale - East,35.9151306627345
-Gosnells,38.89616167352927
-Huntingdale - Southern River,33.7341980270369
-Maddington - Orange Grove - Martin,37.49326127568722
-Thornlie,38.942812526377985
-Forrestfield - Wattle Grove,36.94817181398651
-High Wycombe,39.00999590331831
-Kalamunda - Maida Vale - Gooseberry Hill,44.48145209283872
-Lesmurdie - Bickley - Carmel,42.146522966384396
-Byford,31.391532060695056
-Mundijong,37.78213385606273
-Serpentine - Jarrahdale,42.04262224145391
-Como,40.948426033879706
-Manning - Waterford,41.297685623333045
-South Perth - Kensington,41.2575344056675
-Banjup,33.71527809725353
-Bibra Industrial,57.23076923076923
-Coogee,40.85673701298701
-Coolbellup,39.75927015891701
-Hamilton Hill,40.992001406346134
+Willetton,37.98006851
+Beckenham - Kenwick - Langford,36.15191682
+Canning Vale - East,35.91513066
+Gosnells,38.89616167
+Huntingdale - Southern River,33.73419803
+Maddington - Orange Grove - Martin,37.49326128
+Thornlie,38.94281253
+Forrestfield - Wattle Grove,36.94817181
+High Wycombe,39.0099959
+Kalamunda - Maida Vale - Gooseberry Hill,44.48145209
+Lesmurdie - Bickley - Carmel,42.14652297
+Byford,31.39153206
+Mundijong,37.78213386
+Serpentine - Jarrahdale,42.04262224
+Como,40.94842603
+Manning - Waterford,41.29768562
+South Perth - Kensington,41.25753441
+Banjup,33.7152781
+Bibra Industrial,57.23076923
+Coogee,40.85673701
+Coolbellup,39.75927016
+Hamilton Hill,40.99200141
 Henderson,62
-North Coogee,43.789913700107874
-South Lake - Cockburn Central,38.99658994032396
-Spearwood,42.10456527542939
-Success - Hammond Park,32.535561023058875
-Yangebup,37.05551181102362
-Beeliar - Wattleup,34.28067923783197
-Jandakot,42.24867724867725
-East Fremantle,42.21397547266224
-Fremantle,42.986689849511365
-Fremantle - South,42.03865206622344
-Wellard (West) - Bertram,30.24965163591773
-Calista,39.35407984944213
-Hope Valley - Postans,45.12244897959184
+North Coogee,43.7899137
+South Lake - Cockburn Central,38.99658994
+Spearwood,42.10456528
+Success - Hammond Park,32.53556102
+Yangebup,37.05551181
+Beeliar - Wattleup,34.28067924
+Jandakot,42.24867725
+East Fremantle,42.21397547
+Fremantle,42.98668985
+Fremantle - South,42.03865207
+Wellard (West) - Bertram,30.24965164
+Calista,39.35407985
+Hope Valley - Postans,45.12244898
 Kwinana Industrial,48
-Parmelia - Orelia,37.71636751377288
-Casuarina - Wandi,33.016975308641975
-Applecross - Ardross,41.79404975634778
-Bateman,40.913225300575014
-Bicton - Palmyra,41.43157396769615
-Booragoon,41.97445515100563
-Bull Creek,44.05697543947139
-Leeming,41.27815542899137
-Melville,41.14917760330105
-Murdoch - Kardinya,43.43171102053864
-Willagee,38.97407611693326
-Winthrop,42.393889073397546
-Cooloongup,41.66548714319415
-Port Kennedy,36.59761163032191
-Rockingham,45.668839079059566
-Safety Bay - Shoalwater,44.449658276379395
-Singleton - Golden Bay - Secret Harbour,33.17736851585014
-Waikiki,38.731133954896805
-Warnbro,38.19407986595923
-Baldivis - North,31.867165334021152
-Baldivis - South,32.26984126984127
-Karnup,32.20628870890901
-Albany,46.217891760904685
-Albany Surrounds,41.66846506609118
-Bayonet Head - Lower King,42.31679169070975
-Denmark,45.77452695182064
-Gnowangerup,38.66318719554628
-Katanning,39.84692069118299
-Kojonup,42.33812592959841
-Little Grove - Elleker,44.726456178551985
-McKail - Willyung,38.9853225522939
-Plantagenet,44.32581126445356
-Chittering,41.08073487274566
-Cunderdin,43.836497890295355
-Dowerin,44.085095137420716
-Gingin - Dandaragan,46.06273062730627
-Merredin,42.158088235294116
-Moora,41.30985287561302
-Mukinbudin,44.49782971619366
-Northam,41.87689327227897
-Toodyay,47.527379400260756
-York - Beverley,49.78874878758487
-Brookton,45.755300859598854
-Kulin,41.53864390706496
-Murray,41.28457335014712
-Narrogin,41.79553817847286
-Wagin,44.323354521222065
-Broome,34.0960409556314
-Derby - West Kimberley,33.34133522727273
-Halls Creek,30.67580287929125
-Kununurra,34.24852625937835
-Roebuck,32.9528384279476
-East Pilbara,37.27096114519427
-Newman,29.74196619852416
-Port Hedland,32.67605633802817
-South Hedland,31.30824956986326
-Ashburton (WA),32.43076923076923
-Karratha,30.536187503680583
-Roebourne,33.507588856868395
-Esperance,41.260612125760986
-Esperance Surrounds,39.66541164658634
-Carnarvon,40.04175279040926
-Exmouth,38.51213227399614
-Boulder,35.39597877687797
-Kalgoorlie,35.018452696059896
-Kalgoorlie - North,33.868339279548856
-Kambalda - Coolgardie - Norseman,38.61638818951705
-Leinster - Leonora,35.76278586278586
-Geraldton,44.43936080740118
-Geraldton - East,37.329471674092936
-Geraldton - North,36.87890853729945
-Geraldton - South,37.95229818462727
-Irwin,47.648715144887916
-Meekatharra,38.77897063467003
-Morawa,44.25032258064516
-Northampton - Mullewa - Greenough,45.40850538203635
+Parmelia - Orelia,37.71636751
+Casuarina - Wandi,33.01697531
+Applecross - Ardross,41.79404976
+Bateman,40.9132253
+Bicton - Palmyra,41.43157397
+Booragoon,41.97445515
+Bull Creek,44.05697544
+Leeming,41.27815543
+Melville,41.1491776
+Murdoch - Kardinya,43.43171102
+Willagee,38.97407612
+Winthrop,42.39388907
+Cooloongup,41.66548714
+Port Kennedy,36.59761163
+Rockingham,45.66883908
+Safety Bay - Shoalwater,44.44965828
+Singleton - Golden Bay - Secret Harbour,33.17736852
+Waikiki,38.73113395
+Warnbro,38.19407987
+Baldivis - North,31.86716533
+Baldivis - South,32.26984127
+Karnup,32.20628871
+Albany,46.21789176
+Albany Surrounds,41.66846507
+Bayonet Head - Lower King,42.31679169
+Denmark,45.77452695
+Gnowangerup,38.6631872
+Katanning,39.84692069
+Kojonup,42.33812593
+Little Grove - Elleker,44.72645618
+McKail - Willyung,38.98532255
+Plantagenet,44.32581126
+Chittering,41.08073487
+Cunderdin,43.83649789
+Dowerin,44.08509514
+Gingin - Dandaragan,46.06273063
+Merredin,42.15808824
+Moora,41.30985288
+Mukinbudin,44.49782972
+Northam,41.87689327
+Toodyay,47.5273794
+York - Beverley,49.78874879
+Brookton,45.75530086
+Kulin,41.53864391
+Murray,41.28457335
+Narrogin,41.79553818
+Wagin,44.32335452
+Broome,34.09604096
+Derby - West Kimberley,33.34133523
+Halls Creek,30.67580288
+Kununurra,34.24852626
+Roebuck,32.95283843
+East Pilbara,37.27096115
+Newman,29.7419662
+Port Hedland,32.67605634
+South Hedland,31.30824957
+Ashburton (WA),32.43076923
+Karratha,30.5361875
+Roebourne,33.50758886
+Esperance,41.26061213
+Esperance Surrounds,39.66541165
+Carnarvon,40.04175279
+Exmouth,38.51213227
+Boulder,35.39597878
+Kalgoorlie,35.0184527
+Kalgoorlie - North,33.86833928
+Kambalda - Coolgardie - Norseman,38.61638819
+Leinster - Leonora,35.76278586
+Geraldton,44.43936081
+Geraldton - East,37.32947167
+Geraldton - North,36.87890854
+Geraldton - South,37.95229818
+Irwin,47.64871514
+Meekatharra,38.77897063
+Morawa,44.25032258
+Northampton - Mullewa - Greenough,45.40850538
 Migratory - Offshore - Shipping (WA),41.65625
-No usual address (WA),40.52612679544329
-Bridgewater - Gagebrook,34.07881168671741
-Brighton - Pontville,36.70234581326705
-Old Beach - Otago,40.67272727272727
-Bellerive - Rosny,44.51229195296992
-Cambridge,41.09383378016086
-Geilston Bay - Risdon,41.689675007190104
-Howrah - Tranmere,43.16894741371891
-Lindisfarne - Rose Bay,46.9395289624443
-Mornington - Warrane,39.95366421093447
-Risdon Vale,37.69363662539591
-Rokeby,34.178903168342025
-South Arm,42.163800515907134
-Austins Ferry - Granton,39.34294421003282
-Berriedale - Chigwell,39.4513258897418
-Claremont (Tas.),40.649594078319005
-Derwent Park - Lutana,38.68909168081494
-Glenorchy,40.11753716188774
-Montrose - Rosetta,42.287772585669785
-Moonah,38.23862645982221
-New Norfolk,40.652754820936636
-West Moonah,37.16826923076923
-Kingston - Huntingfield,39.06147449699309
-Kingston Beach - Blackmans Bay,42.35124603534209
-Margate - Snug,38.90882248730365
-Taroona - Bonnet Hill,43.61163175303197
-Hobart,40.24496347133053
-Lenah Valley - Mount Stuart,39.609982332155475
-Mount Nelson - Dynnyrne,38.86527476856411
-New Town,41.189254818637124
-Sandy Bay,42.43342269883825
-South Hobart - Fern Tree,40.465915826911676
-West Hobart,39.87161421637702
-Dodges Ferry - Lewisham,41.68067621507396
-Sorell - Richmond,42.0852472169291
-Invermay,37.05887396398971
-Kings Meadows - Punchbowl,39.95896502931069
-Launceston,41.8317843866171
-Legana,41.42095238095238
-Mowbray,36.49454365079365
-Newnham - Mayfield,37.353756382202775
-Newstead,42.93226218732883
-Norwood (Tas.),46.04414682539682
-Prospect Vale - Blackstone,44.421821940056105
-Ravenswood,37.62227475702653
-Riverside,41.33851017042331
-South Launceston,40.05690721649484
-Summerhill - Prospect,40.78370786516854
-Trevallyn,40.01589923601074
-Waverley - St Leonards,38.05925925925926
-West Launceston,41.60660445082556
-Youngtown - Relbia,42.536803578690524
-Beauty Point - Beaconsfield,48.3506557782727
-Deloraine,45.046340265269365
-Grindelwald - Lanena,45.48669387755102
-Hadspen - Carrick,39.542588495575224
-Westbury,43.602910602910605
-Dilston - Lilydale,42.57260086619558
-George Town,44.589761669722186
-Longford,44.34824858757062
-Northern Midlands,43.49378714208536
-Perth - Evandale,42.44775846294602
-St Helens - Scamander,49.497413155949744
-Flinders and Cape Barren Islands,50.182522123893804
-Scottsdale - Bridport,44.96423336265025
-Central Highlands,44.89691991786447
-Derwent Valley,41.20572996037794
-Southern Midlands,41.6514131897712
+No usual address (WA),40.5261268
+Bridgewater - Gagebrook,34.07881169
+Brighton - Pontville,36.70234581
+Old Beach - Otago,40.67272727
+Bellerive - Rosny,44.51229195
+Cambridge,41.09383378
+Geilston Bay - Risdon,41.68967501
+Howrah - Tranmere,43.16894741
+Lindisfarne - Rose Bay,46.93952896
+Mornington - Warrane,39.95366421
+Risdon Vale,37.69363663
+Rokeby,34.17890317
+South Arm,42.16380052
+Austins Ferry - Granton,39.34294421
+Berriedale - Chigwell,39.45132589
+Claremont (Tas.),40.64959408
+Derwent Park - Lutana,38.68909168
+Glenorchy,40.11753716
+Montrose - Rosetta,42.28777259
+Moonah,38.23862646
+New Norfolk,40.65275482
+West Moonah,37.16826923
+Kingston - Huntingfield,39.0614745
+Kingston Beach - Blackmans Bay,42.35124604
+Margate - Snug,38.90882249
+Taroona - Bonnet Hill,43.61163175
+Hobart,40.24496347
+Lenah Valley - Mount Stuart,39.60998233
+Mount Nelson - Dynnyrne,38.86527477
+New Town,41.18925482
+Sandy Bay,42.4334227
+South Hobart - Fern Tree,40.46591583
+West Hobart,39.87161422
+Dodges Ferry - Lewisham,41.68067622
+Sorell - Richmond,42.08524722
+Invermay,37.05887396
+Kings Meadows - Punchbowl,39.95896503
+Launceston,41.83178439
+Legana,41.42095238
+Mowbray,36.49454365
+Newnham - Mayfield,37.35375638
+Newstead,42.93226219
+Norwood (Tas.),46.04414683
+Prospect Vale - Blackstone,44.42182194
+Ravenswood,37.62227476
+Riverside,41.33851017
+South Launceston,40.05690722
+Summerhill - Prospect,40.78370787
+Trevallyn,40.01589924
+Waverley - St Leonards,38.05925926
+West Launceston,41.60660445
+Youngtown - Relbia,42.53680358
+Beauty Point - Beaconsfield,48.35065578
+Deloraine,45.04634027
+Grindelwald - Lanena,45.48669388
+Hadspen - Carrick,39.5425885
+Westbury,43.6029106
+Dilston - Lilydale,42.57260087
+George Town,44.58976167
+Longford,44.34824859
+Northern Midlands,43.49378714
+Perth - Evandale,42.44775846
+St Helens - Scamander,49.49741316
+Flinders and Cape Barren Islands,50.18252212
+Scottsdale - Bridport,44.96423336
+Central Highlands,44.89691992
+Derwent Valley,41.20572996
+Southern Midlands,41.65141319
 Wilderness - East,49
-Bruny Island - Kettering,48.324890829694326
-Cygnet,44.6686143572621
-Geeveston - Dover,45.7527950310559
-Huonville - Franklin,41.263773665177624
-Forestier - Tasman,50.899110939311946
-Triabunna - Bicheno,50.75407854984894
-Acton - Upper Burnie,40.29486386138614
-Burnie - Ulverstone Surrounds,41.81322282189669
-Burnie - Wivenhoe,40.39302446642374
-Parklands - Camdale,40.824535535240344
-Penguin - Sulphur Creek,43.725403001667594
-Romaine - Havenview,39.74942987457241
-Somerset,44.684864733122104
-Ulverstone,45.71410490788919
-West Ulverstone,45.67602495543672
-Wynyard,45.38272570802691
-Devonport,42.96015991177281
-East Devonport,42.934397163120565
-Latrobe,43.15490087085418
-Miandetta - Don,40.24515424515425
-Port Sorell,47.38104089219331
-Quoiba - Spreyton,42.002232142857146
-Sheffield - Railton,44.49954887218045
-Turners Beach - Forth,43.47391055045872
-King Island,43.84466625077979
-North West,39.66682543462729
-Smithton,41.974567650050865
-Waratah,42.43496250323248
-West Coast (Tas.),43.289117234936946
-No usual address (Tas.),40.48308823529412
+Bruny Island - Kettering,48.32489083
+Cygnet,44.66861436
+Geeveston - Dover,45.75279503
+Huonville - Franklin,41.26377367
+Forestier - Tasman,50.89911094
+Triabunna - Bicheno,50.75407855
+Acton - Upper Burnie,40.29486386
+Burnie - Ulverstone Surrounds,41.81322282
+Burnie - Wivenhoe,40.39302447
+Parklands - Camdale,40.82453554
+Penguin - Sulphur Creek,43.725403
+Romaine - Havenview,39.74942987
+Somerset,44.68486473
+Ulverstone,45.71410491
+West Ulverstone,45.67602496
+Wynyard,45.38272571
+Devonport,42.96015991
+East Devonport,42.93439716
+Latrobe,43.15490087
+Miandetta - Don,40.24515425
+Port Sorell,47.38104089
+Quoiba - Spreyton,42.00223214
+Sheffield - Railton,44.49954887
+Turners Beach - Forth,43.47391055
+King Island,43.84466625
+North West,39.66682543
+Smithton,41.97456765
+Waratah,42.4349625
+West Coast (Tas.),43.28911723
+No usual address (Tas.),40.48308824
 Darwin Airport,33
-Darwin City,36.3772027972028
-Fannie Bay - The Gardens,40.584738733757256
-Larrakeyah,35.430537853683404
-Ludmilla - The Narrows,35.88992609879424
-Parap,37.339757316202714
-Stuart Park,36.30638090599123
-Woolner - Bayview - Winnellie,35.800277874261894
-Alawa,36.258919961427196
-Anula,36.20368046842325
-Berrimah,34.1917007597896
-Brinkin - Nakara,36.14077952297848
+Darwin City,36.3772028
+Fannie Bay - The Gardens,40.58473873
+Larrakeyah,35.43053785
+Ludmilla - The Narrows,35.8899261
+Parap,37.33975732
+Stuart Park,36.30638091
+Woolner - Bayview - Winnellie,35.80027787
+Alawa,36.25891996
+Anula,36.20368047
+Berrimah,34.19170076
+Brinkin - Nakara,36.14077952
 Charles Darwin,17
-Coconut Grove,37.74782608695652
+Coconut Grove,37.74782609
 East Arm,61
-Jingili,35.54694323144105
-Karama,35.11310892745139
-Leanyer,37.703213200173685
-Lyons (NT),29.16205468102734
-Malak - Marrara,37.839170506912446
-Millner,37.39006259780908
-Moil,36.84795613160519
-Nightcliff,36.489019407558736
-Rapid Creek,36.15040148239654
-Tiwi,41.14488748519542
-Wagaman,35.38902743142145
-Wanguri,37.89240851993446
-Wulagi,34.89719626168224
-Howard Springs,37.802311912225704
-Humpty Doo,37.40499108734403
-Virginia,39.315247895229184
-Weddell,38.2905580409701
-Bakewell,32.64800514800515
-Driver,33.168988269794724
-Durack - Marlow Lagoon,32.88570794496227
-Gray,34.702590342181004
-Moulden,33.234042553191486
-Palmerston - North,32.377772747849704
-Palmerston - South,27.233219390926042
-Rosebery - Bellamack,30.058077334556014
-Woodroffe,33.936352121595945
-Charles,35.86661928452973
-East Side,34.91119691119691
-Flynn (NT),33.46958796599085
-Larapinta,33.58356769787063
-Mount Johns,35.62081877184224
-Petermann - Simpson,33.456465739309635
-Ross,41.244207429201914
-Sandover - Plenty,31.588957055214724
-Tanami,30.105414126927215
-Yuendumu - Anmatjere,30.63235294117647
-Barkly,28.76389526871842
-Tennant Creek,34.726190476190474
-Alligator,42.78196022727273
-Daly,30.766524520255864
-Thamarrurr,27.915708812260537
-Tiwi Islands,31.81423757371525
-West Arnhem,28.653556969346443
-Anindilyakwa,29.82394924662966
-East Arnhem,29.68505516549649
-Nhulunbuy,31.39709517923362
-Elsey,31.62152777777778
-Gulf,31.150570884871552
-Katherine,34.09957517355714
-Victoria River,28.280435628160248
-Migratory - Offshore - Shipping (NT),40.58620689655172
-No usual address (NT),39.91497975708502
-Aranda,40.5602593440122
-Belconnen,34.169499527856466
-Bruce,34.557416267942585
-Charnwood,36.29479578392622
-Cook,41.85661517797179
-Dunlop,34.58257261410788
-Evatt,37.4394950405771
-Florey,40.05333612215018
-Flynn (ACT),37.77186311787072
-Fraser,40.0901447921532
-Giralang,38.35053066037736
-Hawker,42.18845388188454
-Higgins,38.757246376811594
-Holt,38.333511491181184
-Kaleen,40.2782131661442
-Latham,38.125066809192944
-Lawson,29.286912139992708
-Macgregor (ACT),34.177982954545456
-Macquarie,39.497416020671835
-McKellar,41.654154518950435
-Melba,38.451021012133765
-Page,43.50211795373086
-Scullin,36.41835401698236
-Spence,38.89318885448916
-Weetangera,40.75626342161775
+Jingili,35.54694323
+Karama,35.11310893
+Leanyer,37.7032132
+Lyons (NT),29.16205468
+Malak - Marrara,37.83917051
+Millner,37.3900626
+Moil,36.84795613
+Nightcliff,36.48901941
+Rapid Creek,36.15040148
+Tiwi,41.14488749
+Wagaman,35.38902743
+Wanguri,37.89240852
+Wulagi,34.89719626
+Howard Springs,37.80231191
+Humpty Doo,37.40499109
+Virginia,39.3152479
+Weddell,38.29055804
+Bakewell,32.64800515
+Driver,33.16898827
+Durack - Marlow Lagoon,32.88570794
+Gray,34.70259034
+Moulden,33.23404255
+Palmerston - North,32.37777275
+Palmerston - South,27.23321939
+Rosebery - Bellamack,30.05807733
+Woodroffe,33.93635212
+Charles,35.86661928
+East Side,34.91119691
+Flynn (NT),33.46958797
+Larapinta,33.5835677
+Mount Johns,35.62081877
+Petermann - Simpson,33.45646574
+Ross,41.24420743
+Sandover - Plenty,31.58895706
+Tanami,30.10541413
+Yuendumu - Anmatjere,30.63235294
+Barkly,28.76389527
+Tennant Creek,34.72619048
+Alligator,42.78196023
+Daly,30.76652452
+Thamarrurr,27.91570881
+Tiwi Islands,31.81423757
+West Arnhem,28.65355697
+Anindilyakwa,29.82394925
+East Arnhem,29.68505517
+Nhulunbuy,31.39709518
+Elsey,31.62152778
+Gulf,31.15057088
+Katherine,34.09957517
+Victoria River,28.28043563
+Migratory - Offshore - Shipping (NT),40.5862069
+No usual address (NT),39.91497976
+Aranda,40.56025934
+Belconnen,34.16949953
+Bruce,34.55741627
+Charnwood,36.29479578
+Cook,41.85661518
+Dunlop,34.58257261
+Evatt,37.43949504
+Florey,40.05333612
+Flynn (ACT),37.77186312
+Fraser,40.09014479
+Giralang,38.35053066
+Hawker,42.18845388
+Higgins,38.75724638
+Holt,38.33351149
+Kaleen,40.27821317
+Latham,38.12506681
+Lawson,29.28691214
+Macgregor (ACT),34.17798295
+Macquarie,39.49741602
+McKellar,41.65415452
+Melba,38.45102101
+Page,43.50211795
+Scullin,36.41835402
+Spence,38.89318885
+Weetangera,40.75626342
 Molonglo Corridor,29.625
-Strathnairn,28.020289855072463
-West Belconnen,38.46153846153846
-Hume,37.27979274611399
+Strathnairn,28.02028986
+West Belconnen,38.46153846
+Hume,37.27979275
 Kowen,59
-Canberra East,45.164976958525344
-Canberra Airport,38.007936507936506
-Majura,30.231939163498097
-Amaroo,34.12965674312673
-Bonner,29.663856404677727
-Casey,30.62391573729864
-Crace,32.59936974789916
-Forde,32.35538116591928
-Franklin,31.051494130202776
-Gungahlin,33.1269065083246
-Hall,44.60431654676259
-Harrison,30.979333819596402
-Ngunnawal,34.84786574242977
-Nicholls,40.792984560035976
-Palmerston,36.70850492390331
-Jacka,27.466101694915253
+Canberra East,45.16497696
+Canberra Airport,38.00793651
+Majura,30.23193916
+Amaroo,34.12965674
+Bonner,29.6638564
+Casey,30.62391574
+Crace,32.59936975
+Forde,32.35538117
+Franklin,31.05149413
+Gungahlin,33.12690651
+Hall,44.60431655
+Harrison,30.97933382
+Ngunnawal,34.84786574
+Nicholls,40.79298456
+Palmerston,36.70850492
+Jacka,27.46610169
 Kenny,17
-Moncrieff,27.60804965205943
-Taylor,27.840878529807263
-Throsby,28.29436325678497
-Acton,20.800211044671123
-Ainslie,41.87211036539895
-Braddon,34.18430141287284
-Civic,31.635272200372594
-Dickson,33.881723716381416
-Downer,36.648901355773724
-Hackett,39.11514587212911
-Lyneham,39.857368421052634
-O'Connor (ACT),37.581722617836554
-Turner,35.897694201925226
-Watson,35.18616071428571
-Campbell,40.29624810236391
-Duntroon,22.49872902897814
-Reid,42.5340383344349
-Deakin,43.616504854368934
-Forrest,45.10077519379845
-Griffith (ACT),40.637368815592204
-Narrabundah,41.05886007143967
+Moncrieff,27.60804965
+Taylor,27.84087853
+Throsby,28.29436326
+Acton,20.80021104
+Ainslie,41.87211037
+Braddon,34.18430141
+Civic,31.6352722
+Dickson,33.88172372
+Downer,36.64890136
+Hackett,39.11514587
+Lyneham,39.85736842
+O'Connor (ACT),37.58172262
+Turner,35.8976942
+Watson,35.18616071
+Campbell,40.2962481
+Duntroon,22.49872903
+Reid,42.53403833
+Deakin,43.61650485
+Forrest,45.10077519
+Griffith (ACT),40.63736882
+Narrabundah,41.05886007
 Parkes (ACT) - South,86
-Red Hill (ACT),40.49967907573813
-Yarralumla,46.32947976878613
-Barton,42.15554414784394
-Fyshwick,45.607142857142854
-Kingston (ACT),38.892857142857146
-Banks,35.32580331061344
-Bonython,38.43094496365524
-Calwell,38.128353498158866
-Chisholm,37.558879573170735
-Conder,36.78202115158637
-Fadden,40.88969857568731
-Gilmore,37.799852832965414
-Gordon (ACT),38.43822222222222
-Gowrie (ACT),38.602651147752994
-Greenway,40.951585572500605
-Isabella Plains,37.333410085194565
-Kambah,40.36678377515171
-Macarthur,38.44395604395604
-Monash,43.54644128113879
-Oxley (ACT),39.094899169632264
-Richardson,36.89053742169469
-Theodore,36.450238221281104
-Tuggeranong,60.333333333333336
-Wanniassa,39.38381400076229
+Red Hill (ACT),40.49967908
+Yarralumla,46.32947977
+Barton,42.15554415
+Fyshwick,45.60714286
+Kingston (ACT),38.89285714
+Banks,35.32580331
+Bonython,38.43094496
+Calwell,38.1283535
+Chisholm,37.55887957
+Conder,36.78202115
+Fadden,40.88969858
+Gilmore,37.79985283
+Gordon (ACT),38.43822222
+Gowrie (ACT),38.60265115
+Greenway,40.95158557
+Isabella Plains,37.33341009
+Kambah,40.36678378
+Macarthur,38.44395604
+Monash,43.54644128
+Oxley (ACT),39.09489917
+Richardson,36.89053742
+Theodore,36.45023822
+Tuggeranong,60.33333333
+Wanniassa,39.383814
 Tuggeranong - West,27
-Chapman,43.87935279634189
-Duffy,39.182486041727884
-Fisher,39.21195992485911
-Holder,40.91563713378044
-Rivett,39.15521398432791
-Stirling,45.150522964984084
-Waramanga,38.975662913185616
-Weston,42.44152626362735
-Chifley,39.61950856291884
-Curtin,40.78166487262289
-Farrer,43.24907749077491
-Garran,41.2573568753344
-Hughes,42.833490714510546
-Isaacs,46.00552016985138
-Lyons (ACT),39.30379362670713
-Mawson,39.89565217391304
-O'Malley,46.66553672316384
-Pearce,42.19226436349981
-Phillip,34.94524773472142
-Torrens,38.149482401656314
+Chapman,43.8793528
+Duffy,39.18248604
+Fisher,39.21195992
+Holder,40.91563713
+Rivett,39.15521398
+Stirling,45.15052296
+Waramanga,38.97566291
+Weston,42.44152626
+Chifley,39.61950856
+Curtin,40.78166487
+Farrer,43.24907749
+Garran,41.25735688
+Hughes,42.83349071
+Isaacs,46.00552017
+Lyons (ACT),39.30379363
+Mawson,39.89565217
+O'Malley,46.66553672
+Pearce,42.19226436
+Phillip,34.94524773
+Torrens,38.1494824
 Arboretum,67
-Coombs,29.62067553735926
-Denman Prospect,28.774699234414875
-Wright,31.652642650539047
+Coombs,29.62067554
+Denman Prospect,28.77469923
+Wright,31.65264265
 Molonglo - East,57
-ACT - South West,33.582191780821915
-Namadgi,28.444444444444443
-No usual address (ACT),37.541666666666664
-Christmas Island,39.09540846750149
-Cocos (Keeling) Islands,40.38316151202749
-Jervis Bay,37.15884476534296
-Norfolk Island,45.680742459396754
+ACT - South West,33.58219178
+Namadgi,28.44444444
+No usual address (ACT),37.54166667
+Christmas Island,39.09540847
+Cocos (Keeling) Islands,40.38316151
+Jervis Bay,37.15884477
+Norfolk Island,45.68074246
 No usual address (OT),47
-Total,39.48831665389008
+Total,39.48831665
