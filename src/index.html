@@ -2,53 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Superannuation Visualisations</title>
-
-  <!-- Vega libraries: load in this order -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-  <!-- Your JavaScript -->
-  <script src="js/vega_lite_vis.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-
-<script src="vega_lite_vis.js" defer></script>
-</head>
-
-<head>
     <meta charset="UTF-8">
-    <title>Superannuation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font: Inter -->
+    <title>Superannuation Visualisations</title>
+
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    
-</head>
+    <!-- Vega libraries: load in this order -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-<head>
-    <!-- Your existing head content -->
+    <!-- Your JavaScript: load once, after the libraries -->
+    <script src="js/vega_lite_vis.js" defer></script>
 
+    <!-- Shared tooltip styling -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #344054;
-            background-color: #FFFFFF;
-            margin: 0;
+        #vg-tooltip-element {
+            background-color: #FFFFFF !important;
+            color: #19324D !important;
+            border: 1px solid #D9E5E5 !important;
+            border-radius: 6px !important;
+            box-shadow: 0 4px 12px rgba(25, 50, 77, 0.12) !important;
+            font-family: "Inter", Arial, sans-serif !important;
+            font-size: 12px !important;
+            padding: 10px 12px !important;
         }
 
-        h1, h2, h3 {
-            color: #172B4D;
-            font-weight: 700;
+        #vg-tooltip-element table {
+            color: #19324D !important;
+            font-family: "Inter", Arial, sans-serif !important;
+        }
+
+        #vg-tooltip-element td.key {
+            color: #526477 !important;
+            padding-right: 12px !important;
+        }
+
+        #vg-tooltip-element td.value {
+            color: #19324D !important;
+            font-weight: 600 !important;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background-color: #F7F6F2;
+            color: #19324D;
         }
     </style>
 </head>
 
+<body>
+
+    <div id="world_cloud"></div>
+
+    <div id="timeline"></div>
+
+    <div id="age_map"></div>
+
+    <div id="retiree_map"></div>
+
+    <div id="age_profiles"></div>
+
+    <div id="gender_pyramid"></div>
+
+    <div id="state_balances"></div>
+
+    <div id="accounts_radial"></div>
+
+    <div id="benefits_ternary"></div>
+
+    <div id="fund_ranking"></div>
+
+</body>
 </html>

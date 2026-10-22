@@ -2,16 +2,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const charts = [
-        ["#accounts_radial", "accounts_radial.vg.json"],
-        ["#age_map", "age_map.vg.json"],
-        ["#age_profiles", "age_profiles.vg.json"],
-        ["#benefits_ternary", "benefits_ternary.vg.json"],
-        ["#fund_ranking", "fund_ranking.vg.json"],
-        ["#gender_pyramid", "gender_pyramid.vg.json"],
-        ["#retiree_map", "retiree_map.vg.json"],
-        ["#state_balaces", "state_balaces.vg.json"],
+        ["#world_cloud", "world_cloud.vg.json"],
         ["#timeline", "timeline.vg.json"],
-        ["#world_cloud", "world_cloud.vg.json"]
+        ["#age_map", "age_map.vg.json"],
+        ["#retiree_map", "retiree_map.vg.json"],
+        ["#age_profiles", "age_profiles.vg.json"],
+        ["#gender_pyramid", "gender_pyramid.vg.json"],
+        ["#state_balances", "state_balances.vg.json"],
+        ["#accounts_radial", "accounts_radial.vg.json"],
+        ["#benefits_ternary", "benefits_ternary.vg.json"],
+        ["#fund_ranking", "fund_ranking.vg.json"]
     ];
 
     charts.forEach(([element, spec]) => {
@@ -29,4 +29,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-

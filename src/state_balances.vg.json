@@ -36,8 +36,8 @@
         },
       "mark": {
         "type": "geoshape",
-        "fill": "#F0F0F0",
-        "stroke": "#777777",
+        "fill": "#FFFFFF",
+        "stroke": "#E2E5E5",
         "strokeWidth": 1
       }
     },
@@ -94,7 +94,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Male", "Female"],
-            "range": ["#4477AA", "#EE9955"]
+            "range": ["#247C83", "#C49A45"]
           },
           "legend": {
             "title": "Gender"
@@ -143,32 +143,55 @@
       }
     }
   ],
+      "background": "#F7F6F2",
   "config": {
     "font": "Inter",
     "title": {
-        "font": "Inter",
-        "fontSize": 16,
-        "fontWeight": 600,
-        "color": "#172B4D",
-        "anchor": "start"
+      "font": "Inter",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#19324D",
+      "anchor": "start",
+      "offset": 12
     },
     "axis": {
-        "labelFont": "Inter",
-        "titleFont": "Inter",
-        "labelColor": "#344054",
-        "titleColor": "#344054",
-        "gridColor": "#E8EEF2",
-        "domainColor": "#CBD5E1"
+      "labelFont": "Inter",
+      "labelFontSize": 11,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "gridColor": "#E2E5E5",
+      "gridWidth": 0.7,
+      "domain": false,
+      "tickColor": "#CBD3D6",
+      "labelPadding": 6,
+      "titlePadding": 10
     },
     "legend": {
-        "labelFont": "Inter",
-        "titleFont": "Inter",
-        "labelColor": "#344054",
-        "titleColor": "#172B4D",
-        "orient": "bottom"
+      "labelFont": "Inter",
+      "labelFontSize": 11,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleColor": "#19324D",
+      "symbolSize": 100,
+      "padding": 8
     },
     "view": {
-        "stroke": null
+      "stroke": null
+    },
+    "bar": {
+      "cornerRadiusEnd": 3
+    },
+    "line": {
+      "strokeWidth": 2.5,
+      "point": true
+    },
+    "point": {
+      "filled": true,
+      "size": 55
     }
-}
+  }
 }
