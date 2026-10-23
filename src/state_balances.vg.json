@@ -97,7 +97,7 @@
             "range": ["#247C83", "#C49A45"]
           },
           "legend": {
-            "title": "Gender"
+            "title": "Average account balance ($)"
           }
         },
         "radius": {
@@ -106,9 +106,6 @@
           "scale": {
             "domain": [80000, 200000],
             "range": [12, 35]
-          },
-          "legend": {
-            "title": "Average account balance ($)"
           }
         },
         "tooltip": [

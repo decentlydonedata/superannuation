@@ -6,7 +6,6 @@
   "height": 450,
   "padding": 12,
   "autosize": "none",
-  "background": "#FAFAF7",
   "data": [
     {
       "name": "table",

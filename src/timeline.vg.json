@@ -1,6 +1,19 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australia's Superannuation Guarantee Timeline",
+    "subtitle": "SG contribution rates and key legislative milestones, 1992–2026",
+    "anchor": "start",
+    "font": "Inter",
+    "fontSize": 20,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 12,
+    "subtitleColor": "#526477",
+    "color": "#19324D",
+    "offset": 12
+  },
+  "description": "Vertical timeline of Australian superannuation guarantee rates and legislative changes.",
   "data": {
     "url": "data/raw/Legislature.csv",
     "format": {
@@ -10,154 +23,250 @@
   "transform": [
     {
       "calculate": "toNumber(datum.Year)",
-      "as": "Year_numeric"
+      "as": "YearNum"
     },
     {
       "calculate": "toNumber(datum.Rate)",
-      "as": "Rate_numeric"
-    }
-  ],
-  "layer": [
-    {
-      "mark": {
-        "type": "line",
-        "point": false,
-        "strokeWidth": 2
-      },
-      "encoding": {
-        "x": {
-          "field": "Year_numeric",
-          "type": "quantitative",
-          "title": "Year",
-          "axis": {
-            "format": "d"
-          }
-        },
-        "y": {
-          "field": "Rate_numeric",
-          "type": "quantitative",
-          "title": "Rate"
-        },
-        "order": {
-          "field": "Year_numeric",
-          "type": "quantitative"
-        },
-        "tooltip": [
-          {
-            "field": "Year",
-            "type": "nominal",
-            "title": "Year"
-          },
-          {
-            "field": "Rate_numeric",
-            "type": "quantitative",
-            "title": "Rate"
-          }
-        ]
-      }
+      "as": "RateNum"
     },
     {
-      "transform": [
-            {
-            "filter": "datum.Legislature != null && datum.Legislature != '' && datum.Legislature != 'SG rate increase'"
+      "filter": "datum.YearNum >= 1992 && datum.YearNum <= 2026"
+    },
+    {
+      "calculate": "datum.Act != null && datum.Act != '' ? 'Legislative milestone' : (datum.Legislature == 'SG rate increase' ? 'SG rate increase' : 'No legislative change')",
+      "as": "EventType"
+    },
+    {
+      "calculate": "datum.Description != null && trim(datum.Description) != '' ? datum.Description : null",
+      "as": "EventDescription"
+    },
+    {
+    "calculate": "datum.Legislature != 'No legislative change' ? datum.Act : null",
+    "as": "ActTooltip"
+    },
+    {
+    "calculate": "toNumber(datum.Year)",
+    "as": "YearNum"
+    }
+  ],
+  "hconcat": [
+    {
+      "width": 200,
+      "height": 700,
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "#D9E5E5",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "RateNum",
+              "type": "quantitative",
+              "scale": {
+                "domain": [0, 12.5],
+                "nice": false
+              },
+              "axis": {
+                "title": "SG rate (%)",
+                "orient": "bottom",
+                "labelFontSize": 10,
+                "titleFontSize": 11,
+                "tickCount": 4,
+                "grid": true,
+                "gridColor": "#E2E5E5"
+              }
+            },
+            "y": {
+                "field": "YearNum",
+                "type": "quantitative",
+                "scale": {
+                  "domain": [1992, 2026],
+                  "reverse": true,
+                  "nice": false
+                },
+                "axis": {
+                  "title": "Year",
+                  "orient": "left",
+                  "values": [1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022,2024,2026],
+                  "format": "d",
+                  "grid": true,
+                  "labels": true,
+                  "ticks": true,
+                  "domain": true
+                }
+              },
+            "order": {
+              "field": "YearNum",
+              "type": "quantitative"
             }
-      ],
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 90,
+            "stroke": "#F7F6F2",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "RateNum",
+              "type": "quantitative",
+              "scale": {
+                "domain": [0, 12.5],
+                "nice": false
+              }
+            },
+            "y": {
+              "field": "YearNum",
+              "type": "quantitative",
+              "scale": {
+                "domain": [1992, 2026],
+                "reverse": true,
+                "nice": false
+              }
+            },
+            "color": {
+              "field": "EventType",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  "Legislative milestone",
+                  "SG rate increase",
+                  "No legislative change"
+                ],
+                "range": [
+                  "#247C83",
+                  "#C49A45",
+                  "#E2E5E5"
+                ]
+              },
+              "legend": {
+                "title": "Event type",
+                "orient": "bottom"
+              }
+            },
+            "tooltip": [
+              {
+                "field": "YearNum",
+                "type": "quantitative",
+                "title": "Year",
+                "format": "d"
+              },
+              {
+                "field": "RateNum",
+                "type": "quantitative",
+                "title": "SG rate",
+                "format": ".1f"
+              },
+              {
+                "field": "ActTooltip",
+                "type": "nominal",
+                "title": "Act"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": 300,
+      "height": 700,
       "mark": {
-        "type": "point",
-        "filled": true,
-        "size": 90,
-        "color": "#247C83"
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "font": "Inter",
+        "fontSize": 10,
+        "color": "#19324D",
+        "limit": 700
       },
       "encoding": {
         "x": {
-          "field": "Year_numeric",
-          "type": "quantitative",
-          "title": "Year"
+          "value": 0
         },
         "y": {
-          "field": "Rate_numeric",
+          "field": "YearNum",
           "type": "quantitative",
-          "title": "Rate"
+          "scale": {
+            "domain": [1992, 2026],
+            "reverse": true,
+            "nice": false
+          },
+          "axis": null
+        },
+        "opacity": {
+          "condition": {
+            "test": "isValid(datum.EventDescription)",
+            "value": 1
+          },
+          "value": 0
+        },
+        "text": {
+          "field": "EventDescription",
+          "type": "nominal"
         },
         "tooltip": [
           {
-            "field": "Year",
-            "type": "nominal",
-            "title": "Year"
-          },
-          {
-            "field": "Rate_numeric",
+            "field": "YearNum",
             "type": "quantitative",
-            "title": "Rate"
-          },
-          {
-            "field": "Legislature",
-            "type": "nominal",
-            "title": "Legislature"
+            "title": "Year",
+            "format": "d"
           },
           {
             "field": "Act",
             "type": "nominal",
             "title": "Act"
-          },
-          {
-            "field": "Description",
-            "type": "nominal",
-            "title": "Description"
           }
         ]
       }
     }
   ],
-      "background": "#F7F6F2",
+  "resolve": {
+    "scale": {
+      "y": "shared"
+    }
+  },
+  "spacing": 12,
+  "background": "#F7F6F2",
   "config": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
     "axis": {
       "labelFont": "Inter",
-      "labelFontSize": 11,
+      "labelFontSize": 10,
       "labelColor": "#526477",
       "titleFont": "Inter",
-      "titleFontSize": 12,
+      "titleFontSize": 11,
       "titleFontWeight": 500,
       "titleColor": "#19324D",
       "gridColor": "#E2E5E5",
       "gridWidth": 0.7,
       "domain": false,
       "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
+      "labelPadding": 5,
+      "titlePadding": 8
     },
     "legend": {
       "labelFont": "Inter",
-      "labelFontSize": 11,
+      "labelFontSize": 10,
       "labelColor": "#526477",
       "titleFont": "Inter",
-      "titleFontSize": 12,
+      "titleFontSize": 11,
       "titleColor": "#19324D",
-      "symbolSize": 100,
+      "symbolSize": 90,
       "padding": 8
     },
     "view": {
       "stroke": null
     },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
     "line": {
-      "strokeWidth": 2.5,
-      "point": true
+      "strokeWidth": 2
     },
     "point": {
-      "filled": true,
-      "size": 55
+      "filled": true
     }
   }
 }

@@ -5,8 +5,8 @@
     "text": "Superannuation Fund Rankings, 2015–2025",
     "subtitle": "Click a fund to highlight its ranking over time"
   },
-  "width": 750,
-  "height": 450,
+  "width": 1000,
+  "height": 300,
   "data": {
     "url": "data/clean/fund_rankings.csv",
     "format": {
@@ -38,7 +38,7 @@
       "filled": true,
       "size": 55
     },
-    "strokeWidth": 2
+    "strokeWidth": 4
   },
   "encoding": {
     "x": {
@@ -66,13 +66,37 @@
       "field": "Fund"
     },
     "color": {
-      "condition": {
-        "param": "fundSelect",
-        "field": "Fund",
-        "type": "nominal"
-      },
-      "value": "#D3D3D3"
-    },
+  "condition": {
+    "param": "fundSelect",
+    "field": "Fund",
+    "type": "nominal",
+    "scale": {
+    "domain": [
+      "AMP Superannuation Savings Trust",
+      "Australian Retirement Trust",
+      "AustralianSuper",
+      "Aware Super",
+      "Colonial First State FirstChoice Superannuation Trust",
+      "MLC Super Fund",
+      "Public Sector Superannuation Scheme",
+      "Retirement Wrap",
+      "Unisuper"
+    ],
+    "range": [
+      "#6B9A96",
+      "#247C83",
+      "#C49A45",
+      "#54718C",
+      "#85865B",
+      "#718B7A",
+      "#7896AD",
+      "#9A8875",
+      "#42666A"
+    ]
+  }
+  },
+  "value": "#D3D3D3"
+},
     "opacity": {
       "condition": {
         "param": "fundSelect",

@@ -24,43 +24,56 @@
       }
     },
     {
-      "data": {
-        "url": "data/clean/retiree_dots.csv",
-        "format": {
-          "type": "csv"
+    "data": {
+      "url": "data/clean/retiree_dots.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {
+      "type": "circle",
+      "opacity": 0.55,
+      "size": 5
+    },
+    "encoding": {
+      "longitude": {
+        "field": "longitude",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "latitude",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "age_group",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Over 70%", "70% or less", "Unknown"],
+          "range": ["#C49A45", "#247C83", "#B8B8B8"]
+        },
+        "legend": {
+          "title": "SA1 population aged over 60"
         }
       },
-      "mark": {
-        "type": "circle",
-        "color": "#247C83",
-        "opacity": 0.55,
-        "size": 5
-      },
-      "encoding": {
-        "longitude": {
+      "tooltip": [
+        {
           "field": "longitude",
-          "type": "quantitative"
+          "type": "quantitative",
+          "format": ".3f",
+          "title": "Longitude"
         },
-        "latitude": {
+        {
           "field": "latitude",
-          "type": "quantitative"
+          "type": "quantitative",
+          "format": ".3f",
+          "title": "Latitude"
         },
-        "tooltip": [
-          {
-            "field": "longitude",
-            "type": "quantitative",
-            "format": ".3f",
-            "title": "Longitude"
-          },
-          {
-            "field": "latitude",
-            "type": "quantitative",
-            "format": ".3f",
-            "title": "Latitude"
-          }
-        ]
-      }
+        {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Population aged over 60 (%)"
+        }
+      ]
     }
+  }
   ],
       "background": "#F7F6F2",
   "config": {

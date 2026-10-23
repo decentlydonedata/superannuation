@@ -213,131 +213,65 @@ retirees <- raw_census10 %>%
   select(c(SA1, Percentage, Retirees))
 write_csv(retirees, here("src/data/clean", "retirees.csv"))
 
-# Census SA2 Data
-raw_censusage <- read_csv(paste0(here(),"/src/data/raw/Age Range.csv"), skip = 8) %>%
+# Census SA4 Data
+raw_censusage <- read_csv(
+  here("src/data/raw/sa3.csv"),skip = 9,col_types = cols(.default = col_character())
+) %>%
+  rename(SA3 = `AGEP Age`) %>%
+  filter(SA3 != "Total") %>%
   mutate(
-    `Average Age` = rowSums(
-      across(`0`:`115`, ~ .x * as.numeric(cur_column())),
-      na.rm = TRUE
-    ) / rowSums(across(`0`:`115`), na.rm = TRUE)
-  ) %>% filter(!is.na(`Average Age`)) %>% rename(SA2 = `AGEP Age`) %>%
-  select(c(SA2, `Average Age`))
-write_csv(raw_censusage, here("src/data/clean", "sa2_age.csv"))
+    across(
+      `0`:`115`,
+      ~ parse_number(.x, na = c("", " na", "n/a", "N/A", "null"))
+    )
+  ) %>%
+  mutate(
+    total_population = rowSums(across(`0`:`115`),na.rm = TRUE
+    ),
+    Average_Age = if_else(total_population > 0,
+      rowSums(across(`0`:`115`,~ .x * as.numeric(cur_column())),na.rm = TRUE) / total_population,NA_real_
+    )
+  ) %>%
+  filter(!is.na(Average_Age)) %>%
+  select(SA3, Average_Age)
 
-
+write_csv(
+  raw_censusage,
+  here("src/data/clean/sa3_age.csv")
+)
 library(sf)
 library(dplyr)
 library(readr)
-library(stringr)
 
-# --------------------------------------------------
-# 1. Read the data
-# --------------------------------------------------
-
-age_raw <- read_csv(
-  "src/data/clean/sa2_age.csv",
-  col_types = cols(
-    SA2 = col_character(),
-    `Average Age` = col_double()
-  ),
-  show_col_types = FALSE
-)
-
-sa2_boundaries <- st_read(
-  "src/data/boundaries/SA2_2021_AUST_GDA2020.shp",
+# Read SA3 geographic boundaries
+sa3_map <- st_read(
+  "src/data/boundaries/SA3_2021_AUST_GDA2020.shp",
   quiet = TRUE
 )
 
-# Inspect the columns before joining
-names(age_raw)
-names(sa2_boundaries)
+# Read cleaned data
+sa3_data <- read_csv(paste0(here(),"/src/data/clean/sa3_age.csv"))
 
-# --------------------------------------------------
-# 2. Clean the CSV
-# --------------------------------------------------
-
-sa2_age <- age_raw %>%
-  mutate(
-    SA2 = str_trim(as.character(SA2)),
-    `Average Age` = as.numeric(`Average Age`)
-  ) %>%
-  filter(
-    !is.na(SA2),
-    !is.na(`Average Age`),
-    is.finite(`Average Age`)
+# Join using the matching SA3 code fields.
+# Replace these names with the actual column names.
+sa3_map <- sa3_map %>%
+  left_join(
+    sa3_data,
+    by = c("SA3_NAME21" = "SA3")
   )
-
-# Check duplicate SA2 identifiers
-duplicates <- sa2_age %>%
-  count(SA2) %>%
-  filter(n > 1)
-
-print(duplicates)
-
-if (nrow(duplicates) > 0) {
-  stop("Duplicate SA2 identifiers found. Inspect duplicates before joining.")
-}
-
-# --------------------------------------------------
-# 3. Prepare the ABS boundaries
-# --------------------------------------------------
-
-sa2_boundaries <- sa2_boundaries %>%
+names(sa3_map)
+names(sa3_data)
+# Simplify geometry to reduce browser rendering time
+sa3_map <- sa3_map %>%
   st_make_valid() %>%
-  mutate(
-    SA2 = str_trim(as.character(SA2_CODE21))
-  )
+  st_transform(3577) %>%
+  st_simplify(dTolerance = 100, preserveTopology = TRUE) %>%
+  st_transform(4326)
 
-# --------------------------------------------------
-# 4. Join average age to the polygons
-# --------------------------------------------------
-
-sa2_map <- sa2_boundaries %>%
-  left_join(sa2_age, by = "SA2")
-
-# Check the join
-cat("Number of SA2 polygons:", nrow(sa2_map), "\n")
-cat(
-  "SA2 polygons with average age:",
-  sum(!is.na(sa2_map$`Average Age`)),
-  "\n"
-)
-cat(
-  "SA2 polygons without average age:",
-  sum(is.na(sa2_map$`Average Age`)),
-  "\n"
-)
-
-# Find CSV records without a matching boundary
-unmatched <- sa2_age %>%
-  anti_join(
-    st_drop_geometry(sa2_boundaries) %>% distinct(SA2),
-    by = "SA2"
-  )
-
-print(unmatched)
-
-# --------------------------------------------------
-# 5. Export clean data for Vega-Lite
-# --------------------------------------------------
-
-dir.create(
-  "data/clean",
-  recursive = TRUE,
-  showWarnings = FALSE
-)
-
-write_csv(
-  sa2_map %>%
-    st_drop_geometry() %>%
-    select(SA2, SA2_NAME21, `Average Age`),
-  "data/clean/sa2_age_clean.csv"
-)
-
-# Export joined boundaries for inspection if needed
+# Export the simplified map
 st_write(
-  sa2_map,
-  "data/clean/sa2_age_joined.geojson",
+  sa3_map,
+  "src/data/clean/sa3_choropleth.geojson",
   delete_dsn = TRUE,
   quiet = TRUE
 )
@@ -346,7 +280,7 @@ st_write(
 # Benefit Reasons
 raw_benefitpayments <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
      sheet = "Table 4", skip = 4) %>%
-  select(c(`Fund name`,`Total lump sum benefit payments`,`Retirement...32`, `Attaining age 65...33`, `Attaining preservation age...34`, 
+  select(c(`Fund name`,`Total lump sum benefit payments`,`Total number of member accounts from which a lump sum benefit payment was made`,`Retirement...32`, `Attaining age 65...33`, `Attaining preservation age...34`, 
            `Death...35`, `Termination...36`, `Termination with less than $200...37`, 
            `Unclaimed money and lost member...38`, `Lost member who is found...39`, 
            `Non categorised conditions of release...40`, `Terminal medical condition...41`, 
@@ -356,6 +290,7 @@ raw_benefitpayments <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level
            rename(
              fund = `Fund name`,
              total = `Total lump sum benefit payments`,
+             members = `Total number of member accounts from which a lump sum benefit payment was made`,
              retirement = `Retirement...32`,
              age_65 = `Attaining age 65...33`,
              preservation = `Attaining preservation age...34`,
@@ -378,6 +313,7 @@ raw_benefitpayments <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level
     across(
       c(
         total,
+        members,
         retirement,
         age_65,
         preservation,
@@ -425,6 +361,7 @@ payments <- raw_benefitpayments %>% filter(!is.na(total)) %>% filter(!is.na(reti
   select(
     fund,
     total,
+    members,
     retirement,
     age_65,
     preservation,
@@ -448,16 +385,19 @@ benefitpayments <- payments %>%
       preservation_missing & !age65_missing ~ missing_per,
       preservation_missing & age65_missing ~ missing_per / (1 + ratio),
       TRUE ~ preservation
-    )
+    ),
+    average_payments = (total/members)*1000
   ) %>%
   select(-age65_missing, -preservation_missing, -missing_per)
+
+
 write_csv(benefitpayments, here("src/data/clean", "benefit_payments.csv"))
 
 # Bump chart members rank
 raw_memberships <- read_excel(
   paste0(
     here(),
-    "src/data/raw/Annual fund-level superannuation statistics back series June 2004 to June 2025.xlsx"
+    "/src/data/raw/Annual fund-level superannuation statistics back series June 2004 to June 2025.xlsx"
   ),
   sheet = "Table 10",
   skip = 5
@@ -487,7 +427,7 @@ fund_rankings <- bind_rows(
       Rank = min_rank(desc(Benefits))
     ) %>%
     ungroup() %>%
-    filter(Rank <= 10) %>%
+    filter(Rank <= 5) %>%
     mutate(Ranking_type = "Assets"),
   
   raw_memberships %>%
@@ -497,12 +437,21 @@ fund_rankings <- bind_rows(
       Rank = min_rank(desc(Members))
     ) %>%
     ungroup() %>%
-    filter(Rank <= 10) %>%
+    filter(Rank <= 5) %>%
     mutate(Ranking_type = "Member accounts")
 ) %>%
   arrange(Ranking_type, Year, Rank) %>%
   select(Year, Ranking_type, Fund, ABN, Members, Benefits, Rank)
 write_csv(fund_rankings, here("src/data/clean", "fund_rankings.csv"))
+
+read_csv("src/data/clean/fund_rankings.csv") %>%
+  filter(
+    Year >= 2015,
+    Year <= 2025,
+    Ranking_type == "Assets"
+  ) %>%
+  distinct(Fund) %>%
+  arrange(Fund)
 
 # Gender Population Pyramid
 
@@ -629,27 +578,30 @@ estimate_median_by_age <- function(file_path, persons_col, date) {
 
 file_path <- paste0(
   here(),
-  "src/data/raw/Quarterly Superannuation Industry Publication - June 2026.xlsx"
+  "/src/data/raw/Quarterly Superannuation Industry Publication - June 2026.xlsx"
 )
 
 median_profiles <- bind_rows(
   estimate_median_by_age(
     file_path,
     persons_col = "...7",
-    date = "2022-06-30"
+    date = "2016-06-30"
   ),
   estimate_median_by_age(
     file_path,
     persons_col = "...15",
-    date = "2024-06-30"
+    date = "2021-06-30"
   ),
   estimate_median_by_age(
     file_path,
     persons_col = "...23",
     date = "2026-06-30"
   )
-)
+)%>%
+  mutate(Date = lubridate::year(Date))
 write_csv(median_profiles, here("src/data/clean", "age_profiles.csv"))
+
+
 
 # Gender population pyramid
 
@@ -711,7 +663,7 @@ retirees <- read_csv(
 
 # 2. Read the SA1 boundaries
 sa1 <- st_read(
-  "data/boundaries/SA1_2021_AUST_GDA2020.shp",
+  "src/data/boundaries/SA1_2021_AUST_GDA2020.shp",
   quiet = TRUE
 )
 
@@ -745,31 +697,69 @@ set.seed(123)
 
 dot_points <- purrr::map2(
   st_geometry(sa1_retirees),
-  sa1_retirees$Retirees,
-  function(polygon, n) {
-    sf::st_sample(
+  seq_len(nrow(sa1_retirees)),
+  function(polygon, i) {
+    n <- as.integer(sa1_retirees$Retirees[i])
+    
+    if (is.na(n) || n <= 0) {
+      return(st_sfc(crs = st_crs(sa1_retirees)))
+    }
+    
+    points <- sf::st_sample(
       polygon,
-      size = as.integer(n),
+      size = n,
       type = "random"
+    )
+    
+    points
+  }
+)
+
+# 7. Keep the SA1 classification associated with every dot
+dot_data <- purrr::map2(
+  dot_points,
+  seq_along(dot_points),
+  function(points, i) {
+    if (length(points) == 0) {
+      return(NULL)
+    }
+    
+    coords <- st_coordinates(points)
+    
+    tibble(
+      longitude = coords[, 1],
+      latitude = coords[, 2],
+      SA1 = sa1_retirees$SA1[i],
+      Percentage = sa1_retirees$Percentage[i]
     )
   }
 )
 
-# 7. Combine all generated points
-dot_points <- do.call(c, dot_points)
-dot_points <- st_sfc(
-  dot_points,
-  crs = st_crs(sa1_retirees)
+retiree_dots <- bind_rows(dot_data)
+
+# 8. Convert coordinates to longitude and latitude
+# Points are still in the projected CRS, EPSG:3577
+dots_sf <- st_as_sf(
+  retiree_dots,
+  coords = c("longitude", "latitude"),
+  crs = 3577,
+  remove = FALSE
 )
 
-# 8. Convert to longitude and latitude
-dot_points <- st_transform(dot_points, 4326)
-coords <- st_coordinates(dot_points)
+dots_sf <- st_transform(dots_sf, 4326)
+coords <- st_coordinates(dots_sf)
 
-retiree_dots <- tibble(
-  longitude = coords[, 1],
-  latitude = coords[, 2]
-)
+retiree_dots <- retiree_dots %>%
+  mutate(
+    longitude = coords[, 1],
+    latitude = coords[, 2],
+    age_group = if_else(
+      Percentage > 70,
+      "Over 70%",
+      "70% or less",
+      missing = "Unknown"
+    )
+  )
 
 # 9. Export for Vega-Lite
 write_csv(
@@ -778,5 +768,4 @@ write_csv(
 )
 
 cat("Dots generated:", nrow(retiree_dots), "\n")
-cat("Expected dots:", sum(sa1_retirees$Retirees), "\n")
-
+cat("Expected dots:", sum(sa1_retirees$Retirees, na.rm = TRUE), "\n")

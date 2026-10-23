@@ -31,9 +31,10 @@
         "#C49A45"
       ]
     },
-    "legend": {
-      "title": "Number of accounts"
-    }
+      "legend": {
+        "orient": "right",
+        "title": null
+      }
   },
     "tooltip": [
   {

@@ -1,7 +1,10 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Ternary plot of superannuation benefit payment reasons by fund.",
+  "title": {
+    "text": "How Superannuation Benefits Are Distributed",
+    "subtitle": "Composition of benefit payments across retirement, age 65, preservation age and other categories"
+  },
   "width": 560,
   "height": 500,
   "data": {
@@ -43,8 +46,12 @@
       "as": "y"
     },
     {
-  "calculate": "indexof(['HESTA', 'Military Superannuation & Benefits Fund No 1', 'HOSTPLUS Superannuation Fund'], datum.fund) >= 0 ? 'Highlighted funds' : 'Other funds'",
-  "as": "Highlight"
+      "calculate": "indexof(['HESTA', 'Military Superannuation & Benefits Fund No 1', 'CSS Fund'], datum.fund) >= 0 ? 'Highlighted funds' : 'Other funds'",
+      "as": "Highlight"
+    },
+    {
+      "calculate": "toNumber(datum.average_payments)",
+      "as": "AveragePayments"
     }
   ],
   "layer": [
@@ -90,6 +97,35 @@
     {
       "data": {
         "values": [
+          {"x": 0, "y": 0},
+          {"x": 1, "y": 0},
+          {"x": 0.5, "y": 0.8660254}
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#19324D",
+        "size": 50,
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {"domain": [-0.16, 1.16], "nice": false},
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {"domain": [-0.12, 1.02], "nice": false},
+          "axis": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
           {"x": 0, "y": -0.055, "label": "Retirement"},
           {"x": 1, "y": -0.055, "label": "Attaining age 65"},
           {"x": 0.5, "y": 0.925, "label": "Attaining preservation age"}
@@ -128,11 +164,10 @@
     },
     {
       "mark": {
-        "type": "circle",
-        "size": 85,
-        "opacity": 0.75,
-        "filled": true
-      },
+      "type": "circle",
+      "opacity": 0.75,
+      "filled": true
+    },
       "encoding": {
         "x": {
           "field": "x",
@@ -152,6 +187,19 @@
           },
           "axis": null
         },
+        "size": {
+        "field": "AveragePayments",
+        "type": "quantitative",
+        "scale": {
+          "type": "linear",
+          "range": [0, 1500]
+        },
+        "legend": {
+          "title": "Average payments",
+          "orient": "bottom",
+          "format": ",.0f"
+        }
+      },
         "color": {
         "field": "Highlight",
         "type": "nominal",
@@ -175,6 +223,12 @@
             "type": "quantitative",
             "title": "Total benefits paid  ($'000)",
             "format": ",.0f"
+          },
+          {
+            "field": "AveragePayments",
+            "type": "quantitative",
+            "title": "Average payments",
+            "format": ",.2f"
           },
           {
             "field": "Retirement",
