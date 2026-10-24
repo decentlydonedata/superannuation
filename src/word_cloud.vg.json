@@ -1,11 +1,8 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Word cloud showing superannuation-related word frequencies",
-  "width": 800,
-  "height": 450,
-  "padding": 12,
-  "autosize": "none",
+  "width": 500,
+  "height": 320,
   "data": [
     {
       "name": "table",
@@ -22,16 +19,33 @@
           "expr": "datum.name != null && trim(datum.name) !== '' && isValid(datum.n) && datum.n > 0"
         },
         {
-          "type": "collect",
-          "sort": {
-            "field": "n",
-            "order": "descending"
-          }
-        },
-        {
           "type": "formula",
           "as": "angle",
-          "expr": "[-45, 0, 0, 0, 0, 45][floor(random() * 6)]"
+          "expr": "0"
+        },
+        {
+          "type": "wordcloud",
+          "size": [
+            800,
+            450
+          ],
+          "text": {
+            "field": "name"
+          },
+          "font": "Inter",
+          "fontWeight": "bold",
+          "fontSize": {
+            "field": "n"
+          },
+          "fontSizeRange": [
+            13,
+            60
+          ],
+          "rotate": {
+            "field": "angle"
+          },
+          "padding": 3,
+          "spiral": "archimedean"
         }
       ]
     }
@@ -59,32 +73,6 @@
       "from": {
         "data": "table"
       },
-      "transform": [
-        {
-          "type": "wordcloud",
-          "size": [
-            800,
-            450
-          ],
-          "text": {
-            "field": "name"
-          },
-          "font": "Inter",
-          "fontWeight": "bold",
-          "fontSize": {
-            "field": "n"
-          },
-          "fontSizeRange": [
-            13,
-            60
-          ],
-          "rotate": {
-            "field": "angle"
-          },
-          "padding": 3,
-          "spiral": "archimedean"
-        }
-      ],
       "encode": {
         "enter": {
           "align": {
@@ -92,10 +80,6 @@
           },
           "baseline": {
             "value": "alphabetic"
-          },
-          "fill": {
-            "scale": "wordColor",
-            "field": "name"
           }
         },
         "update": {
@@ -104,6 +88,9 @@
           },
           "y": {
             "field": "y"
+          },
+          "text": {
+            "field": "name"
           },
           "font": {
             "field": "font"
@@ -117,8 +104,9 @@
           "angle": {
             "field": "angle"
           },
-          "fillOpacity": {
-            "value": 1
+          "fill": {
+            "scale": "wordColor",
+            "field": "name"
           },
           "tooltip": {
             "signal": "{'Word': datum.name, 'Frequency': datum.n}"
@@ -132,55 +120,67 @@
       }
     }
   ],
-  "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 32,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
 }
+}
+

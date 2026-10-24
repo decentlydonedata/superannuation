@@ -4,7 +4,7 @@
   "title": {
     "text": "Australia's Superannuation Guarantee Timeline",
     "subtitle": ["SG contribution rates and key legislative milestones, 1992–2026",
-                "Source: "]
+                "Source: Australian Tax Office; Parliament of Australia; Australian Treasury"]
   },
   "description": "Vertical timeline of Australian superannuation guarantee rates and legislative changes.",
   "data": {
@@ -44,8 +44,8 @@
   ],
   "hconcat": [
     {
-      "width": 200,
-      "height": 700,
+      "width": 180,
+      "height": 560,
       "layer": [
         {
           "mark": {
@@ -64,8 +64,6 @@
               "axis": {
                 "title": "SG rate (%)",
                 "orient": "bottom",
-                "labelFontSize": 10,
-                "titleFontSize": 11,
                 "tickCount": 4,
                 "grid": true,
                 "gridColor": "#E2E5E5"
@@ -80,8 +78,8 @@
                   "nice": false
                 },
                 "axis": {
-                  "title": "Year",
-                  "orient": "left",
+                  "title": null,
+                  "orient": "right",
                   "values": [1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022,2024,2026],
                   "format": "d",
                   "grid": true,
@@ -139,7 +137,7 @@
               },
               "legend": {
                 "title": "Event type",
-                "orient": "bottom"
+                "orient": "top"
               }
             },
             "tooltip": [
@@ -166,16 +164,16 @@
       ]
     },
     {
-      "width": 300,
-      "height": 700,
+      "width": 820,
+      "height": 560,
       "mark": {
         "type": "text",
         "align": "left",
         "baseline": "middle",
         "font": "Inter",
-        "fontSize": 10,
+        "fontSize": 12,
         "color": "#19324D",
-        "limit": 700
+        "limit": 780
       },
       "encoding": {
         "x": {
@@ -223,55 +221,66 @@
       "y": "shared"
     }
   },
-    "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 32,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 20,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 12,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 12,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
+}
 }

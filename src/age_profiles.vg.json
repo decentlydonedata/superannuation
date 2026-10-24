@@ -6,8 +6,8 @@
     "subtitle": ["Comparison across 30 June 2022, 2024 and 2026",
                 "Source: Australian Prudential Regulatory Authority (2026)"]
   },
-  "width": 650,
-  "height": 400,
+  "width": 460,
+  "height": 300,
   "data": {
     "url": "data/clean/age_profiles.csv",
     "format": {
@@ -41,11 +41,13 @@
         "75 to 84",
         "85+"
       ],
-      "title": "Age bracket",
-      "axis": {
-        "labelAngle": -45,
-        "labelLimit": 100
-      }
+  "title": "Age bracket",
+  "axis": {
+    "labelAngle": -45,
+    "labelLimit": 100,
+    "labelFontSize": 11,
+    "labelOverlap": false
+  }
     },
     "y": {
       "field": "Estimated_median",
@@ -102,55 +104,66 @@
       }
     ]
   },
-    "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 24,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 12,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 12,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 12,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 12,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
+}
 }

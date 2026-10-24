@@ -1,13 +1,8 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Average Age by Statistical Area Level 3",
-    "subtitle": ["Average age across Australian SA3 regions",
-                "Source: Australian Bureau of Statistics (2021)"]
-  },
-  "width": 650,
-  "height": 600,
+  "width": 450,
+  "height": 400,
   "projection": {
     "type": "mercator"
   },
@@ -25,16 +20,31 @@
   },
   "encoding": {
     "color": {
-      "field": "properties.Average_Age",
-      "type": "quantitative",
-      "title": "Average age (years)",
-      "scale": {
-        "scheme": "viridis"
-      }
+    "field": "properties.Average_Age",
+    "type": "quantitative",
+    "title": "Average age (years)",
+    "scale": {
+        "range": [
+        "#19324D",
+        "#54718C",
+        "#247C83",
+        "#718B7A",
+        "#C49A45"
+        ],
+        "interpolate": "lab"
+    },
+    "legend": { 
+        "gradientLength": 180,
+        "gradientThickness": 14,
+        "format": ".1f",
+        "titleColor": "#19324D",
+        "labelColor": "#526477",
+        "position": "bottom"
+    }
     },
     "tooltip": [
       {
-        "field": "properties.SA3_CODE21",
+        "field": "properties.SA3_NAME21",
         "type": "nominal",
         "title": "SA3 code"
       },
@@ -46,55 +56,66 @@
       }
     ]
   },
-  "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 24,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 12,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 12,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
+}
 }

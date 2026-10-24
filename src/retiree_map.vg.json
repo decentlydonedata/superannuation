@@ -6,12 +6,12 @@
     "subtitle": ["Each dot represents approximately 100 retirees, mapped by Statistical Area Level 1 (SA1)", 
                 " Source: Australian Bureau of Statistics (Census 2021)"]
   },
-  "width": 700,
-  "height": 600,
+  "width": 1050,
+  "height": 700,
   "projection": {
     "type": "mercator",
     "center": [134, -27],
-    "scale": 700,
+    "scale": 1000,
     "translate": [380, 300]
   },
   "layer": [
@@ -194,55 +194,66 @@
   }
 }
   ],
-  "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 24,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
+}
 }

@@ -6,8 +6,15 @@ library(here)
 library(readabs)
 
 # Word Cloud
-raw_names <- read_excel(paste0(here(),"/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
-                        sheet = "Table 2a", skip = 4) %>% mutate(name = `Fund name`) %>% select(name) %>% filter(!is.na(name))
+
+raw_names <- read_excel(
+  paste0(here(), "/src/data/raw/Annual fund-level superannuation statistics June 2025.xlsx"),
+  sheet = "Table 2a",
+  skip = 4
+) %>%
+  mutate(name = `Fund name`) %>%
+  select(name) %>%
+  filter(!is.na(name))
 
 word_cloud <- raw_names %>%
   mutate(
@@ -46,8 +53,14 @@ word_cloud <- raw_names %>%
   ) %>%
   separate_longer_delim(name, delim = " ") %>%
   filter(name != "") %>%
-  count(name, sort = TRUE)
-write_csv(word_cloud, file = paste0(here(),"/src/data/clean/word_cloud.csv"))
+  count(name, sort = TRUE) %>%
+  filter(n > 1) %>% filter(name != "The") %>% filter(name != "&")
+
+write_csv(
+  word_cloud,
+  file = paste0(here(), "/src/data/clean/word_cloud.csv")
+)
+
 
 # Balance by State and Gender
 raw_statebalances <- read_excel(paste0(here(),"/src/data/raw/ts24snapshot05indexofchartdata.xlsx"),
@@ -244,38 +257,69 @@ library(dplyr)
 library(readr)
 
 # Read SA3 geographic boundaries
+library(sf)
+library(dplyr)
+library(readr)
+
 sa3_map <- st_read(
   "src/data/boundaries/SA3_2021_AUST_GDA2020.shp",
   quiet = TRUE
 )
 
-# Read cleaned data
-sa3_data <- read_csv("src/data/clean/sa3_age.csv") %>%
+sa3_age <- read_csv(
+  "src/data/clean/sa3_age.csv",
+  col_types = cols(
+    SA3 = col_character(),
+    Average_age = col_double()
+  )
+)
+
+# Match the SA3 codes
+sa3_map <- sa3_map %>%
+  mutate(SA3_CODE21 = as.character(SA3_CODE21))
+
+sa3_age <- sa3_age %>%
   mutate(SA3 = as.character(SA3))
 
-# Join using the matching SA3 code fields.
-# Replace these names with the actual column names.
-sa3_map <- sa3_map %>%
+# Join average age to every SA3 polygon
+sa3_choropleth <- sa3_map %>%
   left_join(
-    sa3_data,
+    sa3_age,
     by = c("SA3_CODE21" = "SA3")
   )
-names(sa3_map)
-names(sa3_data)
-# Simplify geometry to reduce browser rendering time
-sa3_map <- sa3_map %>%
-  st_make_valid() %>%
-  st_transform(3577) %>%
-  st_simplify(dTolerance = 100, preserveTopology = TRUE) %>%
-  st_transform(4326)
 
-# Export the simplified map
+# Convert geometry to longitude/latitude for GeoJSON
+sa3_choropleth <- st_transform(
+  sa3_choropleth,
+  crs = 4326
+)
+
+# Export all SA3 polygons
 st_write(
-  sa3_map,
+  sa3_choropleth %>%
+    select(
+      SA3_CODE21,
+      SA3_NAME21,
+      Average_Age,
+      geometry
+    ),
   "src/data/clean/sa3_choropleth.geojson",
   delete_dsn = TRUE,
   quiet = TRUE
 )
+
+# Confirm the output
+nrow(sa3_choropleth)
+st_bbox(sa3_choropleth)
+library(sf)
+library(dplyr)
+
+# Read the exact file used by Vega-Lite
+sa3_geo <- st_read(
+  "src/data/clean/sa3_choropleth.geojson",
+  quiet = TRUE
+)
+
 
 
 # Benefit Reasons
@@ -770,3 +814,61 @@ write_csv(
 
 cat("Dots generated:", nrow(retiree_dots), "\n")
 cat("Expected dots:", sum(sa1_retirees$Retirees, na.rm = TRUE), "\n")
+
+# Fund order for the bump graph
+
+library(dplyr)
+library(readr)
+library(jsonlite)
+
+fund_order <- read_csv(
+  "src/data/clean/fund_rankings.csv",
+  show_col_types = FALSE
+) %>%
+  filter(
+    Year >= 2015,
+    Year <= 2025,
+    Ranking_type == "Assets"
+  ) %>%
+  group_by(Fund) %>%
+  summarise(
+    # Most recent year the fund ranked in the top five
+    last_top5_year = if (any(Rank <= 5, na.rm = TRUE)) {
+      max(Year[Rank <= 5], na.rm = TRUE)
+    } else {
+      NA_real_
+    },
+    
+    # Rank in 2025, if available
+    latest_rank = if (any(Year == 2025)) {
+      Rank[Year == 2025][1]
+    } else {
+      NA_real_
+    },
+    
+    # Number of years in the top five during 2021–2025
+    years_in_recent_top5 = sum(
+      Year >= 2021 & Year <= 2025 & Rank <= 5,
+      na.rm = TRUE
+    ),
+    
+    .groups = "drop"
+  ) %>%
+  mutate(
+    group = case_when(
+      years_in_recent_top5 == 5 ~ 1,
+      !is.na(last_top5_year)   ~ 2,
+      TRUE                     ~ 3
+    )
+  ) %>%
+  arrange(
+    group,
+    desc(last_top5_year),
+    latest_rank,
+    Fund
+  )
+
+# Inspect the complete ordering
+print(fund_order, n = Inf)
+
+cat(toJSON(fund_order$Fund, auto_unbox = FALSE, pretty = TRUE))

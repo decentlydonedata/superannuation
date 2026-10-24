@@ -7,13 +7,14 @@
 
     <title>Superannuation Visualisations</title>
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Playfair Display and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet">
 
     <!-- Vega libraries: load in this order -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -22,7 +23,83 @@
 
     <!-- Your JavaScript: load once, after the libraries -->
     <script src="js/vega_lite_vis.js" defer></script>
+    
+    <!-- Main and headings-->
+    <style>
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: #33485A;
+        background-color: #F7F6F2;
+        line-height: 1.7;
+    }
+    main {
+        width: 100%;
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    section {
+        margin-bottom: 4rem;
+    }
+
+    .visualisation {
+        width: 100%;
+        margin: 2.5rem 0;
+    }
+
+    .side-by-side {
+        gap: 2rem;
+    }
+    h1, h2, h3{
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: #19324D;
+    }
+    h1 {
+        font-size: 44px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: #526477
+    }
+    .subtitle {
+        font-size: 20px;
+        color: #526477;
+    }
+    .text-content {
+        max-width: 760px;
+    }
+    .source, .caption {
+        font-size: 12px;
+        color: #526477;
+    }
+
+    @media (max-width: 768px) {
+    main {
+        padding: 1.25rem;
+    }
+    }
+    @media (max-width: 480px) {
+        main {
+            padding: 1rem;
+        }
+    }
+    </style>
     <!-- Shared tooltip styling -->
     <style>
         #vg-tooltip-element {
@@ -57,29 +134,182 @@
             color: #19324D;
         }
     </style>
+    <!-- Containers-->     
+    
+<style>
+.side-by-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+    margin: 2.5rem 0 4rem;
+}
+
+.side-by-side > *,
+.full-width-chart {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.side-by-side .visualisation {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.vega-embed,
+.vega-embed canvas,
+.vega-embed svg {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+    .side-by-side {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+  .full-width-chart .vega-embed {
+    width: 100%;
+    max-width: 100%;
+  }
+
+</style>
+<!--- Full width chart -->
+
+
+
 </head>
 
 <body>
+    <main>
+    <h1>So, what actually is super?</h1>
+    <p>
+        Superannuation, usually just called super, is money put aside during your working life to help pay for life after work. 
+        In Australia, employers generally have to contribute a percentage of eligible employees’ earnings into super, where the money is invested over time.
+        It’s your money for the future, but it can be hard to know why you need it, who has it, how much you need and why are there so many different funds?
+    </p>
+    <section>
+        <h2>What supperannuation</h2>
+            <section class="side-by-side">
+            <div>
+                <h3>Who's managing Australia's super?</h3>
+                <h4>
+                    Source: Australian Prudential Regulatory Authority (2026)
+                </h4>
 
-    <div id="world_cloud"></div>
+                <p>
+                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
+                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
+                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
+                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
+                system designed to support Australians in retirement.
+                </p>
+                
+            </div>
+            <div>
+                <div id="word_cloud" class="visualisation"></div>
+            </div>
+            </section>
+        <div class="full-width-chart">
+            <div id="timeline"></div>
+        </div>
 
-    <div id="timeline"></div>
+    </section>
+    <section>
+        <h2>Why superannuation</h2>
+        <p>
+            something about aging population and retirement
+        </p>
+            <div class="full-width-chart">
+                <div id="retiree_map"></div>
+            </div>  
+            <section class="side-by-side">
+            <div>
+                <div id="age_map" class="visualisation"></div>
+            </div>
+            <div>
+                <h3>some states and areas are a lot younger on average than others</h3>
+                <h4>
+                    Source: Australian Bureau of Statistics (2026)
+                </h4>
 
-    <div id="age_map"></div>
+                <p>
+                Yada Yada about generational wealth and inequality across australia something something cost of living
+                </p>
+                
+            </div>
+            </section>
+    </section>
+    <section>
+        <h2> Who superannuation</h2>
+        <section class="side-by-side">
+            <div>
+                <p>
+                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
+                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
+                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
+                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
+                system designed to support Australians in retirement.
+                </p>
+                
+            </div>
+            <div>
+                <div id="age_profiles" class="visualisation"></div>
+            </div>
+        </section>
+        <section class="side-by-side">
+            <div>
+                <p>
+                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
+                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
+                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
+                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
+                system designed to support Australians in retirement.
+                </p>
+                
+            </div>
+            <div>
+                <div id="accounts_radial" class="visualisation"></div>
+            </div>
+        </section>
+        <section class="side-by-side">
+            <div>
+                <p>
+                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
+                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
+                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
+                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
+                system designed to support Australians in retirement.
+                </p>
+                
+            </div>
+            <div>
+                <div id="state_balances" class="visualisation"></div>
+            </div>
+        </section>
+        <div class="full-width-chart">
+            <div id="gender_pyramid"></div>
+        </div>
 
-    <div id="retiree_map"></div>
+    </section>
+    <sectiion>
+        <h2>How supperannuation</h2>
+            <div id="benefits_ternary"></div>
+            <div id="fund_ranking"></div>
+            <p>
+                SOMETHING ABOUT HOW DDOMINANT SOME FUNDS HAVE BEEN AND OTHERS NOT
+            </p>
+    </sectiion>
+        <div class="full-width-chart">
+            <div id="benefits_ternary"></div>
+        </div>
+        <div class="full-width-chart">
+            <div id="fund_ranking"></div>
+        </div>
 
-    <div id="age_profiles"></div>
-
-    <div id="gender_pyramid"></div>
-
-    <div id="state_balances"></div>
-
-    <div id="accounts_radial"></div>
-
-    <div id="benefits_ternary"></div>
-
-    <div id="fund_ranking"></div>
-
+    </main>
 </body>
 </html>

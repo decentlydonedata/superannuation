@@ -6,7 +6,7 @@
     "subtitle": ["Click a fund to highlight its ranking over time", 
                 "Source: Australian Prudential Regulation Authority (2026)"]
   },
-  "width": 1000,
+  "width": 900,
   "height": 300,
   "data": {
     "url": "data/clean/fund_rankings.csv",
@@ -72,28 +72,28 @@
     "field": "Fund",
     "type": "nominal",
     "scale": {
-    "domain": [
-      "AMP Superannuation Savings Trust",
-      "Australian Retirement Trust",
-      "AustralianSuper",
-      "Aware Super",
-      "Colonial First State FirstChoice Superannuation Trust",
-      "MLC Super Fund",
-      "Public Sector Superannuation Scheme",
-      "Retirement Wrap",
-      "Unisuper"
-    ],
-    "range": [
-      "#6B9A96",
-      "#247C83",
-      "#C49A45",
-      "#54718C",
-      "#85865B",
-      "#718B7A",
-      "#7896AD",
-      "#9A8875",
-      "#42666A"
-    ]
+"domain": [
+  "AustralianSuper",
+  "Australian Retirement Trust",
+  "Aware Super",
+  "Unisuper",
+  "Public Sector Superannuation Scheme",
+  "MLC Super Fund",
+  "Colonial First State FirstChoice Superannuation Trust",
+  "Retirement Wrap",
+  "AMP Superannuation Savings Trust"
+],
+"range": [
+  "#C49A45",
+  "#247C83",
+  "#54718C",
+  "#42666A",
+  "#7896AD",
+  "#718B7A",
+  "#85865B",
+  "#9A8875",
+  "#6B9A96"
+]
   }
   },
   "value": "#D3D3D3"
@@ -147,55 +147,66 @@
       }
     ]
   },
-    "background": "#F7F6F2",
-  "config": {
+"background": "#F7F6F2",
+"config": {
+  "font": "Inter",
+  "title": {
     "font": "Inter",
-    "title": {
-      "font": "Inter",
-      "fontSize": 20,
-      "fontWeight": 600,
-      "color": "#19324D",
-      "anchor": "start",
-      "offset": 12
-    },
-    "axis": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleFontWeight": 500,
-      "titleColor": "#19324D",
-      "gridColor": "#E2E5E5",
-      "gridWidth": 0.7,
-      "domain": false,
-      "tickColor": "#CBD3D6",
-      "labelPadding": 6,
-      "titlePadding": 10
-    },
-    "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
-      "titleFont": "Inter",
-      "titleFontSize": 12,
-      "titleColor": "#19324D",
-      "symbolSize": 100,
-      "padding": 8
-    },
-    "view": {
-      "stroke": null
-    },
-    "bar": {
-      "cornerRadiusEnd": 3
-    },
-    "line": {
-      "strokeWidth": 2.5,
-      "point": true
-    },
-    "point": {
-      "filled": true,
-      "size": 55
-    }
+    "fontSize": 24,
+    "fontWeight": 600,
+    "color": "#19324D",
+    "anchor": "start",
+    "offset": 12,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 16,
+    "subtitleFontWeight": 400,
+    "subtitleColor": "#526477",
+    "subtitlePadding": 8
+  },
+  "text": {
+    "font": "Inter",
+    "fontSize": 16,
+    "fill": "#526477"
+  },
+  "axis": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "gridColor": "#E2E5E5",
+    "gridWidth": 0.7,
+    "domain": false,
+    "tickColor": "#CBD3D6",
+    "labelPadding": 6,
+    "titlePadding": 10
+  },
+  "legend": {
+    "labelFont": "Inter",
+    "labelFontSize": 16,
+    "labelColor": "#526477",
+    "titleFont": "Inter",
+    "titleFontSize": 16,
+    "titleFontWeight": 500,
+    "titleColor": "#19324D",
+    "symbolSize": 100,
+    "padding": 8
+  },
+  "view": {
+    "stroke": null
+  },
+  "bar": {
+    "cornerRadiusEnd": 3
+  },
+  "line": {
+    "strokeWidth": 2.5,
+    "point": true
+  },
+  "point": {
+    "filled": true,
+    "size": 55
   }
+}
 }

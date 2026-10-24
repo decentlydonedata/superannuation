@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const charts = [
-        ["#world_cloud", "world_cloud.vg.json"],
+        ["#word_cloud", "word_cloud.vg.json"],
         ["#timeline", "timeline.vg.json"],
         ["#age_map", "age_map.vg.json"],
         ["#retiree_map", "retiree_map.vg.json"],
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     charts.forEach(([element, spec]) => {
 
         // Use Vega mode for the word cloud; Vega-Lite for other charts
-        const options = spec === "world_cloud.vg.json"
+        const options = spec === "word_cloud.vg.json"
             ? { actions: false, mode: "vega" }
             : { actions: true, mode: "vega-lite" };
 
