@@ -213,7 +213,7 @@ retirees <- raw_census10 %>%
   select(c(SA1, Percentage, Retirees))
 write_csv(retirees, here("src/data/clean", "retirees.csv"))
 
-# Census SA4 Data
+# Census SA3 Data
 raw_censusage <- read_csv(
   here("src/data/raw/sa3.csv"),skip = 9,col_types = cols(.default = col_character())
 ) %>%
@@ -250,14 +250,15 @@ sa3_map <- st_read(
 )
 
 # Read cleaned data
-sa3_data <- read_csv(paste0(here(),"/src/data/clean/sa3_age.csv"))
+sa3_data <- read_csv("src/data/clean/sa3_age.csv") %>%
+  mutate(SA3 = as.character(SA3))
 
 # Join using the matching SA3 code fields.
 # Replace these names with the actual column names.
 sa3_map <- sa3_map %>%
   left_join(
     sa3_data,
-    by = c("SA3_NAME21" = "SA3")
+    by = c("SA3_CODE21" = "SA3")
   )
 names(sa3_map)
 names(sa3_data)
@@ -754,9 +755,9 @@ retiree_dots <- retiree_dots %>%
     longitude = coords[, 1],
     latitude = coords[, 2],
     age_group = if_else(
-      Percentage > 70,
-      "Over 70%",
-      "70% or less",
+      Percentage > 0.7,
+      "Over 50%",
+      "50% or less",
       missing = "Unknown"
     )
   )
@@ -764,7 +765,7 @@ retiree_dots <- retiree_dots %>%
 # 9. Export for Vega-Lite
 write_csv(
   retiree_dots,
-  "data/clean/retiree_dots.csv"
+  "src/data/clean/retiree_dots.csv"
 )
 
 cat("Dots generated:", nrow(retiree_dots), "\n")

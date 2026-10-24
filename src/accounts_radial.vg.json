@@ -1,5 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Superannuation Accounts",
+    "subtitle": ["*****Insert Subtitle here*******", 
+                "Source: Australian Taxation Office (2026)"]
+  },
   "data": {
     "url": "data/clean/account_distribution.csv"
   },

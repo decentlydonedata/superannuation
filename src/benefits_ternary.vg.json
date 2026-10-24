@@ -3,7 +3,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "How Superannuation Benefits Are Distributed",
-    "subtitle": "Composition of benefit payments across retirement, age 65, preservation age and other categories"
+    "subtitle": ["Composition of benefit payments across retirement, age 65, preservation age and other categories",
+    "Source: Australian Prudential Regulation Authority (2026)"]
   },
   "width": 560,
   "height": 500,

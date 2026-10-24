@@ -108,7 +108,7 @@
       }
     ]
   },
-    "background": "#F7F6F2",
+  "background": "#F7F6F2",
   "config": {
     "font": "Inter",
     "title": {

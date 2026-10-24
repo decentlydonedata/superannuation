@@ -1,11 +1,18 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Dot map showing the distribution of retirees across Australian SA1 areas. Each dot represents 100 retirees.",
+  "title": {
+    "text": "Where Retirees Are Distributed Across Australia",
+    "subtitle": ["Each dot represents approximately 100 retirees, mapped by Statistical Area Level 1 (SA1)", 
+                " Source: Australian Bureau of Statistics (Census 2021)"]
+  },
   "width": 700,
-  "height": 650,
+  "height": 600,
   "projection": {
-    "type": "mercator"
+    "type": "mercator",
+    "center": [134, -27],
+    "scale": 700,
+    "translate": [380, 300]
   },
   "layer": [
     {
@@ -18,64 +25,176 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#f2f2f2",
-        "stroke": "#999999",
-        "strokeWidth": 0.5
+        "fill": "#FFFFFF",
+        "stroke": "#E2E5E5",
+        "strokeWidth": 0.8
       }
     },
+
+{
+  "data": {
+    "url": "data/clean/retiree_dots.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
     {
-    "data": {
-      "url": "data/clean/retiree_dots.csv",
-      "format": {"type": "csv"}
+      "filter": "isValid(datum.longitude) && isValid(datum.latitude)"
     },
-    "mark": {
-      "type": "circle",
-      "opacity": 0.55,
-      "size": 5
+    {
+      "filter": "datum.age_group === '50% or less'"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "filled": true,
+    "size": 10,
+    "opacity": 0.2,
+    "color": "#247C83",
+    "stroke": "#F7F6F2",
+    "strokeWidth": 0.2
+  },
+  "encoding": {
+    "longitude": {
+      "field": "longitude",
+      "type": "quantitative"
     },
-    "encoding": {
-      "longitude": {
-        "field": "longitude",
-        "type": "quantitative"
+    "latitude": {
+      "field": "latitude",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "SA1",
+        "type": "nominal",
+        "title": "SA1"
       },
-      "latitude": {
-        "field": "latitude",
-        "type": "quantitative"
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Retiree percentage",
+        "format": ".0%"
       },
-      "color": {
+      {
         "field": "age_group",
         "type": "nominal",
-        "scale": {
-          "domain": ["Over 70%", "70% or less", "Unknown"],
-          "range": ["#C49A45", "#247C83", "#B8B8B8"]
-        },
-        "legend": {
-          "title": "SA1 population aged over 60"
-        }
+        "title": "Retiree share group"
+      }
+    ]
+  }
+},
+{
+  "data": {
+    "url": "data/clean/retiree_dots.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum.longitude) && isValid(datum.latitude)"
+    },
+    {
+      "filter": "datum.age_group !== '50% or less'"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "filled": true,
+    "size": 10,
+    "opacity": 1,
+    "color": "#C49A45",
+    "stroke": "#F7F6F2",
+    "strokeWidth": 0.2
+  },
+  "encoding": {
+    "longitude": {
+      "field": "longitude",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "latitude",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "SA1",
+        "type": "nominal",
+        "title": "SA1"
       },
-      "tooltip": [
-        {
-          "field": "longitude",
-          "type": "quantitative",
-          "format": ".3f",
-          "title": "Longitude"
-        },
-        {
-          "field": "latitude",
-          "type": "quantitative",
-          "format": ".3f",
-          "title": "Latitude"
-        },
-        {
-          "field": "Percentage",
-          "type": "quantitative",
-          "title": "Population aged over 60 (%)"
-        }
-      ]
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Retiree percentage",
+        "format": ".0%"
+      },
+      {
+        "field": "age_group",
+        "type": "nominal",
+        "title": "Retiree share group"
+      }
+    ]
+  }
+},
+
+{
+  "data": {
+    "values": [
+      {
+        "age_group": "50% or less",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "age_group": "Over 50%",
+        "x": 1,
+        "y": 0
+      }
+    ]
+  },
+  "mark": {
+    "type": "point",
+    "opacity": 0
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [0, 1]
+      }
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "axis": null
+    },
+    "color": {
+      "field": "age_group",
+      "type": "nominal",
+      "title": "Retiree share",
+      "scale": {
+        "domain": [
+          "50% or less",
+          "Over 50%"
+        ],
+        "range": [
+          "#247C83",
+          "#C49A45"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "symbolType": "circle"
+      }
     }
   }
+}
   ],
-      "background": "#F7F6F2",
+  "background": "#F7F6F2",
   "config": {
     "font": "Inter",
     "title": {

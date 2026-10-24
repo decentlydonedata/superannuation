@@ -1,9 +1,9 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Average Superannuation Account Balance by State and Gender",
-    "subtitle": "Pie size represents average account balance; slices represent gender proportions"
+    "subtitle": ["Pie size represents average account balance; slices represent gender proportions",
+                "Source: Australian Taxation Office (2024)"]
   },
   "width": 760,
   "height": 600,
@@ -97,17 +97,31 @@
             "range": ["#247C83", "#C49A45"]
           },
           "legend": {
-            "title": "Average account balance ($)"
+            "title": "Gender",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "circle",
+            "labelFont": "Inter",
+            "labelFontSize": 12,
+            "titleFont": "Inter",
+            "titleFontSize": 12,
+            "titleColor": "#19324D",
+            "labelColor": "#526477",
+            "symbolSize": 120,
+            "padding": 10
           }
         },
-        "radius": {
-          "field": "Balance",
-          "type": "quantitative",
-          "scale": {
-            "domain": [80000, 200000],
-            "range": [12, 35]
-          }
-        },
+          "radius": {
+            "field": "Balance",
+            "type": "quantitative",
+            "scale": {
+              "type": "sqrt",
+              "domain": [80000, 200000],
+              "range": [12, 35],
+              "zero": false,
+              "clamp": true
+            }
+          },
         "tooltip": [
           {
             "field": "State/Territory",
@@ -167,14 +181,14 @@
       "titlePadding": 10
     },
     "legend": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#526477",
       "titleFont": "Inter",
       "titleFontSize": 12,
+      "titleFontWeight": "normal",
       "titleColor": "#19324D",
+      "labelColor": "#526477",
       "symbolSize": 100,
-      "padding": 8
+      "padding": 8,
+      "titleLineHeight": 14
     },
     "view": {
       "stroke": null

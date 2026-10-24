@@ -3,7 +3,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Estimated Median Superannuation Balance by Age",
-    "subtitle": "Comparison across 30 June 2022, 2024 and 2026"
+    "subtitle": ["Comparison across 30 June 2022, 2024 and 2026",
+                "Source: Australian Prudential Regulatory Authority (2026)"]
   },
   "width": 650,
   "height": 400,

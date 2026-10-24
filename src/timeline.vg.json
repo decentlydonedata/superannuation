@@ -3,15 +3,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Australia's Superannuation Guarantee Timeline",
-    "subtitle": "SG contribution rates and key legislative milestones, 1992–2026",
-    "anchor": "start",
-    "font": "Inter",
-    "fontSize": 20,
-    "subtitleFont": "Inter",
-    "subtitleFontSize": 12,
-    "subtitleColor": "#526477",
-    "color": "#19324D",
-    "offset": 12
+    "subtitle": ["SG contribution rates and key legislative milestones, 1992–2026",
+                "Source: "]
   },
   "description": "Vertical timeline of Australian superannuation guarantee rates and legislative changes.",
   "data": {
@@ -230,43 +223,55 @@
       "y": "shared"
     }
   },
-  "spacing": 12,
-  "background": "#F7F6F2",
+    "background": "#F7F6F2",
   "config": {
     "font": "Inter",
+    "title": {
+      "font": "Inter",
+      "fontSize": 20,
+      "fontWeight": 600,
+      "color": "#19324D",
+      "anchor": "start",
+      "offset": 12
+    },
     "axis": {
       "labelFont": "Inter",
-      "labelFontSize": 10,
+      "labelFontSize": 11,
       "labelColor": "#526477",
       "titleFont": "Inter",
-      "titleFontSize": 11,
+      "titleFontSize": 12,
       "titleFontWeight": 500,
       "titleColor": "#19324D",
       "gridColor": "#E2E5E5",
       "gridWidth": 0.7,
       "domain": false,
       "tickColor": "#CBD3D6",
-      "labelPadding": 5,
-      "titlePadding": 8
+      "labelPadding": 6,
+      "titlePadding": 10
     },
     "legend": {
       "labelFont": "Inter",
-      "labelFontSize": 10,
+      "labelFontSize": 11,
       "labelColor": "#526477",
       "titleFont": "Inter",
-      "titleFontSize": 11,
+      "titleFontSize": 12,
       "titleColor": "#19324D",
-      "symbolSize": 90,
+      "symbolSize": 100,
       "padding": 8
     },
     "view": {
       "stroke": null
     },
+    "bar": {
+      "cornerRadiusEnd": 3
+    },
     "line": {
-      "strokeWidth": 2
+      "strokeWidth": 2.5,
+      "point": true
     },
     "point": {
-      "filled": true
+      "filled": true,
+      "size": 55
     }
   }
 }

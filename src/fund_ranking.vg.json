@@ -3,7 +3,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Superannuation Fund Rankings, 2015–2025",
-    "subtitle": "Click a fund to highlight its ranking over time"
+    "subtitle": ["Click a fund to highlight its ranking over time", 
+                "Source: Australian Prudential Regulation Authority (2026)"]
   },
   "width": 1000,
   "height": 300,
