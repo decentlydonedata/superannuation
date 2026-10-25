@@ -2,8 +2,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Australia's Superannuation Guarantee Timeline",
-    "subtitle": ["SG contribution rates and key legislative milestones, 1992–2026",
+    "text": "From Policy to Paycheque: The Evolution of Super",
+    "subtitle": ["Timeline of superannuation Guarentee contribution rates and key legislative milestones, 1992–2026",
                 "Source: Australian Tax Office; Parliament of Australia; Australian Treasury"]
   },
   "description": "Vertical timeline of Australian superannuation guarantee rates and legislative changes.",
@@ -80,7 +80,9 @@
                 "axis": {
                   "title": null,
                   "orient": "right",
-                  "values": [1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018,2020,2022,2024,2026],
+                  "values": [1992,1993,1994,1995,1996,1997,1998,1999,
+                    2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,
+                    2010,2011,2012,2023,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
                   "format": "d",
                   "grid": true,
                   "labels": true,
@@ -226,13 +228,13 @@
   "font": "Inter",
   "title": {
     "font": "Inter",
-    "fontSize": 32,
+    "fontSize": 24,
     "fontWeight": 600,
     "color": "#19324D",
     "anchor": "start",
     "offset": 12,
     "subtitleFont": "Inter",
-    "subtitleFontSize": 20,
+    "subtitleFontSize": 12,
     "subtitleFontWeight": 400,
     "subtitleColor": "#526477",
     "subtitlePadding": 8
@@ -247,7 +249,7 @@
     "labelFontSize": 12,
     "labelColor": "#526477",
     "titleFont": "Inter",
-    "titleFontSize": 16,
+    "titleFontSize": 12,
     "titleFontWeight": 500,
     "titleColor": "#19324D",
     "gridColor": "#E2E5E5",
@@ -262,7 +264,7 @@
     "labelFontSize": 12,
     "labelColor": "#526477",
     "titleFont": "Inter",
-    "titleFontSize": 16,
+    "titleFontSize": 12,
     "titleFontWeight": 500,
     "titleColor": "#19324D",
     "symbolSize": 100,

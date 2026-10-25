@@ -4,7 +4,10 @@
   "width": 450,
   "height": 400,
   "projection": {
-    "type": "mercator"
+  "type": "mercator",
+  "center": [134, -27],
+  "scale": 550,
+  "translate": [225, 190]
   },
   "data": {
     "url": "data/clean/sa3_choropleth.geojson",
@@ -33,14 +36,19 @@
         ],
         "interpolate": "lab"
     },
-    "legend": { 
-        "gradientLength": 180,
-        "gradientThickness": 14,
-        "format": ".1f",
-        "titleColor": "#19324D",
-        "labelColor": "#526477",
-        "position": "bottom"
-    }
+    "legend": {
+    "orient": "left",
+    "direction": "vertical",
+    "gradientLength": 300,
+    "gradientThickness": 14,
+    "titleOrient": "left",
+    "titleAngle": 270,
+    "titleAlign": "center",
+    "titleAnchor": "middle",
+    "format": ".1f",
+    "titleColor": "#19324D",
+    "labelColor": "#526477"
+  }
     },
     "tooltip": [
       {

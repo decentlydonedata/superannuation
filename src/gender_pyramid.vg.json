@@ -2,8 +2,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Superannuation by Age and Gender",
-    "subtitle": "Comparing member accounts, member benefits and average balances"
+    "text": "Gender Gap in Superannuation Benefits and Balances",
+    "subtitle": ["Men consistently hold higher superannuation assets, with the average balance gap peaking in the late 30s before narrowing after age 60.", 
+                "Source: Australian Prudential Regulation Authority (2026)"]
   },
   "data": {
     "url": "data/clean/gender.csv",
@@ -15,146 +16,269 @@
     {
       "calculate": "datum.Gender === 'Female' ? -datum.value : datum.value",
       "as": "signedValue"
-    }
-  ],
-  "facet": {
-    "field": "measure",
-    "type": "nominal",
-    "sort": [
-      "Member accounts ('000)",
-      "Member benefits ($ million)",
-      "Average balance ($)"
-    ],
-    "columns": 3,
-    "header": {
-      "title": null,
-      "labelFont": "Inter",
-      "labelFontSize": 13,
-      "labelFontWeight": 600,
-      "labelColor": "#19324D",
-      "labelLimit": 180,
-      "labelPadding": 12
-    }
-  },
-  "spec": {
-    "width": 300,
-    "height": 400,
-    "mark": {
-      "type": "bar",
-      "cornerRadiusEnd": 3
     },
-    "encoding": {
-      "y": {
-        "field": "Age bracket",
-        "type": "ordinal",
-        "sort": [
-          "<25",
-          "25 to 29",
-          "30 to 34",
-          "35 to 39",
-          "40 to 44",
-          "45 to 49",
-          "50 to 54",
-          "55 to 59",
-          "60 to 64",
-          "65 to 69",
-          "70 to 74",
-          "75 to 84",
-          "85+"
-        ],
-        "title": "Age bracket",
-        "axis": {
-          "labelLimit": 100,
-          "labelFont": "Inter",
-          "labelFontSize": 11,
-          "titleFont": "Inter",
-          "titleFontSize": 13
-        }
-      },
-      "x": {
+    {
+  "joinaggregate": [
+      {
+        "op": "max",
         "field": "signedValue",
-        "type": "quantitative",
-        "title": null,
-        "axis": {
-          "labelExpr": "format(abs(datum.value), ',.0f')",
-          "labelFont": "Inter",
-          "labelFontSize": 10,
-          "tickCount": 4,
-          "grid": true,
-          "gridColor": "#E2E5E5",
-          "domain": false
-        }
+        "as": "maleValue"
       },
-      "color": {
-        "field": "Gender",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Female", "Male"],
-          "range": ["#C49A45", "#247C83"]
-        },
-        "legend": {
-          "orient": "top",
-          "title": null,
-          "labelFont": "Inter",
-          "labelFontSize": 13,
-          "symbolSize": 100
-        }
+      {
+        "op": "min",
+        "field": "signedValue",
+        "as": "femaleValue"
+      }
+    ],
+    "groupby": ["Age bracket", "measure"]
+  },
+  {
+    "calculate": "datum.maleValue - datum.femaleValue",
+    "as": "genderGap"
+}
+  ],
+  "hconcat": [
+    {
+      "title": {
+        "text": "Member benefits ($ million)",
+        "font": "Inter",
+        "fontSize": 16,
+        "color": "#19324D",
+        "anchor": "middle"
       },
-      "tooltip": [
+      "transform": [
         {
+          "filter": "datum.measure === 'Member benefits ($ million)'"
+        }
+      ],
+      "width": 500,
+      "height": 400,
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
           "field": "Age bracket",
           "type": "ordinal",
-          "title": "Age bracket"
+          "sort": [
+            "<25",
+            "25 to 29",
+            "30 to 34",
+            "35 to 39",
+            "40 to 44",
+            "45 to 49",
+            "50 to 54",
+            "55 to 59",
+            "60 to 64",
+            "65 to 69",
+            "70 to 74",
+            "75 to 84",
+            "85+"
+          ],
+          "title": "Age bracket",
+          "axis": {
+            "labelFont": "Inter",
+            "labelFontSize": 11,
+            "titleFont": "Inter",
+            "titleFontSize": 13,
+            "labelLimit": 100
+          }
         },
-        {
+        "x": {
+          "field": "signedValue",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [-300000, 300000],
+            "nice": false,
+            "zero": false
+          },
+          "axis": {
+            "values": [
+              -300000,
+              -200000,
+              -100000,
+              0,
+              100000,
+              200000,
+              300000
+            ],
+            "labelExpr": "format(abs(datum.value), ',.0f')",
+            "labelFont": "Inter",
+            "labelFontSize": 10,
+            "grid": true,
+            "gridColor": "#E2E5E5",
+            "gridWidth": 0.7,
+            "domain": false,
+            "tickSize": 4
+          }
+        },
+        "color": {
           "field": "Gender",
           "type": "nominal",
-          "title": "Gender"
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#C49A45", "#247C83"]
+          },
+          "legend": {
+            "orient": "top",
+            "title": null,
+            "labelFont": "Inter",
+            "labelFontSize": 12,
+            "symbolSize": 100
+          }
         },
+        "tooltip": [
+          {
+            "field": "Age bracket",
+            "type": "ordinal",
+            "title": "Age bracket"
+          },
+          {
+            "field": "Gender",
+            "type": "nominal",
+            "title": "Gender"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Member benefits ($ million)",
+            "format": ",.2f"
+          }
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "Average balance ($)",
+        "font": "Inter",
+        "fontSize": 16,
+        "color": "#19324D",
+        "anchor": "middle"
+      },
+      "transform": [
         {
-          "field": "measure",
-          "type": "nominal",
-          "title": "Measure"
-        },
-        {
-          "field": "value",
-          "type": "quantitative",
-          "title": "Value",
-          "format": ",.2f"
+          "filter": "datum.measure === 'Average balance ($)'"
         }
-      ]
+      ],
+      "width": 340,
+      "height": 400,
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Age bracket",
+          "type": "ordinal",
+          "sort": [
+            "<25",
+            "25 to 29",
+            "30 to 34",
+            "35 to 39",
+            "40 to 44",
+            "45 to 49",
+            "50 to 54",
+            "55 to 59",
+            "60 to 64",
+            "65 to 69",
+            "70 to 74",
+            "75 to 84",
+            "85+"
+          ],
+          "title": null,
+          "axis": {
+            "labels": false,
+            "ticks": false,
+            "domain": false
+          }
+        },
+        "x": {
+          "field": "signedValue",
+          "type": "quantitative",
+          "title": null,
+          "scale": {
+            "domain": [-400000, 400000],
+            "nice": false,
+            "zero": false
+          },
+          "axis": {
+            "values": [
+              -400000,
+              -300000,
+              -200000,
+              -100000,
+              0,
+              100000,
+              200000,
+              300000,
+              400000
+            ],
+            "labelExpr": "format(abs(datum.value), ',.0f')",
+            "labelFont": "Inter",
+            "labelFontSize": 10,
+            "grid": true,
+            "gridColor": "#E2E5E5",
+            "gridWidth": 0.7,
+            "domain": false,
+            "tickSize": 4
+          }
+        },
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#C49A45", "#247C83"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Age bracket",
+            "type": "ordinal",
+            "title": "Age bracket"
+          },
+          {
+            "field": "Gender",
+            "type": "nominal",
+            "title": "Gender"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Average balance ($)",
+            "format": "$,.2f"
+          }
+        ]
+      }
     }
-  },
+  ],
   "resolve": {
     "scale": {
-      "y": "shared",
-      "x": "independent",
       "color": "shared"
     },
-    "axis": {
-      "y": "shared"
+    "legend": {
+      "color": "shared"
     }
   },
+  "spacing": 24,
   "background": "#F7F6F2",
   "config": {
     "font": "Inter",
     "title": {
-      "font": "Playfair Display",
+      "font": "Inter",
       "fontSize": 24,
-      "fontWeight": 700,
+      "fontWeight": 600,
       "color": "#19324D",
       "anchor": "start",
       "offset": 12,
       "subtitleFont": "Inter",
-      "subtitleFontSize": 16,
+      "subtitleFontSize": 12,
       "subtitleFontWeight": 400,
       "subtitleColor": "#526477",
       "subtitlePadding": 8
-    },
-    "text": {
-      "font": "Inter",
-      "fontSize": 16,
-      "fill": "#526477"
     },
     "axis": {
       "labelColor": "#526477",

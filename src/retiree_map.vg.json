@@ -26,7 +26,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "#FFFFFF",
-        "stroke": "#E2E5E5",
+        "stroke": "#718B7A",
         "strokeWidth": 0.8
       }
     },
@@ -102,7 +102,7 @@
   "mark": {
     "type": "circle",
     "filled": true,
-    "size": 10,
+    "size": 20,
     "opacity": 1,
     "color": "#C49A45",
     "stroke": "#F7F6F2",
@@ -186,10 +186,226 @@
         ]
       },
       "legend": {
-        "orient": "bottom",
+        "orient": "top-left",
         "direction": "horizontal",
         "symbolType": "circle"
       }
+    }
+  }
+}
+
+,
+{
+  "data": {
+    "values": [
+      {
+        "label": "Northern Queensland retiree towns",
+        "label_lon": 153,
+        "label_lat": -19.0,
+        "target_lon": 147,
+        "target_lat": -19.0
+      },
+      {
+        "label": "--",
+        "label_lon": 155,
+        "label_lat": -24.5,
+        "target_lon": 154,
+        "target_lat": -24.5
+      },
+      {
+        "label": "High shares of retirees along the east coast",
+        "label_lon": 155,
+        "label_lat": -24.5,
+        "target_lon": 155,
+        "target_lat": -35.5
+      },
+      {
+        "label": "--",
+        "label_lon": 155,
+        "label_lat": -35.5,
+        "target_lon": 154,
+        "target_lat": -35.5
+      },
+      {
+        "label": "--",
+        "label_lon": 155,
+        "label_lat": -29.5,
+        "target_lon": 157,
+        "target_lat": -29.5
+      },
+      {
+        "label": "Echuca–Albury retiree belt",
+        "label_lon": 153,
+        "label_lat": -36.5,
+        "target_lon": 146,
+        "target_lat": -36.5
+      }
+    ]
+  },
+  "mark": {
+    "type": "rule",
+    "color": "#19324D",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "longitude": {
+      "field": "label_lon",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "label_lat",
+      "type": "quantitative"
+    },
+    "longitude2": {
+      "field": "target_lon"
+    },
+    "latitude2": {
+      "field": "target_lat"
+    }
+  }
+},
+{
+  "data": {
+    "values": [
+      {
+        "label_lon": 153,
+        "label_lat": -19.0,
+        "target_lon": 147,
+        "target_lat": -19.0
+      },
+      {
+        "label_lon": 153,
+        "label_lat": -36.5,
+        "target_lon": 146,
+        "target_lat": -36.5
+      }
+    ]
+  },
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "color": "#19324D",
+    "size": 20,
+    "stroke": "#F7F6F2",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "longitude": {
+      "field": "target_lon",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "target_lat",
+      "type": "quantitative"
+    }
+  }
+},
+  {
+    "data": {
+      "values": [
+        {
+        "label": "Northern Queensland retiree towns",
+        "label_lon": 153,
+        "label_lat": -19.5
+        },
+        {
+          "label": "High proportions on the east coast",
+          "label_lon": 157,
+          "label_lat": -30.0
+        },
+        {
+          "label": "Echuca–Albury retiree belt",
+          "label_lon": 153,
+          "label_lat": -37
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "font": "Inter",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "color": "#19324D",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 5,
+      "dy": -8
+    },
+    "encoding": {
+      "longitude": {
+        "field": "label_lon",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "label_lat",
+        "type": "quantitative"
+      },
+      "text": {
+        "field": "label"
+      }
+    }
+  }
+  ,
+{
+  "data": {
+    "values": [
+      {
+        "lon1": 113,
+        "lon2": 127,
+        "lat1": -37,
+        "lat2": -40.7
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "fill": "#F7F6F2",
+    "fillOpacity": 0.95,
+    "stroke": "#526477",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "longitude": {
+      "field": "lon1",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "lat1",
+      "type": "quantitative"
+    },
+    "longitude2": {
+      "field": "lon2"
+    },
+    "latitude2": {
+      "field": "lat2"
+    }
+  }
+},
+{
+  "data": {
+    "values": [
+      {"lon": 114, "lat": -38, "text": "Retiree shares vary across Australia,"},
+      {"lon": 114, "lat": -39.5, "text": "with concentrations in major cities."}
+    ]
+  },
+  "mark": {
+    "type": "text",
+    "align": "left",
+      "font": "Inter",
+      "fontSize": 12,
+      "fontWeight": 400
+  },
+  "encoding": {
+    "longitude": {
+      "field": "lon",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "lat",
+      "type": "quantitative"
+    },
+    "text": {
+      "field": "text"
     }
   }
 }
@@ -205,7 +421,7 @@
     "anchor": "start",
     "offset": 12,
     "subtitleFont": "Inter",
-    "subtitleFontSize": 16,
+    "subtitleFontSize": 12,
     "subtitleFontWeight": 400,
     "subtitleColor": "#526477",
     "subtitlePadding": 8
@@ -232,7 +448,7 @@
   },
   "legend": {
     "labelFont": "Inter",
-    "labelFontSize": 16,
+    "labelFontSize": 12,
     "labelColor": "#526477",
     "titleFont": "Inter",
     "titleFontSize": 16,

@@ -2,12 +2,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "How Superannuation Benefits Are Distributed",
-    "subtitle": ["Composition of benefit payments across retirement, age 65, preservation age and other categories",
-    "Source: Australian Prudential Regulation Authority (2026)"]
+    "text": "Why do people take out super? And how much?",
+    "subtitle": [
+      "Composition of benefit payments across retirement, age 65, preservation age and other categories",
+      "Source: Australian Prudential Regulatory Authority (2026)"
+    ]
   },
-  "width": 1200,
-  "height": 1000,
+  "width": 600,
+  "height": 600,
   "data": {
     "url": "data/clean/benefit_payments.csv",
     "format": {
@@ -47,7 +49,7 @@
       "as": "y"
     },
     {
-      "calculate": "indexof(['HESTA', 'Military Superannuation & Benefits Fund No 1', 'CSS Fund'], datum.fund) >= 0 ? 'Highlighted funds' : 'Other funds'",
+      "calculate": "indexof(['HESTA', 'Military Superannuation & Benefits Fund No 1', 'CSS Fund', 'Centric Super Fund'], datum.fund) >= 0 ? 'Highlighted funds' : 'Other funds'",
       "as": "Highlight"
     },
     {
@@ -74,19 +76,13 @@
         "x": {
           "field": "x",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.16, 1.16],
-            "nice": false
-          },
+          "scale": {"domain": [-0.16, 1.16], "nice": false},
           "axis": null
         },
         "y": {
           "field": "y",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.12, 1.02],
-            "nice": false
-          },
+          "scale": {"domain": [-0.12, 1.02], "nice": false},
           "axis": null
         },
         "order": {
@@ -134,85 +130,77 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 16,
         "fontWeight": "bold",
         "align": "center",
-        "baseline": "middle"
+        "baseline": "middle",
+        "color": "#19324D"
       },
       "encoding": {
         "x": {
           "field": "x",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.16, 1.16],
-            "nice": false
-          },
+          "scale": {"domain": [-0.16, 1.16], "nice": false},
           "axis": null
         },
         "y": {
           "field": "y",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.12, 1.02],
-            "nice": false
-          },
+          "scale": {"domain": [-0.12, 1.02], "nice": false},
           "axis": null
         },
-        "text": {
-          "field": "label"
-        }
+        "text": {"field": "label"}
       }
     },
     {
       "mark": {
-      "type": "circle",
-      "opacity": 0.75,
-      "filled": true
-    },
+        "type": "circle",
+        "opacity": 0.75,
+        "filled": true
+      },
       "encoding": {
         "x": {
           "field": "x",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.16, 1.16],
-            "nice": false
-          },
+          "scale": {"domain": [-0.16, 1.16], "nice": false},
           "axis": null
         },
         "y": {
           "field": "y",
           "type": "quantitative",
-          "scale": {
-            "domain": [-0.12, 1.02],
-            "nice": false
-          },
+          "scale": {"domain": [-0.12, 1.02], "nice": false},
           "axis": null
         },
-        "size": {
-        "field": "AveragePayments",
-        "type": "quantitative",
-        "scale": {
-          "type": "linear",
-          "range": [0, 1500]
-        },
-        "legend": {
-          "title": "Average payments",
-          "orient": "bottom",
-          "format": ",.0f"
-        }
-      },
         "color": {
-        "field": "Highlight",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Highlighted funds", "Other funds"],
-          "range": ["#C49A45", "#247C83"]
+          "field": "Highlight",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Highlighted funds", "Other funds"],
+            "range": ["#C49A45", "#247C83"]
+          },
+          "legend": null
         },
-        "legend": {
-          "title": "Fund group",
-          "orient": "bottom"
-        }
-      },
+        "size": {
+          "field": "AveragePayments",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "range": [0, 3000]
+          },
+          "legend": {
+            "title": "Average payment ($)",
+            "orient": "right",
+            "direction": "vertical",
+            "format": ",.0f",
+            "labelFont": "Inter",
+            "labelFontSize": 12,
+            "labelColor": "#526477",
+            "titleFont": "Inter",
+            "titleFontSize": 12,
+            "titleColor": "#19324D",
+            "padding": 0
+          }
+        },
         "tooltip": [
           {
             "field": "fund",
@@ -222,13 +210,13 @@
           {
             "field": "total",
             "type": "quantitative",
-            "title": "Total benefits paid  ($'000)",
+            "title": "Total benefits paid ($'000)",
             "format": ",.0f"
           },
           {
             "field": "AveragePayments",
             "type": "quantitative",
-            "title": "Average payments",
+            "title": "Average payment ($)",
             "format": ",.2f"
           },
           {
@@ -257,68 +245,390 @@
           }
         ]
       }
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.fund === 'CSS Fund'"},
+        {"calculate": "-0.02", "as": "labelX"},
+        {"calculate": "0.2", "as": "labelY"},
+        {"calculate": "'CSS: Public-sector retirement benefits'", "as": "label"}
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "#19324D",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "x2": {"field": "labelX"},
+            "y2": {"field": "labelY"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "Inter",
+            "fontSize": 16,
+            "fontWeight": "400px",
+            "align": "right",
+            "baseline": "middle",
+            "color": "#19324D",
+            "dx": 3
+          },
+          "encoding": {
+            "x": {
+              "field": "labelX",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "labelY",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.fund === 'HESTA'"},
+        {"calculate": "0.4", "as": "labelX"},
+        {"calculate": "0.8", "as": "labelY"},
+        {"calculate": "'HESTA: Health and community workforce'", "as": "label"}
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "#19324D",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "x2": {"field": "labelX"},
+            "y2": {"field": "labelY"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "Inter",
+            "fontSize": 16,
+            "fontWeight": "400px",
+            "align": "right",
+            "baseline": "middle",
+            "color": "#19324D",
+            "dx": 3
+          },
+          "encoding": {
+            "x": {
+              "field": "labelX",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "labelY",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.fund === 'Military Superannuation & Benefits Fund No 1'"},
+        {"calculate": "0.1", "as": "labelX"},
+        {"calculate": "0.4", "as": "labelY"},
+        {"calculate": "'Military: Incapacity may lift payouts'", "as": "label"}
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "#19324D",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "x2": {"field": "labelX"},
+            "y2": {"field": "labelY"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "Inter",
+            "fontSize": 16,
+            "fontWeight": "400px",
+            "align": "right",
+            "baseline": "middle",
+            "color": "#19324D",
+            "dx": -3
+          },
+          "encoding": {
+            "x": {
+              "field": "labelX",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "labelY",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.fund === 'Centric Super Fund'"},
+        {"calculate": "0.95", "as": "labelX"},
+        {"calculate": "0.2", "as": "labelY"},
+        {"calculate": "'Centric: Advice-led, investment-focused'", "as": "label"}
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "#19324D",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "x2": {"field": "labelX"},
+            "y2": {"field": "labelY"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "Inter",
+            "fontSize": 16,
+            "fontWeight": "400px",
+            "align": "left",
+            "baseline": "middle",
+            "color": "#19324D",
+            "dx": -3
+          },
+          "encoding": {
+            "x": {
+              "field": "labelX",
+              "type": "quantitative",
+              "scale": {"domain": [-0.16, 1.16], "nice": false},
+              "axis": null
+            },
+            "y": {
+              "field": "labelY",
+              "type": "quantitative",
+              "scale": {"domain": [-0.12, 1.02], "nice": false},
+              "axis": null
+            },
+            "text": {"field": "label"}
+          }
+        }
+      ]
     }
+,
+    {
+      "data": {
+        "values": [
+          {
+            "x": -0.6,
+            "y": -0.08,
+            "align": "center",
+            "baseline": "middle",
+            "text": "Relevant to workers leaving established careers retirement-oriented benefit arrangements",
+            "size": 12,
+            "weight": 400,
+            "color": "#526477"
+          },
+          {
+            "x": 0.53,
+            "y": -0.08,
+            "text": "Relevant to older workers who continue working beyond traditional retirement ages",
+            "size": 12,
+            "weight": 400,
+            "color": "#526477"
+          },
+          {
+            "x": -0.19,
+            "y": 0.89,
+            "text": "Relevant to workers transitioning towards retirement or considering a transition-to-retirement strategy",
+            "size": 12,
+            "weight": 400,
+            "color": "#526477"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.16, 1.16],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.12, 1.02],
+            "nice": false
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "text"
+        },
+        "size": {
+          "field": "size",
+          "type": "quantitative",
+          "scale": null
+        },
+        "fontWeight": {
+          "field": "weight",
+          "type": "quantitative",
+          "scale": null
+        },
+        "color": {
+          "field": "color",
+          "scale": null
+        }
+      }
+    }
+
   ],
-"background": "#F7F6F2",
-"config": {
-  "font": "Inter",
-  "title": {
+  "background": "#F7F6F2",
+  "config": {
     "font": "Inter",
-    "fontSize": 24,
-    "fontWeight": 600,
-    "color": "#19324D",
-    "anchor": "start",
-    "offset": 12,
-    "subtitleFont": "Inter",
-    "subtitleFontSize": 16,
-    "subtitleFontWeight": 400,
-    "subtitleColor": "#526477",
-    "subtitlePadding": 8
-  },
-  "text": {
-    "font": "Inter",
-    "fontSize": 16,
-    "fill": "#526477"
-  },
-  "axis": {
-    "labelFont": "Inter",
-    "labelFontSize": 16,
-    "labelColor": "#526477",
-    "titleFont": "Inter",
-    "titleFontSize": 16,
-    "titleFontWeight": 500,
-    "titleColor": "#19324D",
-    "gridColor": "#E2E5E5",
-    "gridWidth": 0.7,
-    "domain": false,
-    "tickColor": "#CBD3D6",
-    "labelPadding": 6,
-    "titlePadding": 10
-  },
-  "legend": {
-    "labelFont": "Inter",
-    "labelFontSize": 16,
-    "labelColor": "#526477",
-    "titleFont": "Inter",
-    "titleFontSize": 16,
-    "titleFontWeight": 500,
-    "titleColor": "#19324D",
-    "symbolSize": 100,
-    "padding": 8
-  },
-  "view": {
-    "stroke": null
-  },
-  "bar": {
-    "cornerRadiusEnd": 3
-  },
-  "line": {
-    "strokeWidth": 2.5,
-    "point": true
-  },
-  "point": {
-    "filled": true,
-    "size": 55
+    "title": {
+      "font": "Inter",
+      "fontSize": 24,
+      "fontWeight": 600,
+      "color": "#19324D",
+      "anchor": "start",
+      "offset": 12,
+      "subtitleFont": "Inter",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#526477",
+      "subtitlePadding": 8
+    },
+    "text": {
+      "font": "Inter",
+      "fontSize": 16,
+      "fill": "#526477"
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "gridColor": "#E2E5E5",
+      "gridWidth": 0.7,
+      "domain": false,
+      "tickColor": "#CBD3D6",
+      "labelPadding": 6,
+      "titlePadding": 10
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "symbolSize": 100,
+      "padding": 8,
+      "direction": "horizontal"
+    },
+    "view": {
+      "stroke": null
+    },
+    "bar": {
+      "cornerRadiusEnd": 3
+    },
+    "line": {
+      "strokeWidth": 2.5,
+      "point": true
+    },
+    "point": {
+      "filled": true,
+      "size": 55
+    }
   }
-}
 }

@@ -107,8 +107,8 @@ state_coords <- tribble(
   "TAS", 147.3, -42.0,
   "ACT", 149.1, -35.3,
   "NT", 130.8, -12.5,
-  "Unknown or overseas", 157, -38,
-  "AUS", 157, -17
+  "Unknown or overseas", 50, 0,
+  "AUS", 50, 0
 )
 
 statebalances_map <- raw_statebalances %>%
@@ -197,10 +197,10 @@ write_csv(demobalances, here("src/data/clean", "demoblances.csv"))
 # Number of Super Accounts
 account_distribution <- tibble(
   `Number of accounts` = c(
-    "1 account",
-    "2 accounts",
-    "3 accounts",
-    "4 or more accounts"
+    "1",
+    "2",
+    "3",
+    "4 or more"
   ),
   Accounts = c(1, 2, 3, 4),
   Proportion = c(0.80, 0.16, 0.03, 0.01)
@@ -652,7 +652,7 @@ write_csv(median_profiles, here("src/data/clean", "age_profiles.csv"))
 
 raw_gender <- read_excel(
   here(
-    "data", "raw",
+    "src","data", "raw",
     "Quarterly Superannuation Industry Publication - June 2026.xlsx"
   ),
   sheet = "Table 7",
@@ -668,7 +668,6 @@ raw_gender <- read_excel(
 
 measure_rows <- tribble(
   ~Measure,           ~start_row, ~end_row,
-  "Member accounts ('000)",  8L,         59L,
   "Member benefits ($ million)",  72L,        123L,
   "Average balance ($)",  135L,       186L
 )
@@ -676,7 +675,6 @@ measure_rows <- tribble(
 gender <- raw_gender %>%
   mutate(
     measure = case_when(
-      between(excel_row, 8L, 59L)    ~ "Member accounts ('000)",
       between(excel_row, 72L, 123L)  ~ "Member benefits ($ million)",
       between(excel_row, 135L, 186L) ~ "Average balance ($)",
       TRUE ~ NA_character_
@@ -692,6 +690,51 @@ gender <- raw_gender %>%
   ) %>%
   filter(Gender != "Other") %>% filter(Gender != "Total")
 write_csv(gender, here("src/data/clean", "gender.csv"))
+
+# More gender info
+
+# Read the existing gender data
+gender <- read_csv("src/data/clean/gender.csv", show_col_types = FALSE)
+
+# Calculate the male-female difference for each age group and measure
+gender_difference <- gender %>%
+  select(`Age bracket`, Gender, measure, value) %>%
+  pivot_wider(
+    names_from = Gender,
+    values_from = value
+  ) %>%
+  mutate(
+    difference = Male - Female
+  ) %>%
+  select(
+    `Age bracket`,
+    measure,
+    Female,
+    Male,
+    difference
+  ) %>%
+  arrange(
+    factor(
+      `Age bracket`,
+      levels = c(
+        "<25", "25 to 29", "30 to 34", "35 to 39",
+        "40 to 44", "45 to 49", "50 to 54", "55 to 59",
+        "60 to 64", "65 to 69", "70 to 74", "75 to 84",
+        "85+"
+      )
+    ),
+    measure
+  )
+
+# Save the transformed data
+write_csv(
+  gender_difference,
+  "src/data/clean/gender_difference.csv"
+)
+
+# View the results
+print(gender_difference)
+
 
 # Joining SA1 Dots and data
 

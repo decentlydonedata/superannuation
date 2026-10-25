@@ -2,11 +2,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Superannuation Fund Rankings, 2015–2025",
-    "subtitle": ["Click a fund to highlight its ranking over time", 
+    "text": "Superannuation’s Leading Funds: Who Holds Their Ground?",
+    "subtitle": ["Rankings reveal a stable leader, shifting competition and changing positions among major super funds, 2015–2025.", 
                 "Source: Australian Prudential Regulation Authority (2026)"]
   },
-  "width": 900,
+  "width": 700,
   "height": 300,
   "data": {
     "url": "data/clean/fund_rankings.csv",
@@ -158,7 +158,7 @@
     "anchor": "start",
     "offset": 12,
     "subtitleFont": "Inter",
-    "subtitleFontSize": 16,
+    "subtitleFontSize": 12,
     "subtitleFontWeight": 400,
     "subtitleColor": "#526477",
     "subtitlePadding": 8
@@ -170,10 +170,10 @@
   },
   "axis": {
     "labelFont": "Inter",
-    "labelFontSize": 16,
+    "labelFontSize": 12,
     "labelColor": "#526477",
     "titleFont": "Inter",
-    "titleFontSize": 16,
+    "titleFontSize": 12,
     "titleFontWeight": 500,
     "titleColor": "#19324D",
     "gridColor": "#E2E5E5",
@@ -185,14 +185,15 @@
   },
   "legend": {
     "labelFont": "Inter",
-    "labelFontSize": 16,
+    "labelFontSize": 12,
     "labelColor": "#526477",
     "titleFont": "Inter",
     "titleFontSize": 16,
     "titleFontWeight": 500,
     "titleColor": "#19324D",
     "symbolSize": 100,
-    "padding": 8
+    "padding": 8,
+    "labelLimit": 500
   },
   "view": {
     "stroke": null

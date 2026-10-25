@@ -1,9 +1,10 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 500,
-  "height": 320,
-  "data": [
+"width": 460,
+"height": 340,
+"padding": 10,
+      "data": [
     {
       "name": "table",
       "url": "data/clean/word_cloud.csv",

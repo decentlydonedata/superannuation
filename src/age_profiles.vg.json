@@ -2,168 +2,278 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Estimated Median Superannuation Balance by Age",
-    "subtitle": ["Comparison across 30 June 2022, 2024 and 2026",
-                "Source: Australian Prudential Regulatory Authority (2026)"]
+    "text": "Each Generation Is Retiring with More Superannuation",
+    "subtitle": [
+      "Median balances are similar at younger ages, but newer generations hold more as they approach retirement.",
+      "Source: Australian Prudential Regulatory Authority (2026)"
+    ]
   },
-  "width": 460,
-  "height": 300,
+  "width": 900,
+  "height": 400,
   "data": {
     "url": "data/clean/age_profiles.csv",
     "format": {
       "type": "csv"
     }
   },
-  "mark": {
-    "type": "line",
-    "point": {
-      "filled": true,
-      "size": 65
-    },
-    "strokeWidth": 2.5
-  },
-  "encoding": {
-    "x": {
-      "field": "Age bracket",
-      "type": "ordinal",
-      "sort": [
-        "<25",
-        "25 to 29",
-        "30 to 34",
-        "35 to 39",
-        "40 to 44",
-        "45 to 49",
-        "50 to 54",
-        "55 to 59",
-        "60 to 64",
-        "65 to 69",
-        "70 to 74",
-        "75 to 84",
-        "85+"
-      ],
-  "title": "Age bracket",
-  "axis": {
-    "labelAngle": -45,
-    "labelLimit": 100,
-    "labelFontSize": 11,
-    "labelOverlap": false
-  }
-    },
-    "y": {
-      "field": "Estimated_median",
-      "type": "quantitative",
-      "title": "Estimated median balance (AUD)",
-      "axis": {
-        "format": "$,.0f"
+  "transform": [
+    {
+      "calculate": "indexof(['<25', '25 to 29', '30 to 34', '35 to 39', '40 to 44', '45 to 49', '50 to 54', '55 to 59', '60 to 64', '65 to 69', '70 to 74', '75 to 84', '85+'], datum['Age bracket'])",
+      "as": "Age order"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 65
+        },
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Age order",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.5, 12.5],
+            "nice": false
+          },
+          "axis": {
+            "title": "Age bracket",
+            "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            "labelExpr": "['<25', '25 to 29', '30 to 34', '35 to 39', '40 to 44', '45 to 49', '50 to 54', '55 to 59', '60 to 64', '65 to 69', '70 to 74', '75 to 84', '85+'][datum.value]",
+            "labelAngle": 0,
+            "labelLimit": 100,
+            "labelFontSize": 11,
+            "labelOverlap": false
+          }
+        },
+        "y": {
+          "field": "Estimated_median",
+          "type": "quantitative",
+          "title": "Estimated median balance (AUD)",
+          "axis": {
+            "format": "$,.0f"
+          }
+        },
+        "color": {
+          "field": "Date",
+          "type": "nominal",
+          "sort": ["2016", "2021", "2026"],
+          "scale": {
+            "domain": ["2016", "2021", "2026"],
+            "range": ["#54718C", "#247C83", "#C49A45"]
+          },
+          "legend": {
+            "orient": "top",
+            "title": null
+          }
+        },
+        "detail": {
+          "field": "Date"
+        },
+        "tooltip": [
+          {
+            "field": "Date",
+            "type": "nominal",
+            "title": "Date"
+          },
+          {
+            "field": "Age bracket",
+            "type": "ordinal",
+            "title": "Age bracket"
+          },
+          {
+            "field": "Estimated_median",
+            "type": "quantitative",
+            "title": "Estimated median",
+            "format": "$,.2f"
+          }
+        ]
       }
     },
-    "color": {
-      "field": "Date",
-      "type": "nominal",
-      "sort": [
-        "2016",
-        "2021",
-        "2026"
-      ],
-      "scale": {
-        "domain": [
-          "2016",
-          "2021",
-          "2026"
-        ],
-        "range": [
-          "#54718C",
-          "#247C83",
-          "#C49A45"
+    {
+      "data": {
+        "values": [
+          {
+            "annotation": "Annotation 1",
+            "age": 0,
+            "balance": 40000,
+            "labelBalance": 300000
+          },
+          {
+            "annotation": "Annotation 2",
+            "age": 5,
+            "balance": 370000,
+            "labelBalance": 600000
+          },
+          {
+            "annotation": "Annotation 3",
+            "age": 9,
+            "balance": 575000,
+            "labelBalance": 400000
+          }
         ]
       },
-      "legend": {
-        "orient": "top",
-        "title": null
+      "mark": {
+        "type": "rule",
+        "color": "#19324D",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "age",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.5, 12.5],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "balance",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "labelBalance"
+        },
+        "tooltip": [
+          {
+            "field": "annotation",
+            "type": "nominal",
+            "title": "Annotation"
+          },
+          {
+            "field": "age",
+            "type": "quantitative",
+            "title": "Age position"
+          },
+          {
+            "field": "balance",
+            "type": "quantitative",
+            "title": "Rule starts at",
+            "format": "$,.0f"
+          }
+        ]
       }
     },
-    "detail": {
-      "field": "Date"
-    },
-    "tooltip": [
-      {
-        "field": "Date",
-        "type": "nominal",
-        "title": "Date"
+    {
+      "data": {
+        "values": [
+          {
+            "age": -0.5,
+            "balance": 310000,
+            "label": "Generations begin with comparable super balances"
+          },
+          {
+            "age": 3,
+            "balance": 600000,
+            "label": "Newer generations accumulate super at a faster rate"
+          },
+          {
+            "age": 7.2,
+            "balance": 360000,
+            "label": "Now people have high balances at retirement"
+          }
+        ]
       },
-      {
-        "field": "Age bracket",
-        "type": "ordinal",
-        "title": "Age bracket"
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 5,
+        "dy": -3,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "color": "#19324D"
       },
-      {
-        "field": "Estimated_median",
-        "type": "quantitative",
-        "title": "Estimated median",
-        "format": "$,.2f"
+      "encoding": {
+        "x": {
+          "field": "age",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.5, 12.5],
+            "nice": false
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "balance",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
       }
-    ]
+    }
+  ],
+  "resolve": {
+    "axis": {
+      "x": "independent"
+    }
   },
-"background": "#F7F6F2",
-"config": {
-  "font": "Inter",
-  "title": {
+  "background": "#F7F6F2",
+  "config": {
     "font": "Inter",
-    "fontSize": 24,
-    "fontWeight": 600,
-    "color": "#19324D",
-    "anchor": "start",
-    "offset": 12,
-    "subtitleFont": "Inter",
-    "subtitleFontSize": 12,
-    "subtitleFontWeight": 400,
-    "subtitleColor": "#526477",
-    "subtitlePadding": 8
-  },
-  "text": {
-    "font": "Inter",
-    "fontSize": 16,
-    "fill": "#526477"
-  },
-  "axis": {
-    "labelFont": "Inter",
-    "labelFontSize": 12,
-    "labelColor": "#526477",
-    "titleFont": "Inter",
-    "titleFontSize": 12,
-    "titleFontWeight": 500,
-    "titleColor": "#19324D",
-    "gridColor": "#E2E5E5",
-    "gridWidth": 0.7,
-    "domain": false,
-    "tickColor": "#CBD3D6",
-    "labelPadding": 6,
-    "titlePadding": 10
-  },
-  "legend": {
-    "labelFont": "Inter",
-    "labelFontSize": 12,
-    "labelColor": "#526477",
-    "titleFont": "Inter",
-    "titleFontSize": 12,
-    "titleFontWeight": 500,
-    "titleColor": "#19324D",
-    "symbolSize": 100,
-    "padding": 8
-  },
-  "view": {
-    "stroke": null
-  },
-  "bar": {
-    "cornerRadiusEnd": 3
-  },
-  "line": {
-    "strokeWidth": 2.5,
-    "point": true
-  },
-  "point": {
-    "filled": true,
-    "size": 55
+    "title": {
+      "font": "Inter",
+      "fontSize": 24,
+      "fontWeight": 600,
+      "color": "#19324D",
+      "anchor": "start",
+      "offset": 12,
+      "subtitleFont": "Inter",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#526477",
+      "subtitlePadding": 8
+    },
+    "text": {
+      "font": "Inter",
+      "fontSize": 16,
+      "fill": "#526477"
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "gridColor": "#E2E5E5",
+      "gridWidth": 0.7,
+      "domain": false,
+      "tickColor": "#CBD3D6",
+      "labelPadding": 6,
+      "titlePadding": 10
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "symbolSize": 100,
+      "padding": 8
+    },
+    "view": {
+      "stroke": null
+    },
+    "bar": {
+      "cornerRadiusEnd": 3
+    },
+    "line": {
+      "strokeWidth": 2.5,
+      "point": true
+    },
+    "point": {
+      "filled": true,
+      "size": 55
+    }
   }
-}
 }

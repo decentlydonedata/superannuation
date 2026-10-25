@@ -29,6 +29,14 @@
     * {
         box-sizing: border-box;
     }
+    /* Keep Vega-Lite charts crisp and within their containers */
+    .vega-embed {
+        max-width: 100%;
+    }
+
+    .vega-embed svg {
+        display: block;
+    }
 
     body {
         margin: 0;
@@ -57,25 +65,29 @@
     .side-by-side {
         gap: 2rem;
     }
-    h1, h2, h3{
+    h1, h2 {
         font-family: "Playfair Display", serif;
-        font-weight: 700;
+        font-weight: 1000;
         color: #19324D;
     }
     h1 {
-        font-size: 44px;
+        font-size: 120px;
     }
     h2 {
-        font-size: 28px;
+        font-size: 64px;
     }
     h3 {
-        font-size: 22px;
+        font-family: "Inter";
+        font-weight: 500px;
+        font-size: 24px;
+        margin-bottom: 0;
     }
     h4 {
-        font-family: "Inter", sans-serif;
+        font-family: "Inter";
         font-size: 12px;
         font-weight: 500;
-        color: #526477
+        color: #526477;
+        margin-top: 0;
     }
     .subtitle {
         font-size: 20px;
@@ -88,6 +100,15 @@
         font-size: 12px;
         color: #526477;
     }
+    .section-divider {
+        border: 0;
+        height: 1px;
+        background: #D8DCD9;
+        margin: 3rem auto;
+        width: 100%;
+        max-width: 75rem;
+    }       
+    
 
     @media (max-width: 768px) {
     main {
@@ -135,79 +156,121 @@
         }
     </style>
     <!-- Containers-->     
-    
-<style>
-.side-by-side {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-    align-items: start;
-    margin: 2.5rem 0 4rem;
-}
-
-.side-by-side > *,
-.full-width-chart {
-    min-width: 0;
-    max-width: 100%;
-}
-
-.side-by-side .visualisation {
-    width: 100%;
-    min-width: 0;
-    margin: 0;
-}
-
-.vega-embed,
-.vega-embed canvas,
-.vega-embed svg {
-    width: 100%;
-    max-width: 100%;
-}
-
-@media (max-width: 700px) {
+    <style>
     .side-by-side {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        align-items: start;
+        margin: 2.5rem 0 4rem;
+        margin-top: o;
         gap: 2rem;
     }
-}
+    section > h2 {
+        margin-bottom:1rem;
+    }
 
-  .full-width-chart .vega-embed {
-    width: 100%;
-    max-width: 100%;
-  }
+    .side-by-side > *{
+        min-width: 0;
+        max-width: 100%;
+    }
+    .side-by-side h3:first-child {
+        margin-top: 0;
+    }
+    .side-by-side .visualisation {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
 
-</style>
-<!--- Full width chart -->
+    .vega-embed,
+    .vega-embed canvas,
+    .vega-embed svg {
+        width: 100%;
+        max-width: 100%;
+    }
 
+    @media (max-width: 700px) {
+        .side-by-side {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
 
+    </style>
+    <!--- Full width chart -->
+    <style>
+    .full-width-chart {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .full-width-chart > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .full-width-chart .vega-embed {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    </style>
+    <!--- Slider colour-->
+    <style>
+    .vega-bind {
+        font-family: 'Inter', sans-serif;
+        color: #19324D;
+        font-size: 12px;
+    }
+
+    .vega-bind input[type="range"] {
+        accent-color: #247C83;
+        cursor: pointer;
+    }
+
+    .vega-bind label {
+        font-family: 'Inter', sans-serif;
+        color: #19324D;
+        font-weight: 500;
+    }
+
+    .vega-bind select,
+    .vega-bind input {
+        font-family: 'Inter', sans-serif;
+    }
+    </style>
 
 </head>
 
 <body>
     <main>
-    <h1>So, what actually is super?</h1>
-    <p>
-        Superannuation, usually just called super, is money put aside during your working life to help pay for life after work. 
-        In Australia, employers generally have to contribute a percentage of eligible employees’ earnings into super, where the money is invested over time.
-        It’s your money for the future, but it can be hard to know why you need it, who has it, how much you need and why are there so many different funds?
-    </p>
+    <h1>Beyond the Balance</h1>
+    <hr class="section-divider">
     <section>
-        <h2>What supperannuation</h2>
+        <h2>So, what actually is super?</h2>
+            <p>
+                Superannuation, usually just called super, is money put aside during your working life to help pay for life after work. 
+                In Australia, employers generally have to contribute a percentage of eligible employees’ earnings into super, where the money is invested over time.
+                It’s your money for the future, but it can be hard to know why you need it, who has it, how much you need and why are there so many different funds?
+            </p>    
             <section class="side-by-side">
             <div>
                 <h3>Who's managing Australia's super?</h3>
                 <h4>
+                    Word Cloud of frequent words in fund names <br>
                     Source: Australian Prudential Regulatory Authority (2026)
                 </h4>
-
                 <p>
-                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
-                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
+                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings.
+                But the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
                 wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
-                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
+                It shows that superannuation is not just about managing money; it is also about building confidence in a 
                 system designed to support Australians in retirement.
                 </p>
-                
             </div>
             <div>
                 <div id="word_cloud" class="visualisation"></div>
@@ -216,12 +279,14 @@
         <div class="full-width-chart">
             <div id="timeline"></div>
         </div>
-
     </section>
+    <hr class="section-divider">
     <section>
-        <h2>Why superannuation</h2>
+        <h2>Preparing for an ageing Australia</h2>
         <p>
-            something about aging population and retirement
+            Australia's ageing population makes retirement planning increasingly important. But the retirement landscape is not uniform: 
+            retirees are concentrated in some areas more than others, 
+            creating different local needs and highlighting the importance of preparing financially for later life.
         </p>
             <div class="full-width-chart">
                 <div id="retiree_map"></div>
@@ -231,85 +296,78 @@
                 <div id="age_map" class="visualisation"></div>
             </div>
             <div>
-                <h3>some states and areas are a lot younger on average than others</h3>
+                <h3>The Uneven Geography of Ageing</h3>
                 <h4>
+                    Average age by Statistical Area Level 3 (SA3), Australia<br>
                     Source: Australian Bureau of Statistics (2026)
                 </h4>
-
                 <p>
-                Yada Yada about generational wealth and inequality across australia something something cost of living
+                Australia’s superannuation landscape reflects both where people live and the opportunities they have had to accumulate retirement savings. 
+                New South Wales and Victoria stand out in the eastern states, while Queensland also has substantial coastal and peri-regional communities with older populations. 
+                The relationship between age and super is not straightforward. Older working-age Australians have generally had more time to make contributions and 
+                build balances, while retirees may draw down their savings over time. Areas with older populations can therefore have different superannuation profiles, 
+                but age alone does not tell the whole story. 
                 </p>
                 
             </div>
             </section>
     </section>
+    <hr class="section-divider">
     <section>
-        <h2> Who superannuation</h2>
+        <h2>Who Holds Australia’s Super?</h2>
+        <p>
+            Superannuation is one of Australia’s most significant forms of household wealth, but it is not distributed evenly. Balances vary across age groups, 
+            genders and states, reflecting differences in earnings, employment patterns, time spent in the workforce and contribution histories.
+            Looking beyond total balances reveals a more detailed picture of retirement savings: how balances change over the life course, where gender differences emerge, how average balances vary between states, and how many superannuation accounts people hold. 
+            Together, these measures help explain not just how much super Australia holds, but how that wealth is distributed.
+        </p>
+        <div class="full-width-chart">
+            <div id="gender_pyramid"></div>
+        </div>
+        <p>
+            Men consistently hold higher superannuation benefits and average account balances across age groups, highlighting persistent gender differences 
+            in retirement savings. The disparity in average balances is particularly pronounced between ages 35 and 39, when men gain an average 
+            balance advantage of $11,771. This period coincides with the years when many women experience career interruptions or reduced working 
+            hours associated with maternity leave and caring responsibilities, which may reduce their superannuation contributions.
+            The gap narrows from age 60 onwards, as people transition into retirement and begin drawing down their superannuation. 
+            Women's balances may decline more gradually during this period, potentially reflecting differences in retirement timing, 
+            withdrawal patterns and longevity.
+        </p>
+        <div class="full-width-chart">
+            <div id="age_profiles"></div>
+        </div>
         <section class="side-by-side">
             <div>
-                <p>
-                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
-                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
-                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
-                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
-                system designed to support Australians in retirement.
-                </p>
-                
-            </div>
-            <div>
-                <div id="age_profiles" class="visualisation"></div>
-            </div>
-        </section>
-        <section class="side-by-side">
-            <div>
-                <p>
-                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
-                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
-                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
-                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
-                system designed to support Australians in retirement.
-                </p>
-                
+                <div id="state_balances" class="visualisation"></div>
             </div>
             <div>
                 <div id="accounts_radial" class="visualisation"></div>
             </div>
         </section>
-        <section class="side-by-side">
-            <div>
-                <p>
-                The most common words — superannuation, fund, super and scheme — reflect the industry's focus on managing and organising retirement savings. B
-                ut the names also reveal how the sector presents itself to members. Words like Australian, trust, retirement, service, 
-                wealth and first evoke national identity, reliability, security and a commitment to members' financial futures. 
-                Together, these words show that superannuation is not just about managing money; it is also about building confidence in a 
-                system designed to support Australians in retirement.
-                </p>
-                
-            </div>
-            <div>
-                <div id="state_balances" class="visualisation"></div>
-            </div>
-        </section>
-        <div class="full-width-chart">
-            <div id="gender_pyramid"></div>
-        </div>
-
     </section>
-    <sectiion>
-        <h2>How supperannuation</h2>
+    <hr class="section-divider">
+    <section>
+        <h2>The Funds Behind Retirement</h2>
+        <p>
+            Superannuation outcomes depend not only on how much Australians contribute, but also on where their money is invested. Differences in fund membership, 
+            investment performance and fees can shape retirement balances over time. Comparing superannuation funds reveals how the industry distributes 
+            retirement wealth, which funds dominate the market, and how members’ outcomes vary across providers.
+        </p>
             <div id="benefits_ternary"></div>
             <div id="fund_ranking"></div>
             <p>
-                SOMETHING ABOUT HOW DDOMINANT SOME FUNDS HAVE BEEN AND OTHERS NOT
+                Superannuation fund rankings reveal a competitive landscape with both stability and change. AustralianSuper maintained the top position from 2015 to 2025, 
+                while other funds experienced shifts in their relative rankings. Aware Super rose from fifth to second between 2019 and 2021, illustrating how the positions of major funds can evolve over time. 
+                These rankings provide a snapshot of the industry's changing structure, although rank alone does not measure investment performance, fees or member outcomes.
             </p>
-    </sectiion>
-        <div class="full-width-chart">
-            <div id="benefits_ternary"></div>
-        </div>
-        <div class="full-width-chart">
-            <div id="fund_ranking"></div>
-        </div>
-
+    <hr class="section-divider">        
+        <h3>Conclusion: Understanding Superannuation in Australia</h3>
+        <p>
+            Superannuation reflects differences in age, gender, employment and financial security. These visualisations explore how retirement balances accumulate, how wealth is 
+            distributed across demographic groups, states and funds, and how policy has shaped the system over time. <br>
+            Together, they highlight disparities in retirement savings and the importance of understanding not just how much superannuation Australians hold, 
+            but who benefits and what this means for financial security in retirement.
+        </p>
     </main>
 </body>
 </html>

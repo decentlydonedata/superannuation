@@ -16,10 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     charts.forEach(([element, spec]) => {
 
-        // Use Vega mode for the word cloud; Vega-Lite for other charts
-        const options = spec === "word_cloud.vg.json"
-            ? { actions: false, mode: "vega" }
-            : { actions: true, mode: "vega-lite" };
+        const options = {
+            actions: spec === "word_cloud.vg.json" ? false : true,
+            mode: spec === "word_cloud.vg.json" ? "vega" : "vega-lite",
+            renderer: "svg"
+        };
+
+        // Apply tooltip settings only to the ternary chart.
+        if (spec === "benefits_ternary.vg.json") {
+            options.tooltip = {
+                theme: "custom"
+            };
+        }
 
         vegaEmbed(element, spec, options)
             .catch(error => {
