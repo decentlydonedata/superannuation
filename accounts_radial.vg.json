@@ -1,0 +1,236 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "One account is enough",
+    "subtitle": [
+      "Radial Donut Chart of super account ownership",
+      "Source: Australian Taxation Office (2026)"
+    ]
+  },
+  "width": 420,
+  "height": 400,
+  "data": {
+    "url": "data/clean/account_distribution.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 300
+      },
+      "encoding": {
+        "theta": {
+          "field": "Proportion",
+          "type": "quantitative",
+          "stack": true
+        },
+        "radius": {
+          "field": "Accounts",
+          "type": "quantitative",
+          "scale": {
+            "range": [40, 220]
+          }
+        },
+        "color": {
+          "field": "Number of accounts",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#247C83",
+              "#718B7A",
+              "#54718C",
+              "#C49A45"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null,
+            "columns": 4
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Number of accounts",
+            "type": "nominal",
+            "title": "Number of accounts"
+          },
+          {
+            "field": "Proportion",
+            "type": "quantitative",
+            "title": "Share of people",
+            "format": ".0%"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 275,
+            "y": 40,
+            "y2": 100
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#19324D",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 420]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [420, 0]
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 280,
+            "y": 30,
+            "label": "1 in 5 have multiple",
+            "label2": "super accounts"
+          },
+          {
+            "x": 10,
+            "y": 30,
+            "label": "Multiple accounts means extra",
+            "label2": "fees reducing compound growth"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "fold": ["label", "label2"],
+          "as": ["line", "text"]
+        },
+        {
+          "calculate": "datum.line === 'label2' ? datum.y + 17 : datum.y",
+          "as": "labelY"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "centre-bottom",
+        "font": "Inter",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "color": "#19324D"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 420]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "labelY",
+          "type": "quantitative",
+          "scale": {
+            "domain": [420, 0]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "independent"
+    }
+  },
+  "view": {
+    "stroke": null
+  },
+  "background": "#F7F6F2",
+  "config": {
+    "font": "Inter",
+    "title": {
+      "font": "Inter",
+      "fontSize": 24,
+      "fontWeight": 600,
+      "color": "#19324D",
+      "anchor": "start",
+      "offset": 12,
+      "subtitleFont": "Inter",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#526477",
+      "subtitlePadding": 8
+    },
+    "text": {
+      "font": "Inter",
+      "fontSize": 16,
+      "fill": "#526477"
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "gridColor": "#E2E5E5",
+      "gridWidth": 0.7,
+      "domain": false,
+      "tickColor": "#CBD3D6",
+      "labelPadding": 6,
+      "titlePadding": 10
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "labelFontSize": 12,
+      "labelColor": "#526477",
+      "titleFont": "Inter",
+      "titleFontSize": 16,
+      "titleFontWeight": 500,
+      "titleColor": "#19324D",
+      "symbolSize": 100,
+      "padding": 8
+    },
+    "view": {
+      "stroke": null
+    },
+    "bar": {
+      "cornerRadiusEnd": 3
+    },
+    "line": {
+      "strokeWidth": 2.5,
+      "point": true
+    },
+    "point": {
+      "filled": true,
+      "size": 55
+    }
+  }
+}
