@@ -10,7 +10,7 @@
   "translate": [225, 190]
   },
   "data": {
-    "url": "data/clean/sa3_choropleth.geojson",
+    "url": "data/clean/sa4_choropleth_simplified.geojson",
     "format": {
       "type": "json",
       "property": "features"

@@ -228,10 +228,10 @@ write_csv(retirees, here("src/data/clean", "retirees.csv"))
 
 # Census SA3 Data
 raw_censusage <- read_csv(
-  here("src/data/raw/sa3.csv"),skip = 9,col_types = cols(.default = col_character())
+  here("src/data/raw/sa4.csv"),skip = 9,col_types = cols(.default = col_character())
 ) %>%
-  rename(SA3 = `AGEP Age`) %>%
-  filter(SA3 != "Total") %>%
+  rename(SA4 = `AGEP Age`) %>%
+  filter(SA4 != "Total") %>%
   mutate(
     across(
       `0`:`115`,
@@ -246,11 +246,11 @@ raw_censusage <- read_csv(
     )
   ) %>%
   filter(!is.na(Average_Age)) %>%
-  select(SA3, Average_Age)
+  select(SA4, Average_Age)
 
 write_csv(
   raw_censusage,
-  here("src/data/clean/sa3_age.csv")
+  here("src/data/clean/sa4_age.csv")
 )
 library(sf)
 library(dplyr)
@@ -261,45 +261,45 @@ library(sf)
 library(dplyr)
 library(readr)
 
-sa3_map <- st_read(
-  "src/data/boundaries/SA3_2021_AUST_GDA2020.shp",
+sa4_map <- st_read(
+  "src/data/boundaries/SA4_2021_AUST_GDA2020.shp",
   quiet = TRUE
 )
 
-sa3_age <- read_csv(
-  "src/data/clean/sa3_age.csv",
+sa4_age <- read_csv(
+  "src/data/clean/sa4_age.csv",
   col_types = cols(
-    SA3 = col_character(),
+    SA4 = col_character(),
     Average_age = col_double()
   )
 )
 
 # Match the SA3 codes
-sa3_map <- sa3_map %>%
-  mutate(SA3_CODE21 = as.character(SA3_CODE21))
+sa4_map <- sa4_map %>%
+  mutate(SA4_CODE21 = as.character(SA4_CODE21))
 
-sa3_age <- sa3_age %>%
-  mutate(SA3 = as.character(SA3))
+sa4_age <- sa_age %>%
+  mutate(SA4 = as.character(SA4))
 
 # Join average age to every SA3 polygon
-sa3_choropleth <- sa3_map %>%
+sa4_choropleth <- sa4_map %>%
   left_join(
-    sa3_age,
-    by = c("SA3_CODE21" = "SA3")
+    sa4_age,
+    by = c("SA4_CODE21" = "SA4")
   )
 
 # Convert geometry to longitude/latitude for GeoJSON
-sa3_choropleth <- st_transform(
-  sa3_choropleth,
+sa4_choropleth <- st_transform(
+  sa4_choropleth,
   crs = 4326
 )
 
 # Export all SA3 polygons
 st_write(
-  sa3_choropleth %>%
+  sa4_choropleth %>%
     select(
-      SA3_CODE21,
-      SA3_NAME21,
+      SA4_CODE21,
+      SA4_NAME21,
       Average_Age,
       geometry
     ),
@@ -309,17 +309,56 @@ st_write(
 )
 
 # Confirm the output
-nrow(sa3_choropleth)
-st_bbox(sa3_choropleth)
+nrow(sa4_choropleth)
+st_bbox(sa4_choropleth)
 library(sf)
 library(dplyr)
 
 # Read the exact file used by Vega-Lite
-sa3_geo <- st_read(
+sa4_geo <- st_read(
   "src/data/clean/sa3_choropleth.geojson",
   quiet = TRUE
 )
 
+library(sf)
+library(dplyr)
+
+# Read the original GeoJSON
+sa4_map <- st_read(
+  "src/data/clean/sa4_choropleth.geojson",
+  quiet = TRUE
+)
+
+# Check original file size
+file.info("src/data/clean/sa4_choropleth.geojson")$size / 1024^2
+
+# Transform to a projected coordinate system in metres
+sa4_projected <- st_transform(sa4_map, 3577) # GDA2020 / Australian Albers
+
+# Simplify boundaries
+sa4_simplified <- st_simplify(
+  sa4_projected,
+  dTolerance = 500, # 500 metres; adjust if necessary
+  preserveTopology = TRUE
+)
+
+# Return to longitude/latitude for web mapping
+sa4_simplified <- st_transform(sa4_simplified, 4326)
+
+# Export simplified GeoJSON
+st_write(
+  sa4_simplified,
+  "src/data/clean/sa4_choropleth_simplified.geojson",
+  driver = "GeoJSON",
+  delete_dsn = TRUE,
+  quiet = TRUE
+)
+
+# Compare sizes
+file.info(c(
+  "src/data/clean/sa4_choropleth.geojson",
+  "src/data/clean/sa4_choropleth_simplified.geojson"
+))$size / 1024^2
 
 
 # Benefit Reasons
